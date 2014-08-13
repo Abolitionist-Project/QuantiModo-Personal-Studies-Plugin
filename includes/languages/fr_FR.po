@@ -1,0 +1,1702 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qm Study Module\n"
+"POT-Creation-Date: 2014-05-22 17:48+0530\n"
+"PO-Revision-Date: 2014-05-22 17:48+0530\n"
+"Last-Translator: QuantiModo <quantimodo@gmail.com>\n"
+"Language-Team: quantimodo <quantimodo@gmail.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-"
+"study-module\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/"
+"qm-study-module\n"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-QuantiPress-protected-api.php:67
+msgid "Please enter your QuantiPress Marketplace Username."
+msgstr "Veuillez entrer votre nom d'utilisateur QuantiPress Marketplace."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-QuantiPress-protected-api.php:71
+msgid "Please enter your QuantiPress Marketplace API Key."
+msgstr "Veuillez entrer votre clé API QuantiPress Marketplace."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-QuantiPress-protected-api.php:96
+msgid "The API \"set\" is a required parameter."
+msgstr "L'API \"set\" est un paramètre obligatoire."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-QuantiPress-protected-api.php:167
+msgid "The QuantiPress Marketplace \"item ID\" is a required parameter."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:376
+msgid "An Unexpected HTTP Error occurred during the API request."
+msgstr "Une erreur HTTP inattendue s'est produite lors de la demande de l'API."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:376
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:541
+msgid "Try again"
+msgstr "Veuillez réessayer"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:417
+msgid "An unknown error occurred"
+msgstr "Une erreur inconnue est survenue"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:453
+msgid ""
+"The plugin has been updated, but could not be reactivated. Please reactivate "
+"it manually."
+msgstr ""
+"Le plugin a été bien mis à jour, mais n'a pas pu être réactivé. Veuillez le "
+"réactiver manuellement."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:454
+msgid "Plugin reactivated successfully. "
+msgstr "Plugin réactivé avec succés"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:476
+msgid " Plugin Updates"
+msgstr "Mise à jour du plugin"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:515
+msgid "Username: "
+msgstr "Nom d'utilisateur "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:519
+msgid "Email: "
+msgstr "Email:"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:525
+msgid "Key: "
+msgstr "Clé"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:531
+msgid "<p>Your plugin update is <span style=\"color:green\">active</span></p>"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:535
+msgid ""
+"<p>Your input is <span style=\"color:red\">not valid</span>, automatic "
+"updates is <span style=\"color:red\">not active</span>.</p>"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:536
+msgid "Edit Key"
+msgstr "Modifier la clé"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:540
+msgid "<p>Unable to validate update activation.</p>"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:546
+msgid "Add Key"
+msgstr "Ajouter la Clé"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:632
+msgid "User name"
+msgstr "Nom de l'utilisateur"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:638
+msgid "Email"
+msgstr "Email"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/autoupdate/class-plugin-update.php:647
+msgid "Themeforest User name ( for Auto-Updates )"
+msgstr "Nom de l'utilisateur Themeforest (pour les mises à jour automatiques)"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:20
+#, fuzzy
+msgid "Removed a student from Study"
+msgstr "Retirer l'Utilisateur de ce cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:21
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:25
+#, fuzzy
+msgid "Student submitted a Study"
+msgstr "L'élève a soumis le Quiz "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:22
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:24
+#, fuzzy
+msgid "Student started a Study"
+msgstr "L'élève a démarré un chapitre "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:23
+#, fuzzy
+msgid "Student submitted a Quiz"
+msgstr "L'élève a soumis le Quiz "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:26
+#, fuzzy
+msgid "Study reset for Student"
+msgstr "Cours réinitialisé pour l'élève"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:27
+#, fuzzy
+msgid "Bulk action by instructor"
+msgstr "Sélectionner un Professeur"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:28
+#, fuzzy
+msgid "Study Evaluated for student"
+msgstr "auto évalué pour l'élève"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:29
+#, fuzzy
+msgid "Student got a Badge"
+msgstr "L'élève a obtenu une Médaille au cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:30
+#, fuzzy
+msgid "Student got a certificate"
+msgstr "L'Étudiant a obtenu une Attestation dans ce cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:31
+#, fuzzy
+msgid "Quiz Evaluated for student"
+msgstr "auto évalué pour l'élève"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:32
+#, fuzzy
+msgid "Student subscribed for study"
+msgstr "Elève inscrit pour le cours "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:50
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:52
+msgid "per"
+msgstr "par"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:68
+msgid "SUBSCRIPTION FOR"
+msgstr "SUBSCRIPTION POUR "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:100
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:121
+msgid "Student subscribed for study "
+msgstr "Elève inscrit pour le cours "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:101
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:122
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:294
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:295
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:452
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:468
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:485
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:519
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:404
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:655
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1172
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1196
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1216
+msgid "Student "
+msgstr "Elève"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:101
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:122
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:783
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:818
+msgid " subscribed for study "
+msgstr "Inscrit pour le cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:101
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:122
+msgid " for "
+msgstr "pour"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:101
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:122
+msgid " days"
+msgstr "Jours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-actions.php:153
+#, php-format
+msgid "All Instructors <span>%s</span>"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-activity.php:93
+#, php-format
+msgid "%1$s wrote a new %2$s, %3$s, on the site %4$s"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-activity.php:95
+#, php-format
+msgid "%1$s wrote a new %2$s, %3$s"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-activity.php:108
+#, php-format
+msgid "%1$s reviewed the %2$s, %3$s, on the site %4$s"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-activity.php:110
+#, php-format
+msgid "%1$s reviewed the %2$s, %3$s"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-activity.php:114
+#, php-format
+msgid "%1$s answered the %2$s, %3$s, on the site %4$s"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-activity.php:116
+#, php-format
+msgid "%1$s answered the %2$s, %3$s"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:37
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:947
+msgid "Security check Failed. Contact Administrator."
+msgstr "Le contrôle de sécurité a échoué. Veuillez contacter l'Administrateur."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:61
+msgid "Student finished unit "
+msgstr "L'élève a terminé le chapitre "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:62
+msgid "Student finished the unit "
+msgstr "L'élève a terminé le chapitre "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:62
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:999
+msgid " in study "
+msgstr "En cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:85
+msgid "Answer Reset"
+msgstr "La réponse a été réinitialisée"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:87
+msgid "Unable to Reset"
+msgstr "Impossible de réinitialiser"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:98
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:206
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:280
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:315
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:389
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:538
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:589
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:384
+msgid "Security check failed !"
+msgstr "Le contrôle de sécurité a échoué !"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:103
+msgid "Incorrect Study selected."
+msgstr "Le Cours sélectionné est incorrecte."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:190
+msgid "Statistics successfully calculated. Reloading..."
+msgstr "Statistiques calculées avec succès. Rechargement ..."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:192
+msgid "Unable to calculate Average."
+msgstr "Impossible de calculer la Moyenne."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:203
+msgid "SHOW STATS"
+msgstr "VOIR LES STATISTIQUES"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:203
+msgid "HIDE"
+msgstr "MASQUER"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:211
+msgid "Incorrect User selected."
+msgstr "Utilisateur sélectionné Incorrecte"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:222
+msgid "This User has not started the study."
+msgstr "Cet Utilisateur n'a pas encore commencé le cours."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:224
+msgid "This User has completed the study."
+msgstr "Cet Utilisateur a terminé le cours."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:225
+msgid "Student Score for Study "
+msgstr "Note de l'élève pour ce Cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:225
+msgid " out of 100"
+msgstr "sur 100"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:235
+msgid "Study Started : "
+msgstr "Cours Commencé :"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:236
+msgid " ago"
+msgstr "depuis"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:240
+msgid "Curriculum :"
+msgstr "Curriculum :"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:241
+msgid "Quizes"
+msgstr "Quiz"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:251
+msgid "Marks Obtained : "
+msgstr "Notes Obtenues :"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:251
+msgid "Under Evaluation"
+msgstr "En attente d'évaluation"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:266
+msgid "Units Completed "
+msgstr "Chapitres terminés"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:266
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:513
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:519
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:561
+msgid " out of "
+msgstr "sur"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:285
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:320
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:394
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:543
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:594
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:388
+msgid " Incorrect User selected."
+msgstr "Utilisateur sélectionné incorrect."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:291
+msgid "User removed from the Study"
+msgstr "Utilisateur retiré du Cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:294
+msgid " removed from study "
+msgstr "retiré du cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:295
+msgid " removed from the study "
+msgstr "retiré du cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:303
+msgid ""
+"There was issue in removing this user from the Study. Please contact admin."
+msgstr ""
+"Un probléme est survenu lors du retrait de l'élève du cours. Veuillez "
+"contacter l'administrateur."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:367
+msgid "Study Reset for User"
+msgstr "Cours réinitialisé pour l'Utilisateur"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:369
+msgid "Study reset for student "
+msgstr "Cours réinitialisé pour l'élève"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:370
+msgid "Study "
+msgstr "Cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:370
+msgid " reset for student "
+msgstr "réinitialiser pour l'élève"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:377
+msgid ""
+"There was issue in resetting this study for the user. Please contact admin."
+msgstr ""
+"Un probléme est survenu lors de la réinitialisation de ce cours. Veuillez "
+"contacter l'administrateur."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:407
+msgid "Quiz Reset for Selected User"
+msgstr "Quiz Réinitialisé pour l'Utilisateur Sélectionné"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:409
+msgid "Could not find Quiz results for User. Contact Admin."
+msgstr ""
+"Impossible de trouver les résultats de Quiz pour cet Utilisateur. Veuillez "
+"contacter l'Administrateur."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:413
+msgid "Instructor Reseted the Quiz for User"
+msgstr "Le professeur a réinitialisé le Quiz pour l'Utilisateur"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:414
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:622
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:1016
+msgid "Quiz "
+msgstr "Quiz "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:414
+msgid " was reset by the Instructor for user"
+msgstr "a été réinitialisé par le Professeur pour l'utilisateur"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:451
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1171
+msgid "Student got a Badge in the study "
+msgstr "L'élève a obtenu une Médaille au cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:452
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1172
+msgid " got a badge in the study "
+msgstr "a obtenu une médaille dans ce cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:467
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1195
+msgid "Student got a Certificate in the study "
+msgstr "L'Étudiant a obtenu une Attestation dans ce cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:468
+msgid " got a certificate in the study "
+msgstr "obtenir un Attestation dans ce cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:476
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:513
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1205
+msgid "You've obtained "
+msgstr "Vous avez obtenu"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:476
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1205
+msgid " out of 100 in Study :"
+msgstr "Sur 100 au cours :"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:477
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1206
+msgid "Study results available"
+msgstr "Les résultats du cours sont disponibles"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:478
+msgid "STUDY MARKED COMPLETE"
+msgstr "COURS MARQUE COMME TERMINE"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:480
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1211
+msgid "FAILED TO MARK STUDY, CONTACT ADMIN"
+msgstr "IMPOSSIBLE DE MARQUER LE COURS, VEUILLEZ CONTACTER L'ADMINISTRATEUR"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:484
+msgid "Instructor evaluated Study for Student"
+msgstr "Cours évalué par le Professeur pour l'élève"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:485
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:519
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1216
+msgid " got "
+msgstr "a"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:485
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1216
+msgid " out of 100 in study "
+msgstr "sur 100 dans ce cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:513
+msgid " in Quiz"
+msgstr "dans le Quiz"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:514
+msgid "Quiz results available"
+msgstr "Les résultats du quiz sont disponibles"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:517
+msgid "Instructor evaluated Quiz for student "
+msgstr "Le Quiz a été évalué par le Professeur pour l'élève"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:519
+msgid " in Quiz "
+msgstr "En Quiz"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:561
+msgid "MARKS: "
+msgstr "NOTES:"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:561
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:566
+msgid " PENDING"
+msgstr "EN ATTENTE"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:566
+msgid "DONE"
+msgstr "TERMINE"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:575
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:705
+msgid "Total"
+msgstr "Total"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:576
+msgid "Study Percentage (Out of 100)"
+msgstr "Pourcentage du Cours (sur 100)"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:576
+msgid "Study Percentage out of 100"
+msgstr "Pourcentage du Cours sur 100"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:577
+msgid "Mark Study Complete"
+msgstr "Noter le Cours comme Terminé"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:599
+msgid " Incorrect Quiz Id."
+msgstr "L'dentifiant du Quiz est Incorrecte"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:617
+msgid "Marked Answer :"
+msgstr "Réponse Marquée :"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:680
+msgid "Correct Answer :"
+msgstr "Bonne Réponse "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:690
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:695
+msgid "Marks Obtained"
+msgstr "Notes Obtenues"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:690
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:695
+msgid "Give marks"
+msgstr "Donner des notes "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:691
+msgid "Update Marks"
+msgstr "Mettre à jour les Notes "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:696
+msgid "Give Marks"
+msgstr "Donner les Notes"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:706
+msgid "Mark Quiz as Checked"
+msgstr "Marquer le Quiz comme Vérifié"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:727
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:732
+msgid "Set a Subject for the message"
+msgstr "Définir un Sujet pour le message "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:742
+msgid "Messages Sent to "
+msgstr "Messages Envoyés à"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:742
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:922
+msgid " members"
+msgstr "membres"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:744
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:933
+msgid "Please select members"
+msgstr "Veuillez sélectionner les membres"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:748
+msgid "Instructor sent Bulk message to students : "
+msgstr "Le Professeur a envoyé un message en vrac aux élèves :"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:749
+msgid "Bulk Message sent to students "
+msgstr "Message en Vrac envoyé aux élèves "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:782
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:817
+msgid "Instructor added Student for study "
+msgstr "Le professeur a ajouté un élève au cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:783
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:818
+msgid "Instructore added Student "
+msgstr "Le professeur a ajouté un élève"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:796
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:831
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:173
+msgid "Reset Study for User"
+msgstr "Réinitialiser le Cours pour l'Utilisateur  "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:797
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:832
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:174
+msgid "See Study stats for User"
+msgstr "Voir les stats du Cours pour l'Utilisateur"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:798
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:833
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:175
+msgid "Remove User from this Study"
+msgstr "Retirer l'Utilisateur de ce cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:842
+#, fuzzy
+msgid "Instructor added students in study  "
+msgstr "Le professeur a ajouté un élève au cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:843
+#, fuzzy
+msgid "Instructor added "
+msgstr "Le professeur a ajouté un élève"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:843
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:925
+#, fuzzy
+msgid " students in study "
+msgstr "Ajouter des Elèves au Cours "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:865
+msgid "Select Assign Value"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:922
+msgid "Action assigned to "
+msgstr "Action attribuée à"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:924
+msgid "Instructor assigned/removed Certificate/Badges  "
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:925
+msgid "Instructor added/removed Badges/Certificates from "
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:930
+msgid "Could not assign action to members"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:990
+msgid "Unit will be available in "
+msgstr "Le Chapitre sera disponible dans "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:998
+msgid "Student started a unit"
+msgstr "L'élève a démarré un chapitre "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:999
+msgid "Student started the unit "
+msgstr "L'élève a démarré le chapitre"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:1008
+msgid "Unit can not be accessed."
+msgstr "Impossible d'accéder au Chapitre"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:1031
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/curriculum.php:43
+msgid " Hours"
+msgstr "Heures "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:1031
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/curriculum.php:43
+msgid " minutes"
+msgstr "minutes "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:1057
+msgid "Back to Quiz"
+msgstr "Revenir au Quiz "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:1059
+msgid "Previous Unit"
+msgstr "Chapitre Précédent"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:1065
+msgid "Start Quiz"
+msgstr "Démarrer le Quiz "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:1067
+msgid "Mark this Unit Complete"
+msgstr "Marquer ce Chapitre comme Terminé"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:1088
+msgid "Proceed to Quiz"
+msgstr "Passer au Quiz"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-ajax.php:1090
+msgid "Next Unit"
+msgstr "Prochain Chapitre"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:21
+msgid "Too Fast or Answer not marked."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:22
+msgid "Answer Saved."
+msgstr "Réponse Sauvegardée"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:23
+msgid "Processing..."
+msgstr "Traitement en cours..."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:24
+msgid "Saving Answer...please wait"
+msgstr "Enregistrement de votre réponse ... veuillez patienter"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:25
+msgid ""
+"This step is irreversible. Are you sure you want to remove the User from the "
+"study ?"
+msgstr ""
+"Cette étape est irréversible. Etes-vous sûr de vouloir supprimer "
+"l'utilisateur du cours?"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:26
+msgid "Confirm, Remove User from Study"
+msgstr "Confirmer, le Retrait de cet Utilisateur du Cours "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:27
+msgid "Cancel"
+msgstr "Annuler"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:28
+msgid ""
+"This step is irreversible. All Units, Quiz results would be reset for this "
+"user. Are you sure you want to Reset the Study for this User?"
+msgstr ""
+"Cette étape est irréversible. Tous les Chapitres, les résultats de Quiz "
+"seront réinitialiser pour cet utilisateur. Etes-vous sûr de vouloir "
+"réinitialiser le cours pour l'utilisateur?"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:29
+msgid "Confirm, Reset Study for this User"
+msgstr "Confirmer, la Réinitialisation du Cours pour cet Utilisateur "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:30
+msgid ""
+"This step is irreversible. All Questions answers would be reset for this "
+"user. Are you sure you want to Reset the Quiz for this User? "
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:31
+msgid "Confirm, Reset Quiz for this User"
+msgstr "Confirmer, la Réinitialisation du Quiz pour cet Utilisateur"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:32
+msgid "Marks Saved"
+msgstr "Notes Enregistrées"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:33
+msgid "Quiz Marks Saved"
+msgstr "Notes du Quiz Enregitrées"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:34
+msgid "Submit Quiz"
+msgstr "Soumettre le Quiz"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:35
+msgid "Sending Messages ..."
+msgstr "Envoi de Messages"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:36
+msgid "Adding Students to Study ..."
+msgstr "Ajout Elèves aux cours ..."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:37
+msgid "Students successfully added to Study"
+msgstr "Elèves ajoutés au Cours avec succés "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-cssjs.php:38
+msgid "Unable to Add students to Study"
+msgstr "Impossible d'ajouter des Elèves au cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-filters.php:172
+msgid "No Studies found."
+msgstr "Aucun Cours trouvés"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:47
+msgid "Study Directory"
+msgstr "Répertoire des Cours "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:48
+msgid "All Studies by all instructors"
+msgstr "Tous les Cours des Professeurs"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:80
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-loader.php:408
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/home.php:23
+msgid "Home"
+msgstr "Accueil "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:86
+msgid "Curriculum"
+msgstr "Curriculum"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:92
+msgid "Members"
+msgstr "Membres"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:131
+msgid "Search"
+msgstr "Recherche "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:150
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:223
+msgid "TAKE THIS STUDY"
+msgstr "PRENDRE CE COURS "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:187
+msgid "START STUDY"
+msgstr "COMMENCER LE COURS "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:193
+msgid "CONTINUE STUDY"
+msgstr "CONTINUER LE COURS "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:197
+msgid "STUDY UNDER EVALUATION"
+msgstr "COURS EN EVALUATION"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:200
+msgid "STUDY FINISHED"
+msgstr "COURS TERMINE"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:211
+msgid "STUDY ENABLED"
+msgstr "COURS ACTIVE "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:211
+msgid "CONTACT ADMIN TO ENABLE"
+msgstr "CONTACTER L'ADMINISTRATEUR POUR L'ACTIVER"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:216
+msgid "STUDY EXPIRED"
+msgstr "COURS EXPIRE"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:225
+msgid "PRIVATE STUDY"
+msgstr "COURS PRIVES "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:252
+msgid "* REQUIRES"
+msgstr "* REQUIS"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:260
+msgid "Study Badge"
+msgstr "Médaille"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:265
+msgid "Study Certificate"
+msgstr "Attestation"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:384
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:388
+msgid "Security Error"
+msgstr "Erreur de Sécurité"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:403
+msgid "Quiz retake by Student"
+msgstr "Quiz repris l'élève "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:404
+msgid " initiated quiz retake "
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:467
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:475
+msgid "Next Question"
+msgstr "Question Suivante"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:471
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:474
+msgid "Previous Question"
+msgstr "Question Précédente"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:525
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:918
+msgid "Time Remaining"
+msgstr "Temps Restant"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:526
+msgid "Mins"
+msgstr "Mins"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:526
+msgid "Secs"
+msgstr "Secs"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:568
+msgid "QUESTION"
+msgstr "QUESTION"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:608
+msgid "Right now"
+msgstr "Maintenant"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:621
+msgid "Student submitted the Quiz"
+msgstr "L'élève a soumis le Quiz "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:622
+msgid " was submitted by student"
+msgstr "a été soumis par l'élève "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:654
+msgid "Student started a quiz"
+msgstr "L'élève a commencé le quiz"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:655
+msgid " started the quiz "
+msgstr "commencer le quiz"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:670
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:705
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:735
+msgid "Quiz Timed Out ."
+msgstr "Temps du Quiz écoulé"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:671
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:706
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:736
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:740
+msgid "If you want to attempt again, Contact Instructor to reset the quiz."
+msgstr ""
+"Si vous voulez réessayer, Contacter le professeur pour réinitialiser le quiz."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:677
+msgid "Quiz Already Attempted."
+msgstr "Quiz déjà tenté."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:678
+msgid "Security Check Failed. Contact Site Admin."
+msgstr ""
+"Le Contrôle de Sécurité a échoué. Veuillez contacter l'Administrateur du "
+"Site."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:710
+msgid "Start Quiz to begin quiz."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:711
+msgid "Click \"Start Quiz\" button to start the Quiz."
+msgstr "Cliquer sur le bouton \"Commencer le Quiz\" pour commencer le Quiz"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:715
+msgid "Security Check Failed ."
+msgstr "Le Contrôle de Sécurité a échoué."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:716
+msgid "Contact Site Admin."
+msgstr "Contacter l'Administateur du Site."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:739
+msgid "Quiz Already Attempted ."
+msgstr "Quiz déjà tenté."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:785
+msgid "Study Curriculum Not Set."
+msgstr "Programme du Cours non défini."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:849
+msgid "Attachments"
+msgstr "Attachés"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:857
+msgid "Have Questions ? Ask in the Unit Forums"
+msgstr ""
+"Vous avez des questions ? Posez-les dans les Forums relatifs à ce Chapitre"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:878
+msgid "Instructor"
+msgstr "Professeur"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:1015
+msgid "Quiz Auto Evaluated"
+msgstr "Quiz Auto Evalué"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:1016
+msgid " auto evaluated for student "
+msgstr "auto évalué pour l'élève"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:1016
+msgid " with marks "
+msgstr "avec des points"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:1036
+msgid "Certificate not valid for user"
+msgstr "Attestation invalide pour l'utilisateur"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:1085
+msgid "Evaluate study submissions"
+msgstr "Evaluer les soumissions de cours "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:1100
+msgid "Evaluate Quiz submissions"
+msgstr "Evaluer les soumissions des Quiz"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:1105
+msgid "Manage Students"
+msgstr "Gestion des élèves"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:1106
+msgid "See Stats"
+msgstr "Voir les Stats"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-functions.php:1107
+msgid "See all Activity"
+msgstr "Voir toutes les Activités"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-loader.php:71
+msgid "Study"
+msgstr "Cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-loader.php:256
+msgid "Search ..."
+msgstr "Recherche ..."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-loader.php:305
+#, php-format
+msgid "Studies <span>%s</span>"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-loader.php:343
+msgid "My Studies"
+msgstr "Mes Cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-loader.php:353
+msgid "Results"
+msgstr "Résultats"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-loader.php:363
+msgid "Stats"
+msgstr "Stats"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-loader.php:372
+msgid "Instructing Studies"
+msgstr "Charger le cours "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-notifications.php:50
+msgid "study"
+msgstr "cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-notifications.php:51
+msgid "Yes"
+msgstr "Oui"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-notifications.php:52
+msgid "No"
+msgstr "Non"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-notifications.php:59
+msgid "Action One"
+msgstr "Première Action"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-notifications.php:65
+msgid "Action Two"
+msgstr "Deuxième Action "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-notifications.php:123
+msgid "Multiple high-fives"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-notifications.php:123
+#, php-format
+msgid "%d new high-fives, multi-five!"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-notifications.php:127
+#, php-format
+msgid "%s sent you a high-five!"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-notifications.php:164
+#, php-format
+msgid "%s high-fived you!"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-notifications.php:167
+#, php-format
+msgid ""
+"Results for %s are out. You've recieved %s marks.\n"
+"\n"
+"see quiz results %s ,evaluated by %s [%s]\n"
+"\n"
+"\n"
+"---------------------\n"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:98
+msgid "Study Settings Header"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:102
+msgid "study Settings"
+msgstr "Paramètres du cours "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:110
+msgid "Changes Saved."
+msgstr "Modifications Enregistrées"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:116
+msgid "Do you love clicking checkboxes?"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:118
+msgid "Save Settings"
+msgstr "Enregistrer les Paramétres"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:153
+msgid "Send Bulk Message"
+msgstr "Envoyer un Message en Vrac"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:154
+msgid "Add Students to Study"
+msgstr "Ajouter des Elèves au Cours "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:155
+msgid "Assign Badges/Certificates to Students"
+msgstr "Attribuer les Médailles/Attestations aux Elèves "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:164
+msgid "Type Message Subject"
+msgstr "Saisir l'Obget du Message "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:165
+msgid "Type Message"
+msgstr "Saisir le Message "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:166
+msgid "Send Message"
+msgstr "Envoyer le Message"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:179
+msgid "Enter Student Usernames, separated by comma"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:180
+msgid "Add Students"
+msgstr "Ajouter des Elèves "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:194
+msgid "ASSIGN STUDY BADGE"
+msgstr "ATTRIBUER UNE MEDAILLE "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:195
+msgid "ASSIGN STUDY CERTIFICATE"
+msgstr "ATTRIBUER UNE ATTESTATION"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:196
+msgid "REMOVE STUDY BADGE"
+msgstr "RETIRER UNE MEDAILLE"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:197
+msgid "REMOVE STUDY CERTIFICATE"
+msgstr "RETIRER UNE ATTESTATION"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-screens.php:199
+msgid "Assign Action"
+msgstr "Attribuer une Action"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:200
+#, php-format
+msgid "Viewing page %1$s of %2$s"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:408
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:411
+msgid "REVIEWS"
+msgstr "AVIS "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:419
+msgid "STUDENTS"
+msgstr "ELEVES"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:541
+msgid "MEMBERSHIP"
+msgstr "ABONNEMENT"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:543
+msgid "No Level Selected"
+msgstr "Aucun Niveau Sélectionné"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:559
+msgid "PRIVATE"
+msgstr "PRIVE"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1153
+msgid "STUDY EVALUATED "
+msgstr "COURS EVALUE"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1169
+msgid "Congratulations ! You've earned the "
+msgstr "Félicitations ! Vous avez obtenu"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1169
+msgid "Badge"
+msgstr "Médaille"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1192
+msgid ""
+"Congratulations ! You've successfully passed the study and earned the "
+"Study Completion Certificate !"
+msgstr ""
+"Félicitations! Vous avez passé avec succès le cours et obtenu l'Attestation "
+"de Réussite !"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1196
+msgid " got a caertificate in the study "
+msgstr "a obtenu une attestation dans ce cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1215
+msgid "Auto evaluated Study for Student"
+msgstr "Cours auto évalué pour l'élève"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1225
+msgid "STUDY SUBMITTED FOR EVALUATION"
+msgstr "COURS SOUMIS POUR EVALUATION"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1234
+msgid "PLEASE COMPLETE THE "
+msgstr "VEUILLEZ COMPLETER LE "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-template.php:1237
+msgid "STUDY CURRICULUM NOT SET"
+msgstr "PROGRAMME DE COURS NON DEFINI"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:31
+msgid "BuddyPress Study Widget"
+msgstr "Widget BuddyPress de Cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:87
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:223
+msgid "by"
+msgstr "par"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:143
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:254
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:377
+msgid "Widget Title"
+msgstr "Titre du Widget"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:144
+msgid "Style"
+msgstr "Style "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:146
+msgid "Single"
+msgstr "Unique"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:147
+msgid "List"
+msgstr "Liste"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:148
+msgid "Carousel"
+msgstr "Carrousel"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:151
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:295
+msgid "Select Study Category"
+msgstr "Sélectionner une Catégorie de Cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:161
+msgid "Order By"
+msgstr "Commander par"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:163
+msgid "Random"
+msgstr "Aléatoire"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:164
+msgid "Name"
+msgstr "Nom"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:165
+msgid "Study Title"
+msgstr "Titre du Cours "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:166
+msgid "Number of Reviews"
+msgstr "Nombre d'Avis"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:167
+msgid "Date Published"
+msgstr "Date de Publication"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:168
+msgid "Rating"
+msgstr "Evaluation"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:169
+msgid "Number of Students"
+msgstr "Nombre d'Elèves "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:172
+msgid "Sort "
+msgstr "Trier"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:174
+msgid "Ascending"
+msgstr "Ordre croissant"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:175
+msgid "Decending"
+msgstr "Ordre décroissant"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:178
+msgid "Specific Studies (enter comma saperated ids)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:179
+msgid "Number of Studies to show"
+msgstr "Nombre des cours à afficher"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:193
+msgid "BuddyPress Instructor Widget"
+msgstr "BuddyPress Widget du Professeur"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:217
+msgid "Check all Studies created by "
+msgstr "Consulter tous les Cours créés par"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:218
+msgid "More Studies by "
+msgstr "Plusieurs"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:255
+msgid "Fallback Instructor ID"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:256
+msgid "Number of Studies by the Instructor to show"
+msgstr "Nombre de Cours par le Professeur à afficher"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:270
+msgid "BuddyPress Study Search Widget"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:311
+msgid "Select Instructor"
+msgstr "Sélectionner un Professeur"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:320
+msgid "Type Keywords.."
+msgstr "Saisir les Mots clés "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:378
+msgid "Show Study Category Dropdown"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/bp-study-widgets.php:379
+msgid "Show Instructor Dropdown"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/study-loop.php:94
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/my-studies.php:111
+msgid "You have not subscribed to any Study."
+msgstr "Vous n'êtes inscris sur aucun cours "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:25
+msgid "Groups Directory"
+msgstr "Répertoire des Groupes"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:54
+msgid "Group Name (required)"
+msgstr "Nom du Groupe (obligatoire)"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:57
+msgid "Group Description (required)"
+msgstr "Description du Groupe (obligatoire)"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:73
+msgid "Privacy Options"
+msgstr "Options Privées"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:77
+msgid "This is a public group"
+msgstr "Ce groupe est public"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:79
+msgid "Any site member can join this group."
+msgstr "Tout membre du site peut rejoindre ce groupe "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:80
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:89
+msgid ""
+"This group will be listed in the groups directory and in search results."
+msgstr ""
+"Ce groupe sera listé dans le répertoire des groupes et dans les résultats de "
+"recherche."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:81
+msgid "Group content and activity will be visible to any site member."
+msgstr ""
+"Le contenu et les activités de ce groupe seront visible par tout membre de "
+"ce site."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:86
+msgid "This is a private group"
+msgstr "Ce groupe est privé"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:88
+msgid "Only users who request membership and are accepted can join the group."
+msgstr ""
+"Seuls les utilisateurs ayant fait une demande d'adhésion et dont les "
+"demandes ont été acceptées peuvent rejoindre le groupe."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:90
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:99
+msgid ""
+"Group content and activity will only be visible to members of the group."
+msgstr ""
+"Le Contenu et les activités de ce groupe ne seront visibles qu'aux membres "
+"du groupe."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:95
+msgid "This is a hidden group"
+msgstr "Ce groupe est masqué"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:97
+msgid "Only users who are invited can join the group."
+msgstr "Seuls les utilisateurs invités peuvent rejoindre ce groupe "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:98
+msgid ""
+"This group will not be listed in the groups directory or search results."
+msgstr ""
+"Ce groupe ne sera pas listé dans le répertoire des groupes et les résultats "
+"de recherche."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:104
+msgid "Group Invitations"
+msgstr "Invitations du Groupe "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:106
+msgid "Which members of this group are allowed to invite others?"
+msgstr ""
+"Quels membres de ce groupe sont autorisés à inviter d'autres personnes?"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:111
+msgid "All group members"
+msgstr "Tous les membres du groupe"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:116
+msgid "Group admins and mods only"
+msgstr "Admins et Modérateurs de groupe seulement"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:121
+msgid "Group admins only"
+msgstr "Administrateur de groupe seulement"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:127
+msgid "Group Forums"
+msgstr "Forums de Groupe"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:131
+msgid "Should this group have a forum?"
+msgstr "Est-ce que ce groupe doit avoir un forum?"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:134
+msgid "Enable discussion forum"
+msgstr "Permettre les discusussions sur le forum "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:138
+#, php-format
+msgid ""
+"<strong>Attention Site Admin:</strong> Group forums require the <a href=\"%s"
+"\">correct setup and configuration</a> of a bbPress installation."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:164
+msgid ""
+"Upload an image to use as an avatar for this group. The image will be shown "
+"on the main group page, and in search results."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:168
+msgid "Upload Image"
+msgstr "Charger une Image"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:172
+msgid "To skip the avatar upload process, hit the \"Next Step\" button."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:179
+msgid "Crop Group Avatar"
+msgstr "Recadrer l'Avatar du Groupe"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:181
+msgid "Avatar to crop"
+msgstr "Avatar à recadrer"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:184
+msgid "Avatar preview"
+msgstr "Aperçu de l'Avatar"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:187
+msgid "Crop Image"
+msgstr "Recadrer l'Image"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:226
+msgid "Select people to invite from your friends list."
+msgstr "Sélectionnez des personnes à inviter à partir de votre liste d'amis."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:244
+msgid "Remove Invite"
+msgstr "Retirer l'Invité"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:261
+msgid ""
+"Once you have built up friend connections you will be able to invite others "
+"to your group."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:283
+msgid "Back to Previous Step"
+msgstr "Retour à l'étape précédente"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:290
+msgid "Next Step"
+msgstr "Etape suivante"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:297
+msgid "Create Group and Continue"
+msgstr "Créer le Groupe et Continuer"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/create.php:304
+msgid "Finish"
+msgstr "Terminer"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/index.php:29
+msgid "Become a Teacher"
+msgstr "Devenir un Professeur"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/index.php:54
+#, php-format
+msgid "All Studies <span>%s</span>"
+msgstr "Tous les cours <span>%s</span>"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/index.php:58
+#, php-format
+msgid "My Studies <span>%s</span>"
+msgstr "Mes Cours <span>%s</span>"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/index.php:76
+msgid "Order By:"
+msgstr "Classer par:"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/index.php:78
+msgid "Alphabetical"
+msgstr "Ordre Alphabétique"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/index.php:79
+msgid "Most Members"
+msgstr "Popularité"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/index.php:80
+msgid "Newly Created"
+msgstr "Récence"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/index.php:81
+msgid "Highest Rated"
+msgstr "Notes"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/my-studies.php:59
+msgid "Start Study"
+msgstr "Commencer le Cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/my-studies.php:62
+msgid "Continue Study"
+msgstr "Continuer le Cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/my-studies.php:65
+msgid "Study Finished"
+msgstr "Cours Terminé"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:27
+msgid "QUIZ SUBMISSIONS"
+msgstr "SOUMISSIONS"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:50
+msgid "Reset Quiz for User"
+msgstr "Réinitialiser le Quiz pour l'Utilisateur"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:51
+msgid "Evaluate Quiz for User"
+msgstr "Evaluer le Quiz pour l'Utilisateur"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:65
+msgid "STUDY SUBMISSIONS"
+msgstr "SOUMISSION DU COURS"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:86
+msgid "Evaluate Study for User"
+msgstr "Evaluer le Cours pour l'Utilisateur"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:108
+msgid "Total Number of Students who took this study"
+msgstr "Nombre total d'élèves qui ont pris ce cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:109
+msgid "Average Percentage obtained by Students"
+msgstr "Pourcentage moyen obtenu par les élèves"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:110
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:117
+msgid "Number of Students who got a Badge"
+msgstr "Nombre d'élèves qui ont obtenu une Médaille"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:111
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:116
+msgid "Number of Passed Students"
+msgstr "Nombre d'élèves ayant réussi"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:112
+msgid "Number of Students who did not pass "
+msgstr "Nombre d'élèves n'ayant pas réussi"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:115
+msgid "Average Marks obtained by Students"
+msgstr "Note Moyenne obtenue par les élèves "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:132
+msgid "Average Marks in Quiz "
+msgstr "Note Moyenne dans le Quiz"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:140
+msgid "Calculate :"
+msgstr "Calculer"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:141
+msgid "Calculate Statistics for Study"
+msgstr "Calculer les statistiques du cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:150
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/members.php:9
+msgid "Total number of Students in study"
+msgstr "Nombre total d'élèves dans ce cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/admin.php:151
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/members.php:10
+msgid "Students Currently taking this study"
+msgstr "Elèves suivant actuellement ce cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/study-header.php:39
+msgid "Instructors"
+msgstr "Professeurs"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/curriculum.php:8
+msgid "Study Curriculum"
+msgstr "Programme du Cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/curriculum.php:29
+msgid "FREE"
+msgstr "GRATUIT"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/front.php:10
+msgid "Requires completition of study "
+msgstr "Exige de terminer le cours"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/home.php:24
+msgid "Structure"
+msgstr "Structure"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/home.php:29
+msgid "Admin"
+msgstr "Administrateur"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/home.php:30
+msgid "Units"
+msgstr "Chapitres"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-study-module/includes/templates/study/single/home.php:106
+msgid "Related Studies"
+msgstr "Cours associés"

@@ -1,0 +1,1782 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: QuantiPress v1.4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-22 17:47+0530\n"
+"PO-Revision-Date: 2014-05-22 17:48+0530\n"
+"Last-Translator: QuantiModo <quantimodo@gmail.com>\n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ qm
+#: bp-study-actions.php:20
+#, fuzzy
+msgid "Removed a student from Study"
+msgstr "Teilnehmer aus dem Kurs entfernen "
+
+#: bp-study-actions.php:21 bp-study-actions.php:25
+#, fuzzy
+msgid "Student submitted a Study"
+msgstr "Eingeschickt "
+
+#: bp-study-actions.php:22 bp-study-actions.php:24
+#, fuzzy
+msgid "Student started a Study"
+msgstr "Teilnehmer "
+
+#: bp-study-actions.php:23
+#, fuzzy
+msgid "Student submitted a Quiz"
+msgstr "Eingeschickt "
+
+# @ qm
+#: bp-study-actions.php:26
+#, fuzzy
+msgid "Study reset for Student"
+msgstr "Kurs für den Benutzer zurücksetzen "
+
+# @ qm
+#: bp-study-actions.php:27
+#, fuzzy
+msgid "Bulk action by instructor"
+msgstr "Trainer "
+
+#: bp-study-actions.php:28
+#, fuzzy
+msgid "Study Evaluated for student"
+msgstr "Teilnehmer "
+
+# @ qm
+#: bp-study-actions.php:29
+#, fuzzy
+msgid "Student got a Badge"
+msgstr "Anzahl der Teilnehmer, die einen Badge erhalten haben "
+
+# @ qm
+#: bp-study-actions.php:30
+#, fuzzy
+msgid "Student got a certificate"
+msgstr "Teilnehmer "
+
+#: bp-study-actions.php:31
+#, fuzzy
+msgid "Quiz Evaluated for student"
+msgstr " automatisch für den Teilnehmer ausgewertet "
+
+# @ qm
+#: bp-study-actions.php:32
+#, fuzzy
+msgid "Student subscribed for study"
+msgstr "KURSEINSCHREIBUNG FÜR "
+
+#: bp-study-actions.php:50 bp-study-actions.php:52
+msgid "per"
+msgstr "pro"
+
+# @ qm
+#: bp-study-actions.php:68
+msgid "SUBSCRIPTION FOR"
+msgstr "EINGESCHRIEBEN FÜR "
+
+# @ qm
+#: bp-study-actions.php:100 bp-study-actions.php:121
+msgid "Student subscribed for study "
+msgstr "Teilnehmer für Kurs angemeldet"
+
+# @ qm
+#: bp-study-actions.php:101 bp-study-actions.php:122 bp-study-ajax.php:294
+#: bp-study-ajax.php:295 bp-study-ajax.php:452 bp-study-ajax.php:468
+#: bp-study-ajax.php:485 bp-study-ajax.php:519 bp-study-functions.php:404
+#: bp-study-functions.php:655 bp-study-template.php:1172
+#: bp-study-template.php:1196 bp-study-template.php:1216
+msgid "Student "
+msgstr "Teilnehmer "
+
+# @ qm
+#: bp-study-actions.php:101 bp-study-actions.php:122 bp-study-ajax.php:783
+#: bp-study-ajax.php:818
+msgid " subscribed for study "
+msgstr "eingeschrieben für den Kurs"
+
+#: bp-study-actions.php:101 bp-study-actions.php:122
+msgid " for "
+msgstr "für"
+
+#: bp-study-actions.php:101 bp-study-actions.php:122
+msgid " days"
+msgstr "Tage"
+
+# @ qm
+#: bp-study-actions.php:153
+#, php-format
+msgid "All Instructors <span>%s</span>"
+msgstr "Alle Trainer <span>%s</span>"
+
+#: bp-study-activity.php:93
+#, php-format
+msgid "%1$s wrote a new %2$s, %3$s, on the site %4$s"
+msgstr "%1$s schrieb einen neuen %2$s, %3$s, auf der Seite %4$s"
+
+#: bp-study-activity.php:95
+#, php-format
+msgid "%1$s wrote a new %2$s, %3$s"
+msgstr " %1$s schrieb einen neuen  %2$s, %3$s"
+
+#: bp-study-activity.php:108
+#, php-format
+msgid "%1$s reviewed the %2$s, %3$s, on the site %4$s"
+msgstr "%1$s rezensierte %2$s, %3$s, auf der Seite %4$s"
+
+#: bp-study-activity.php:110
+#, php-format
+msgid "%1$s reviewed the %2$s, %3$s"
+msgstr "%1$s rezensierte %2$s, %3$s"
+
+#: bp-study-activity.php:114
+#, php-format
+msgid "%1$s answered the %2$s, %3$s, on the site %4$s"
+msgstr "%1$s beantwortete %2$s, %3$s, auf der Seite %4$s"
+
+#: bp-study-activity.php:116
+#, php-format
+msgid "%1$s answered the %2$s, %3$s"
+msgstr "%1$s beantwortete %2$s, %3$s"
+
+# @ qm
+#: bp-study-ajax.php:37 bp-study-ajax.php:947
+msgid "Security check Failed. Contact Administrator."
+msgstr "Sicherheitstest fehlgeschlagen. Kontaktieren Sie den Administrator."
+
+# @ qm
+#: bp-study-ajax.php:61
+msgid "Student finished unit "
+msgstr "Teilnehmer hat eine Lektion beendet"
+
+#: bp-study-ajax.php:62
+msgid "Student finished the unit "
+msgstr "Teilnehmer hat die Lektion beendet"
+
+#: bp-study-ajax.php:62 bp-study-ajax.php:999
+msgid " in study "
+msgstr "im Kurs"
+
+# @ qm
+#: bp-study-ajax.php:85
+msgid "Answer Reset"
+msgstr "Antwort zurückgesetzt"
+
+# @ qm
+#: bp-study-ajax.php:87
+msgid "Unable to Reset"
+msgstr "Kann nicht zurückgesetzt werden"
+
+#: bp-study-ajax.php:98 bp-study-ajax.php:206 bp-study-ajax.php:280
+#: bp-study-ajax.php:315 bp-study-ajax.php:389 bp-study-ajax.php:538
+#: bp-study-ajax.php:589 bp-study-functions.php:384
+msgid "Security check failed !"
+msgstr "Sicherheitstest fehlgeschlagen."
+
+#: bp-study-ajax.php:103
+msgid "Incorrect Study selected."
+msgstr "Falschen Kurs ausgewählt."
+
+#: bp-study-ajax.php:190
+msgid "Statistics successfully calculated. Reloading..."
+msgstr "Statistik erfolgreich berechnet. Neu laden ..."
+
+# @ qm
+#: bp-study-ajax.php:192
+msgid "Unable to calculate Average."
+msgstr "Durchschnitt kann nicht berechnet werden. "
+
+#: bp-study-ajax.php:203
+msgid "SHOW STATS"
+msgstr "Statistik anzeigen "
+
+#: bp-study-ajax.php:203
+msgid "HIDE"
+msgstr "VERBERGEN"
+
+#: bp-study-ajax.php:211
+msgid "Incorrect User selected."
+msgstr "Falschen Benutzer ausgewählt. "
+
+# @ qm
+#: bp-study-ajax.php:222
+msgid "This User has not started the study."
+msgstr "Dieser Benutzer hat den Kurs noch nicht begonnen. "
+
+#: bp-study-ajax.php:224
+msgid "This User has completed the study."
+msgstr "Dieser Benutzer hat dne Kurs vollständig bearbeitet. "
+
+#: bp-study-ajax.php:225
+msgid "Student Score for Study "
+msgstr "Kursergebnis des Teilnehmers "
+
+# @ qm
+#: bp-study-ajax.php:225
+msgid " out of 100"
+msgstr "von 100"
+
+# @ qm
+#: bp-study-ajax.php:235
+msgid "Study Started : "
+msgstr "Kurs begonnen : "
+
+# @ qm
+#: bp-study-ajax.php:236
+msgid " ago"
+msgstr "vor "
+
+# @ qm
+#: bp-study-ajax.php:240
+msgid "Curriculum :"
+msgstr "Kursablauf "
+
+#: bp-study-ajax.php:241
+msgid "Quizes"
+msgstr "Quiz"
+
+#: bp-study-ajax.php:251
+msgid "Marks Obtained : "
+msgstr "Bewertung, die die Teilnehmer erreicht haben "
+
+#: bp-study-ajax.php:251
+msgid "Under Evaluation"
+msgstr "Unter Auswertung"
+
+# @ qm
+#: bp-study-ajax.php:266
+msgid "Units Completed "
+msgstr "Vollständige Lektionen "
+
+# @ qm
+#: bp-study-ajax.php:266 bp-study-ajax.php:513 bp-study-ajax.php:519
+#: bp-study-ajax.php:561
+msgid " out of "
+msgstr "von "
+
+#: bp-study-ajax.php:285 bp-study-ajax.php:320 bp-study-ajax.php:394
+#: bp-study-ajax.php:543 bp-study-ajax.php:594 bp-study-functions.php:388
+msgid " Incorrect User selected."
+msgstr "Falschen Benutzer ausgewählt. "
+
+# @ qm
+#: bp-study-ajax.php:291
+msgid "User removed from the Study"
+msgstr "Teilnehmer aus dem Kurs entfernt  "
+
+# @ qm
+#: bp-study-ajax.php:294
+msgid " removed from study "
+msgstr " aus dem Kurs entfernt"
+
+# @ qm
+#: bp-study-ajax.php:295
+msgid " removed from the study "
+msgstr " aus diesem Kurs entfernt "
+
+#: bp-study-ajax.php:303
+msgid ""
+"There was issue in removing this user from the Study. Please contact admin."
+msgstr ""
+"Es gab ein Problem beim Entfernen dieses Benutzers aus dem Kurs. Bitte "
+"kontaktieren Sie den Admin."
+
+# @ qm
+#: bp-study-ajax.php:367
+msgid "Study Reset for User"
+msgstr "Kurs für den Benutzer zurückgesetzt"
+
+# @ qm
+#: bp-study-ajax.php:369
+msgid "Study reset for student "
+msgstr "Kurs für den Benutzer zurückgesetzt "
+
+# @ qm
+#: bp-study-ajax.php:370
+msgid "Study "
+msgstr "Kurs"
+
+#: bp-study-ajax.php:370
+msgid " reset for student "
+msgstr "Kurs für den Teilnehmer zurückgesetzt"
+
+# @ qm
+#: bp-study-ajax.php:377
+msgid ""
+"There was issue in resetting this study for the user. Please contact admin."
+msgstr ""
+"Es gab ein Problem beim Zurücksetzen des Kurses für den Teilnehmer. Bitte "
+"kontaktieren sie den Admin. "
+
+#: bp-study-ajax.php:407
+msgid "Quiz Reset for Selected User"
+msgstr "Quiz für den ausgewählten Benutzer zurückgesetzt"
+
+#: bp-study-ajax.php:409
+msgid "Could not find Quiz results for User. Contact Admin."
+msgstr ""
+"Quizergebnisse für den Benutzer konnten nicht gefunden werden. Kontakt Sie "
+"den Admin."
+
+# @ qm
+#: bp-study-ajax.php:413
+msgid "Instructor Reseted the Quiz for User"
+msgstr "Trainer hat das Quiz für den Benutzer zurückgesetzt"
+
+#: bp-study-ajax.php:414 bp-study-functions.php:622
+#: bp-study-functions.php:1016
+msgid "Quiz "
+msgstr "Quiz "
+
+# @ qm
+#: bp-study-ajax.php:414
+msgid " was reset by the Instructor for user"
+msgstr "Kurs für den Benutzer zurückgesetzt  "
+
+# @ qm
+#: bp-study-ajax.php:451 bp-study-template.php:1171
+msgid "Student got a Badge in the study "
+msgstr "Teilnehmer, die einen Badge für den Kurs erhalten haben "
+
+#: bp-study-ajax.php:452 bp-study-template.php:1172
+msgid " got a badge in the study "
+msgstr "Teilnehmer, die einen Badge erhalten haben "
+
+# @ qm
+#: bp-study-ajax.php:467 bp-study-template.php:1195
+msgid "Student got a Certificate in the study "
+msgstr "Teilnehmer hat ein Zertifikat erhalten  "
+
+#: bp-study-ajax.php:468
+msgid " got a certificate in the study "
+msgstr "erhielt ein Zertifikat für den Kurs "
+
+#: bp-study-ajax.php:476 bp-study-ajax.php:513 bp-study-template.php:1205
+msgid "You've obtained "
+msgstr "Sie haben erreicht "
+
+#: bp-study-ajax.php:476 bp-study-template.php:1205
+msgid " out of 100 in Study :"
+msgstr "von 100 im Kurs : "
+
+# @ qm
+#: bp-study-ajax.php:477 bp-study-template.php:1206
+msgid "Study results available"
+msgstr "Ergebnisse verfügbar "
+
+#: bp-study-ajax.php:478
+msgid "STUDY MARKED COMPLETE"
+msgstr "KURS ALS VOLLSTÄNDIG MARKIERT "
+
+#: bp-study-ajax.php:480 bp-study-template.php:1211
+msgid "FAILED TO MARK STUDY, CONTACT ADMIN"
+msgstr "KURS KONNTE NICHT BEWERTET WERDEN, KONTAKTIEREN SIE DEN ADMIN. "
+
+# @ qm
+#: bp-study-ajax.php:484
+msgid "Instructor evaluated Study for Student"
+msgstr "Trainer hat Kurs für den Teilnehmer ausgewertet "
+
+#: bp-study-ajax.php:485 bp-study-ajax.php:519 bp-study-template.php:1216
+msgid " got "
+msgstr " erhalten "
+
+#: bp-study-ajax.php:485 bp-study-template.php:1216
+msgid " out of 100 in study "
+msgstr " von 100 im Kurs "
+
+# @ qm
+#: bp-study-ajax.php:513
+msgid " in Quiz"
+msgstr "im Quiz "
+
+# @ qm
+#: bp-study-ajax.php:514
+msgid "Quiz results available"
+msgstr "Quizergebnisse verfügbar "
+
+# @ qm
+#: bp-study-ajax.php:517
+msgid "Instructor evaluated Quiz for student "
+msgstr "Trainer wertet das Quiz für den Benutzer aus. "
+
+# @ qm
+#: bp-study-ajax.php:519
+msgid " in Quiz "
+msgstr " im Quiz "
+
+#: bp-study-ajax.php:561
+msgid "MARKS: "
+msgstr " Bewertungen: "
+
+#: bp-study-ajax.php:561 bp-study-ajax.php:566
+msgid " PENDING"
+msgstr "ANSTEHEND"
+
+#: bp-study-ajax.php:566
+msgid "DONE"
+msgstr "ERLEDIGT"
+
+# @ pmpro
+# @ woocommerce
+#: bp-study-ajax.php:575 bp-study-ajax.php:705
+msgid "Total"
+msgstr "Gesamt "
+
+#: bp-study-ajax.php:576
+msgid "Study Percentage (Out of 100)"
+msgstr "Prozentanteil am Kurs (von 100)"
+
+#: bp-study-ajax.php:576
+msgid "Study Percentage out of 100"
+msgstr "Prozentanteil am Kurs von 100"
+
+# @ qm
+#: bp-study-ajax.php:577
+msgid "Mark Study Complete"
+msgstr "Markieren Sie den Kurs als vollständig bearbeitet"
+
+#: bp-study-ajax.php:599
+msgid " Incorrect Quiz Id."
+msgstr "Falsche Quiz-ID."
+
+# @ qm
+#: bp-study-ajax.php:617
+msgid "Marked Answer :"
+msgstr "Bewertete Antwort : "
+
+# @ qm
+#: bp-study-ajax.php:680
+msgid "Correct Answer :"
+msgstr "Richtige Antwort: "
+
+# @ qm
+#: bp-study-ajax.php:690 bp-study-ajax.php:695
+msgid "Marks Obtained"
+msgstr "Bewertungen, die die Teilnehmer erreicht haben "
+
+#: bp-study-ajax.php:690 bp-study-ajax.php:695
+msgid "Give marks"
+msgstr "Bewertungen vergeben "
+
+# @ qm
+#: bp-study-ajax.php:691
+msgid "Update Marks"
+msgstr "Bewertungen aktualisieren "
+
+#: bp-study-ajax.php:696
+msgid "Give Marks"
+msgstr "Bewertungen vergeben "
+
+#: bp-study-ajax.php:706
+msgid "Mark Quiz as Checked"
+msgstr "Markieren Sie das Quiz als korrigiert.  "
+
+#: bp-study-ajax.php:727 bp-study-ajax.php:732
+msgid "Set a Subject for the message"
+msgstr "Betreffzeile für diese Nachricht eingeben "
+
+# @ qm
+#: bp-study-ajax.php:742
+msgid "Messages Sent to "
+msgstr "Nachrichten gesendet an "
+
+# @ qm
+#: bp-study-ajax.php:742 bp-study-ajax.php:922
+msgid " members"
+msgstr " Mitglieder "
+
+#: bp-study-ajax.php:744 bp-study-ajax.php:933
+msgid "Please select members"
+msgstr "Bitte Mitglieder auswählen "
+
+#: bp-study-ajax.php:748
+msgid "Instructor sent Bulk message to students : "
+msgstr "Trainer sendet Massennachricht an alle Teilnehmer : "
+
+#: bp-study-ajax.php:749
+msgid "Bulk Message sent to students "
+msgstr "Massennachricht an alle Teilnehmer "
+
+#: bp-study-ajax.php:782 bp-study-ajax.php:817
+msgid "Instructor added Student for study "
+msgstr "Trainer fügte Teilnehmer zum Kurs hinzu "
+
+# @ qm
+#: bp-study-ajax.php:783 bp-study-ajax.php:818
+msgid "Instructore added Student "
+msgstr "Trainer hat Teilnehmer hinzugefügt "
+
+# @ qm
+#: bp-study-ajax.php:796 bp-study-ajax.php:831
+#: templates/study/single/admin.php:173
+msgid "Reset Study for User"
+msgstr "Kurs für den Benutzer zurücksetzen "
+
+# @ qm
+#: bp-study-ajax.php:797 bp-study-ajax.php:832
+#: templates/study/single/admin.php:174
+msgid "See Study stats for User"
+msgstr "Kursstatistik für den Teilnehmer ansehen "
+
+# @ qm
+#: bp-study-ajax.php:798 bp-study-ajax.php:833
+#: templates/study/single/admin.php:175
+msgid "Remove User from this Study"
+msgstr "Teilnehmer aus dem Kurs entfernen "
+
+#: bp-study-ajax.php:842
+#, fuzzy
+msgid "Instructor added students in study  "
+msgstr "Anzahl der Kursteilnehmer "
+
+# @ qm
+#: bp-study-ajax.php:843
+#, fuzzy
+msgid "Instructor added "
+msgstr "Trainer "
+
+#: bp-study-ajax.php:843 bp-study-ajax.php:925
+#, fuzzy
+msgid " students in study "
+msgstr "Anzahl der Kursteilnehmer "
+
+#: bp-study-ajax.php:865
+msgid "Select Assign Value"
+msgstr "Fügen Sie einen Wert hinzu "
+
+#: bp-study-ajax.php:922
+msgid "Action assigned to "
+msgstr "Aktivität zugewiesen"
+
+#: bp-study-ajax.php:924
+msgid "Instructor assigned/removed Certificate/Badges  "
+msgstr ""
+
+#: bp-study-ajax.php:925
+msgid "Instructor added/removed Badges/Certificates from "
+msgstr ""
+
+#: bp-study-ajax.php:930
+msgid "Could not assign action to members"
+msgstr "Aktion konnte den Mitgliedern nicht hinzugefügt werden "
+
+#: bp-study-ajax.php:990
+msgid "Unit will be available in "
+msgstr "Lektion wird verfügbar sein in "
+
+#: bp-study-ajax.php:998
+msgid "Student started a unit"
+msgstr "Teilnehmer hat eine Lektion begonnen "
+
+#: bp-study-ajax.php:999
+msgid "Student started the unit "
+msgstr "Teilnehmer hat die Lektion begonnen "
+
+# @ qm
+#: bp-study-ajax.php:1008
+msgid "Unit can not be accessed."
+msgstr "Lektion kann nicht aufgerufen werden. "
+
+# @ qm
+#: bp-study-ajax.php:1031 templates/study/single/curriculum.php:43
+msgid " Hours"
+msgstr "Stunden "
+
+# @ qm
+#: bp-study-ajax.php:1031 templates/study/single/curriculum.php:43
+msgid " minutes"
+msgstr " Minuten "
+
+# @ qm
+#: bp-study-ajax.php:1057
+msgid "Back to Quiz"
+msgstr "Zurück zum Quiz "
+
+# @ qm
+#: bp-study-ajax.php:1059
+msgid "Previous Unit"
+msgstr "Vorige Lektion "
+
+# @ qm
+#: bp-study-ajax.php:1065
+msgid "Start Quiz"
+msgstr "Quiz beginnen "
+
+# @ qm
+#: bp-study-ajax.php:1067
+msgid "Mark this Unit Complete"
+msgstr "Markieren Sie diese Lektion als vollständig bearbeitet. "
+
+# @ qm
+#: bp-study-ajax.php:1088
+msgid "Proceed to Quiz"
+msgstr "Weiter zum Quiz "
+
+# @ qm
+#: bp-study-ajax.php:1090
+msgid "Next Unit"
+msgstr "Nächste Lektion "
+
+#: bp-study-cssjs.php:21
+msgid "Too Fast or Answer not marked."
+msgstr "Zu schnell, oder Antwort nicht markiert. "
+
+# @ qm
+#: bp-study-cssjs.php:22
+msgid "Answer Saved."
+msgstr "Antwort gespeichert. "
+
+# @ pmpro
+#: bp-study-cssjs.php:23
+msgid "Processing..."
+msgstr "Weiter..."
+
+#: bp-study-cssjs.php:24
+msgid "Saving Answer...please wait"
+msgstr "Antwort wird gespeichert ... bitte warten "
+
+#: bp-study-cssjs.php:25
+msgid ""
+"This step is irreversible. Are you sure you want to remove the User from the "
+"study ?"
+msgstr ""
+"Dieser Schritt kann nicht rückgängig gemacht werden. Sind Sie sicher, dass "
+"Sie den Benutzer aus dem Kurs entfernen möchten?"
+
+# @ qm
+#: bp-study-cssjs.php:26
+msgid "Confirm, Remove User from Study"
+msgstr "Bestätigen Sie: Teilnehmer aus dem Kurs entfernen."
+
+# @ qm
+# @ pmpro
+#: bp-study-cssjs.php:27
+msgid "Cancel"
+msgstr "Beenden "
+
+#: bp-study-cssjs.php:28
+msgid ""
+"This step is irreversible. All Units, Quiz results would be reset for this "
+"user. Are you sure you want to Reset the Study for this User?"
+msgstr ""
+"Dieser Schritt kann nicht rückgängig gemacht werden. Alle Antworten dieses "
+"Benutzers werden zurückgesetzt. Sind sie sicher, dass Sie den Kurs für "
+"diesen Benutzer zurücksetzen möchten?"
+
+# @ qm
+#: bp-study-cssjs.php:29
+msgid "Confirm, Reset Study for this User"
+msgstr "Bestätigen sie: Kurs für den Benutzer zurücksetzen "
+
+#: bp-study-cssjs.php:30
+msgid ""
+"This step is irreversible. All Questions answers would be reset for this "
+"user. Are you sure you want to Reset the Quiz for this User? "
+msgstr ""
+"Dieser Schritt kann nicht rückgängig gemacht werden. Alle Fragen dieses "
+"Benutzers werden zurückgesetzt. Sind sie sicher, dass Sie den Kurs für "
+"diesen Benutzer zurücksetzen möchten?"
+
+# @ qm
+#: bp-study-cssjs.php:31
+msgid "Confirm, Reset Quiz for this User"
+msgstr "Bestätigen Sie: Quiz für den Benutzer zurücksetzen "
+
+# @ qm
+#: bp-study-cssjs.php:32
+msgid "Marks Saved"
+msgstr "Bewertungen gespeichert "
+
+#: bp-study-cssjs.php:33
+msgid "Quiz Marks Saved"
+msgstr "Quizbewertungen gespeichert "
+
+# @ qm
+#: bp-study-cssjs.php:34
+msgid "Submit Quiz"
+msgstr "Quizergebnisse absenden "
+
+# @ qm
+#: bp-study-cssjs.php:35
+msgid "Sending Messages ..."
+msgstr "Nachrichten absenden ..."
+
+#: bp-study-cssjs.php:36
+msgid "Adding Students to Study ..."
+msgstr "Teilnehmer zum Kurs hinzufügen ..."
+
+# @ qm
+#: bp-study-cssjs.php:37
+msgid "Students successfully added to Study"
+msgstr "Teilnehmer dem Kurs hinzugefügt "
+
+# @ qm
+#: bp-study-cssjs.php:38
+msgid "Unable to Add students to Study"
+msgstr "Kann den Teilnehmer nicht hinzufügen "
+
+# @ pmpro
+#: bp-study-filters.php:172
+msgid "No Studies found."
+msgstr "Keine Kurse gefunden. "
+
+# @ qm
+#: bp-study-functions.php:47
+msgid "Study Directory"
+msgstr "Kursverzeichnis "
+
+# @ qm
+#: bp-study-functions.php:48
+msgid "All Studies by all instructors"
+msgstr "Alle Kurse aller Trainer "
+
+# @ qm
+#: bp-study-functions.php:80 bp-study-loader.php:408
+#: templates/study/single/home.php:23
+msgid "Home"
+msgstr "Startseite "
+
+# @ qm
+#: bp-study-functions.php:86
+msgid "Curriculum"
+msgstr "Kursablauf "
+
+# @ buddypress
+# @ qm
+#: bp-study-functions.php:92
+msgid "Members"
+msgstr "Mitglieder "
+
+#: bp-study-functions.php:131
+msgid "Search"
+msgstr "Suche "
+
+# @ qm
+#: bp-study-functions.php:150 bp-study-functions.php:223
+msgid "TAKE THIS STUDY"
+msgstr "KURS BUCHEN "
+
+# @ qm
+#: bp-study-functions.php:187
+msgid "START STUDY"
+msgstr "KURS BEGINNEN "
+
+# @ qm
+#: bp-study-functions.php:193
+msgid "CONTINUE STUDY"
+msgstr "KURS FORTSETZEN "
+
+#: bp-study-functions.php:197
+msgid "STUDY UNDER EVALUATION"
+msgstr "KURS WIRD AUSGEWERTET "
+
+# @ qm
+#: bp-study-functions.php:200
+msgid "STUDY FINISHED"
+msgstr "KURS BEENDET "
+
+# @ qm
+#: bp-study-functions.php:211
+msgid "STUDY ENABLED"
+msgstr "KURS FREIGESCHALTET "
+
+#: bp-study-functions.php:211
+msgid "CONTACT ADMIN TO ENABLE"
+msgstr "KONTAKTIEREN SIE DEN ADMIN FÜR DIE FREISCHALTUNG "
+
+# @ qm
+#: bp-study-functions.php:216
+msgid "STUDY EXPIRED"
+msgstr "KURS AUSGELAUFEN "
+
+# @ qm
+#: bp-study-functions.php:225
+msgid "PRIVATE STUDY"
+msgstr "PRIVATER KURS "
+
+#: bp-study-functions.php:252
+msgid "* REQUIRES"
+msgstr "* ERFORDERT"
+
+# @ qm
+#: bp-study-functions.php:260
+msgid "Study Badge"
+msgstr "Kurs-Badge "
+
+# @ qm
+#: bp-study-functions.php:265
+msgid "Study Certificate"
+msgstr "Kurszertifikat "
+
+#: bp-study-functions.php:384 bp-study-functions.php:388
+msgid "Security Error"
+msgstr "Sicherheitsfehler"
+
+#: bp-study-functions.php:403
+msgid "Quiz retake by Student"
+msgstr "Teilnehmer wiederholt das Quiz "
+
+#: bp-study-functions.php:404
+msgid " initiated quiz retake "
+msgstr "Quizwiederholung initiiert "
+
+# @ qm
+#: bp-study-functions.php:467 bp-study-functions.php:475
+msgid "Next Question"
+msgstr "Nächste Frage "
+
+# @ qm
+#: bp-study-functions.php:471 bp-study-functions.php:474
+msgid "Previous Question"
+msgstr "Vorige Frage"
+
+#: bp-study-functions.php:525 bp-study-functions.php:918
+msgid "Time Remaining"
+msgstr "Verbleibende Zeit "
+
+#: bp-study-functions.php:526
+msgid "Mins"
+msgstr "Minuten "
+
+#: bp-study-functions.php:526
+msgid "Secs"
+msgstr "Sekunden "
+
+# @ qm
+#: bp-study-functions.php:568
+msgid "QUESTION"
+msgstr "Frage "
+
+#: bp-study-functions.php:608
+msgid "Right now"
+msgstr "Jetzt "
+
+#: bp-study-functions.php:621
+msgid "Student submitted the Quiz"
+msgstr "Teilnehmer hat die Quizergebnisse eingesandt "
+
+# @ qm
+#: bp-study-functions.php:622
+msgid " was submitted by student"
+msgstr " wurde vom Teilnehmer eingesandt "
+
+#: bp-study-functions.php:654
+msgid "Student started a quiz"
+msgstr "Teilnehmer startet Quiz  "
+
+#: bp-study-functions.php:655
+msgid " started the quiz "
+msgstr " hat Quiz begonnen "
+
+#: bp-study-functions.php:670 bp-study-functions.php:705
+#: bp-study-functions.php:735
+msgid "Quiz Timed Out ."
+msgstr "Quizzeit abgelaufen . "
+
+#: bp-study-functions.php:671 bp-study-functions.php:706
+#: bp-study-functions.php:736 bp-study-functions.php:740
+msgid "If you want to attempt again, Contact Instructor to reset the quiz."
+msgstr ""
+"Wenn Sie es noch einmal versuchen möchten, kontaktieren Sie den Trainer, "
+"damit er das Quiz zurückgesetzt."
+
+#: bp-study-functions.php:677
+msgid "Quiz Already Attempted."
+msgstr "Quiz bereits bearbeitet. "
+
+#: bp-study-functions.php:678
+msgid "Security Check Failed. Contact Site Admin."
+msgstr "Sicherheitstest fehlgeschlagen. Kontaktieren Sie den Admin."
+
+#: bp-study-functions.php:710
+msgid "Start Quiz to begin quiz."
+msgstr "Starten Sie das Quiz, um zu beginnen. "
+
+#: bp-study-functions.php:711
+msgid "Click \"Start Quiz\" button to start the Quiz."
+msgstr "Klicken Sie den \"Start Quiz\" -Button, um das Quiz zu starten."
+
+#: bp-study-functions.php:715
+msgid "Security Check Failed ."
+msgstr "Sicherheitstest fehlgeschlagen. "
+
+#: bp-study-functions.php:716
+msgid "Contact Site Admin."
+msgstr "Kontaktieren sie den Seiten-Admin. "
+
+#: bp-study-functions.php:739
+msgid "Quiz Already Attempted ."
+msgstr "Quiz bereits bearbeitet "
+
+# @ qm
+#: bp-study-functions.php:785
+msgid "Study Curriculum Not Set."
+msgstr "Keine Kursübersicht angelegt. "
+
+# @ qm
+#: bp-study-functions.php:849
+msgid "Attachments"
+msgstr "Anhänge "
+
+# @ qm
+#: bp-study-functions.php:857
+msgid "Have Questions ? Ask in the Unit Forums"
+msgstr ""
+"Hier geht es zu den Lektionenforen! Laden Sie hier Ihr Bilder hoch und "
+"diskutieren Sie Ihre Ergebnisse. "
+
+# @ qm
+#: bp-study-functions.php:878
+msgid "Instructor"
+msgstr "Trainer "
+
+#: bp-study-functions.php:1015
+msgid "Quiz Auto Evaluated"
+msgstr "Quiz automatisch ausgewertet. "
+
+#: bp-study-functions.php:1016
+msgid " auto evaluated for student "
+msgstr " automatisch für den Teilnehmer ausgewertet "
+
+#: bp-study-functions.php:1016
+msgid " with marks "
+msgstr " mit Bewertungen "
+
+#: bp-study-functions.php:1036
+msgid "Certificate not valid for user"
+msgstr "Zertifikat nicht gültig für den Teilnehmer "
+
+# @ qm
+#: bp-study-functions.php:1085
+msgid "Evaluate study submissions"
+msgstr "KURS EINSENDUNGEN AUSWERTEN "
+
+# @ qm
+#: bp-study-functions.php:1100
+msgid "Evaluate Quiz submissions"
+msgstr "EINSENDEAUFGABEN AUSWERTEN "
+
+# @ qm
+#: bp-study-functions.php:1105
+msgid "Manage Students"
+msgstr "Teilnehmer verwalten "
+
+# @ qm
+#: bp-study-functions.php:1106
+msgid "See Stats"
+msgstr "Kursstatistik ansehen "
+
+# @ qm
+#: bp-study-functions.php:1107
+msgid "See all Activity"
+msgstr "Alle Aktivitäten ansehen "
+
+# @ qm
+#: bp-study-loader.php:71
+msgid "Study"
+msgstr "Kurs "
+
+#: bp-study-loader.php:256
+msgid "Search ..."
+msgstr "Suche ... "
+
+# @ qm
+#: bp-study-loader.php:305
+#, php-format
+msgid "Studies <span>%s</span>"
+msgstr "Kurse <span>%s</span>"
+
+# @ qm
+#: bp-study-loader.php:343
+msgid "My Studies"
+msgstr "Meine Kurse "
+
+# @ qm
+#: bp-study-loader.php:353
+msgid "Results"
+msgstr "Ergebnisse "
+
+# @ qm
+#: bp-study-loader.php:363
+msgid "Stats"
+msgstr "Statistik "
+
+# @ qm
+#: bp-study-loader.php:372
+msgid "Instructing Studies"
+msgstr "Kurse anbieten "
+
+# @ qm
+#: bp-study-notifications.php:50
+msgid "study"
+msgstr "Kurs "
+
+# @ qm
+#: bp-study-notifications.php:51
+msgid "Yes"
+msgstr "Ja "
+
+# @ qm
+#: bp-study-notifications.php:52
+msgid "No"
+msgstr "Nein "
+
+# @ buddypress
+#: bp-study-notifications.php:59
+msgid "Action One"
+msgstr "Schritt 1"
+
+# @ buddypress
+#: bp-study-notifications.php:65
+msgid "Action Two"
+msgstr "Schritt 2 "
+
+#: bp-study-notifications.php:123
+msgid "Multiple high-fives"
+msgstr "Super Riesenglückwunsch! "
+
+#: bp-study-notifications.php:123
+#, php-format
+msgid "%d new high-fives, multi-five!"
+msgstr "%d new high-fives, multi-five!"
+
+#: bp-study-notifications.php:127
+#, php-format
+msgid "%s sent you a high-five!"
+msgstr "%s sendet Ihnen ein high-five!"
+
+#: bp-study-notifications.php:164
+#, php-format
+msgid "%s high-fived you!"
+msgstr "%s high-fived you!"
+
+#: bp-study-notifications.php:167
+#, php-format
+msgid ""
+"Results for %s are out. You've recieved %s marks.\n"
+"\n"
+"see quiz results %s ,evaluated by %s [%s]\n"
+"\n"
+"\n"
+"---------------------\n"
+msgstr ""
+"Die Ergebnisse für %s sind da. Sie haben %s Punkte erreicht.\n"
+"\n"
+"Sehen Sie sich die Quizergebnisse an %s ,überprüft von %s [%s]\n"
+"\n"
+"\n"
+"---------------------\n"
+
+# @ qm
+#: bp-study-screens.php:98
+msgid "Study Settings Header"
+msgstr "Kurseinstellungen Überschrift "
+
+# @ qm
+#: bp-study-screens.php:102
+msgid "study Settings"
+msgstr "Kurseinstellungen "
+
+# @ pmpro
+#: bp-study-screens.php:110
+msgid "Changes Saved."
+msgstr "Änderungen gespeichert. "
+
+# @ pmpro
+#: bp-study-screens.php:116
+msgid "Do you love clicking checkboxes?"
+msgstr "Mögen Sie es Checkboxen anzuklicken? "
+
+# @ qm
+#: bp-study-screens.php:118
+msgid "Save Settings"
+msgstr "Einstellungen speicher "
+
+# @ qm
+#: bp-study-screens.php:153
+msgid "Send Bulk Message"
+msgstr "Nachricht an alle absenden "
+
+#: bp-study-screens.php:154
+msgid "Add Students to Study"
+msgstr "Teilnehmer zum Kurs hinzufügen "
+
+#: bp-study-screens.php:155
+msgid "Assign Badges/Certificates to Students"
+msgstr "Den Teilnehmern Badges/ Zertifikate zuweisen "
+
+#: bp-study-screens.php:164
+msgid "Type Message Subject"
+msgstr "Betreff eingeben "
+
+# @ qm
+#: bp-study-screens.php:165
+msgid "Type Message"
+msgstr "Nachricht schreiben "
+
+# @ qm
+#: bp-study-screens.php:166
+msgid "Send Message"
+msgstr "Nachricht absenden "
+
+#: bp-study-screens.php:179
+msgid "Enter Student Usernames, separated by comma"
+msgstr "Geben Sie die Namen der Teilnehmer ein, kommagetrennt"
+
+# @ qm
+#: bp-study-screens.php:180
+msgid "Add Students"
+msgstr "Teilnehmer hinzufügen "
+
+# @ qm
+#: bp-study-screens.php:194
+msgid "ASSIGN STUDY BADGE"
+msgstr "Kurs-Badge verleihen "
+
+#: bp-study-screens.php:195
+msgid "ASSIGN STUDY CERTIFICATE"
+msgstr "Kurszertifikat verleihen "
+
+# @ qm
+#: bp-study-screens.php:196
+msgid "REMOVE STUDY BADGE"
+msgstr "Kurs-Badge entfernen "
+
+# @ qm
+#: bp-study-screens.php:197
+msgid "REMOVE STUDY CERTIFICATE"
+msgstr "Kurszertifikat entfernen "
+
+# @ buddypress
+#: bp-study-screens.php:199
+msgid "Assign Action"
+msgstr "Aktivität hinzufügen "
+
+#: bp-study-template.php:200
+#, php-format
+msgid "Viewing page %1$s of %2$s"
+msgstr "Seite  %1$s von %2$s ansehen"
+
+# @ qm
+#: bp-study-template.php:408 bp-study-template.php:411
+msgid "REVIEWS"
+msgstr "REZENSIONEN "
+
+# @ qm
+#: bp-study-template.php:419
+msgid "STUDENTS"
+msgstr "TEILNEHMER "
+
+#: bp-study-template.php:541
+msgid "MEMBERSHIP"
+msgstr "MITGLIEDSCHAFT "
+
+#: bp-study-template.php:543
+msgid "No Level Selected"
+msgstr "Kein Level ausgewählt "
+
+#: bp-study-template.php:559
+msgid "PRIVATE"
+msgstr "PRIVAT "
+
+#: bp-study-template.php:1153
+msgid "STUDY EVALUATED "
+msgstr "KURS BEWERTET "
+
+#: bp-study-template.php:1169
+msgid "Congratulations ! You've earned the "
+msgstr "Herzlichen Glückwunsch, Sie haben das Ziel erreicht "
+
+# @ qm
+#: bp-study-template.php:1169
+msgid "Badge"
+msgstr "Badge "
+
+#: bp-study-template.php:1192
+msgid ""
+"Congratulations ! You've successfully passed the study and earned the "
+"Study Completion Certificate !"
+msgstr ""
+"Herzlichen Glückwunsch! Sie haben den Kurs erfolgreich abgeschlossen und "
+"sich das Kursabschluss-Zertifikat verdient!"
+
+#: bp-study-template.php:1196
+msgid " got a caertificate in the study "
+msgstr " hat ein Kurszertifikta erhalten "
+
+# @ qm
+#: bp-study-template.php:1215
+msgid "Auto evaluated Study for Student"
+msgstr "Den Kurs für den Teilnehmer automatich auswerten "
+
+# @ qm
+#: bp-study-template.php:1225
+msgid "STUDY SUBMITTED FOR EVALUATION"
+msgstr "KURS ZUR BEWERTUNG ABGESCHICKT "
+
+#: bp-study-template.php:1234
+msgid "PLEASE COMPLETE THE "
+msgstr "BITTE VERVOLLSTÄNDIGEN SIE DIE "
+
+#: bp-study-template.php:1237
+msgid "STUDY CURRICULUM NOT SET"
+msgstr "Keine Kursübersicht angelegt.  "
+
+# @ qm
+#: bp-study-widgets.php:31
+msgid "BuddyPress Study Widget"
+msgstr "BuddyPress Kurs-Widget"
+
+#: bp-study-widgets.php:87 bp-study-widgets.php:223
+msgid "by"
+msgstr "von"
+
+# @ qm
+#: bp-study-widgets.php:143 bp-study-widgets.php:254
+#: bp-study-widgets.php:377
+msgid "Widget Title"
+msgstr "Widget-Titel"
+
+# @ qm
+#: bp-study-widgets.php:144
+msgid "Style"
+msgstr "Stil "
+
+#: bp-study-widgets.php:146
+msgid "Single"
+msgstr "Einzel "
+
+#: bp-study-widgets.php:147
+msgid "List"
+msgstr "Liste "
+
+# @ qm
+#: bp-study-widgets.php:148
+msgid "Carousel"
+msgstr "Karussell "
+
+# @ qm
+#: bp-study-widgets.php:151 bp-study-widgets.php:295
+msgid "Select Study Category"
+msgstr "Kurskategorie auswählen "
+
+# @ qm
+#: bp-study-widgets.php:161
+msgid "Order By"
+msgstr "Sortiert nach "
+
+#: bp-study-widgets.php:163
+msgid "Random"
+msgstr "Zufällig"
+
+# @ qm
+#: bp-study-widgets.php:164
+msgid "Name"
+msgstr "Name "
+
+# @ qm
+#: bp-study-widgets.php:165
+msgid "Study Title"
+msgstr "Kurstitel "
+
+# @ qm
+#: bp-study-widgets.php:166
+msgid "Number of Reviews"
+msgstr "Anzahl der Bewertungen "
+
+#: bp-study-widgets.php:167
+msgid "Date Published"
+msgstr "Erscheinungsdatum "
+
+# @ qm
+#: bp-study-widgets.php:168
+msgid "Rating"
+msgstr "Bewertung "
+
+# @ qm
+#: bp-study-widgets.php:169
+msgid "Number of Students"
+msgstr "Anzahl der Kursteilnehmer  "
+
+# @ qm
+#: bp-study-widgets.php:172
+msgid "Sort "
+msgstr "Art "
+
+# @ pmpro
+#: bp-study-widgets.php:174
+msgid "Ascending"
+msgstr "Aufsteigend "
+
+# @ pmpro
+#: bp-study-widgets.php:175
+msgid "Decending"
+msgstr "Absteigend "
+
+#: bp-study-widgets.php:178
+msgid "Specific Studies (enter comma saperated ids)"
+msgstr "Spezifische Kurse (kommagetrennte IDs)"
+
+# @ qm
+#: bp-study-widgets.php:179
+msgid "Number of Studies to show"
+msgstr "Anzahl der angezeigten Kurse "
+
+# @ qm
+#: bp-study-widgets.php:193
+msgid "BuddyPress Instructor Widget"
+msgstr "BuddyPress Trainer Widget"
+
+# @ qm
+#: bp-study-widgets.php:217
+msgid "Check all Studies created by "
+msgstr "Alle angebotenen Kurse ansehen von "
+
+# @ qm
+#: bp-study-widgets.php:218
+msgid "More Studies by "
+msgstr "Mehr Kurse von "
+
+# @ qm
+#: bp-study-widgets.php:255
+msgid "Fallback Instructor ID"
+msgstr "Fallback Instructor ID"
+
+# @ qm
+#: bp-study-widgets.php:256
+msgid "Number of Studies by the Instructor to show"
+msgstr "Kurse des Trainers  "
+
+# @ qm
+#: bp-study-widgets.php:270
+msgid "BuddyPress Study Search Widget"
+msgstr "BuddyPress Kurssuchwidget"
+
+# @ qm
+#: bp-study-widgets.php:311
+msgid "Select Instructor"
+msgstr "Trainer auswählen "
+
+#: bp-study-widgets.php:320
+msgid "Type Keywords.."
+msgstr "Keywords eingeben..."
+
+#: bp-study-widgets.php:378
+msgid "Show Study Category Dropdown"
+msgstr "Dropdown-Menü für Kurskategorie anzeigen"
+
+# @ qm
+#: bp-study-widgets.php:379
+msgid "Show Instructor Dropdown"
+msgstr "Trainer im Dropdown-Menü anzeigen "
+
+# @ qm
+#: templates/study/study-loop.php:94 templates/study/my-studies.php:111
+msgid "You have not subscribed to any Study."
+msgstr "Sie sind in keinem Kurs angemeldet. "
+
+# @ qm
+#: templates/study/create.php:25
+msgid "Groups Directory"
+msgstr "Gruppenverzeichnis "
+
+# @ qm
+#: templates/study/create.php:54
+msgid "Group Name (required)"
+msgstr "Gruppenname (erforderlich) "
+
+# @ qm
+#: templates/study/create.php:57
+msgid "Group Description (required)"
+msgstr "Gruppenbeschreibung (erforderlich) "
+
+# @ qm
+#: templates/study/create.php:73
+msgid "Privacy Options"
+msgstr "Privatsphäreeinstellungen "
+
+# @ qm
+#: templates/study/create.php:77
+msgid "This is a public group"
+msgstr "Dies ist eine öffentliche Gruppe "
+
+# @ qm
+#: templates/study/create.php:79
+msgid "Any site member can join this group."
+msgstr "Alle Benutzer der Seite können der Gruppe beitreten. "
+
+# @ qm
+#: templates/study/create.php:80 templates/study/create.php:89
+msgid ""
+"This group will be listed in the groups directory and in search results."
+msgstr ""
+"Diese Gruppe wird im Gruppenverzeichnis und in den Suchergebnissen "
+"aufgeführt. "
+
+# @ qm
+#: templates/study/create.php:81
+msgid "Group content and activity will be visible to any site member."
+msgstr ""
+"Gruppeninhalte und Aktivitäten sind für alle Benutzer dieser Webseite "
+"sichtbar. "
+
+# @ qm
+#: templates/study/create.php:86
+msgid "This is a private group"
+msgstr "Dies ist eine private Gruppe. "
+
+# @ qm
+#: templates/study/create.php:88
+msgid "Only users who request membership and are accepted can join the group."
+msgstr ""
+"Nur Benutzer, die die Mitgliedschaft beantragen und akzeptiert werden, "
+"können der Gruppe beitreten. "
+
+# @ qm
+#: templates/study/create.php:90 templates/study/create.php:99
+msgid ""
+"Group content and activity will only be visible to members of the group."
+msgstr ""
+"Gruppeninhalte und Aktivitäten sind nur für Gruppenmitglieder sichtbar."
+
+# @ qm
+#: templates/study/create.php:95
+msgid "This is a hidden group"
+msgstr "Dies ist eine versteckte Gruppe "
+
+# @ qm
+#: templates/study/create.php:97
+msgid "Only users who are invited can join the group."
+msgstr "Nur eingeladene Benutzer können der Gruppe beitreten. "
+
+# @ qm
+#: templates/study/create.php:98
+msgid ""
+"This group will not be listed in the groups directory or search results."
+msgstr ""
+"Diese Gruppe wird nicht in den Gruppenverzeichnissen oder Suchergebnissen "
+"aufgeführt."
+
+# @ qm
+#: templates/study/create.php:104
+msgid "Group Invitations"
+msgstr "Gruppeneinladungen "
+
+# @ qm
+#: templates/study/create.php:106
+msgid "Which members of this group are allowed to invite others?"
+msgstr "Welchen Mitgliedern dieser Gruppe ist es erlaubt, andere einzuladen?"
+
+# @ qm
+#: templates/study/create.php:111
+msgid "All group members"
+msgstr "Alle Gruppenmitglieder "
+
+# @ qm
+#: templates/study/create.php:116
+msgid "Group admins and mods only"
+msgstr "Nur Gruppenadministratoren und Moderatoren "
+
+# @ qm
+#: templates/study/create.php:121
+msgid "Group admins only"
+msgstr "Nur Gruppenadministratoren "
+
+# @ qm
+#: templates/study/create.php:127
+msgid "Group Forums"
+msgstr "Gruppenforen "
+
+# @ qm
+#: templates/study/create.php:131
+msgid "Should this group have a forum?"
+msgstr "Soll diese Gruppe ein Forum erhalten? "
+
+# @ qm
+#: templates/study/create.php:134
+msgid "Enable discussion forum"
+msgstr "Diskussionsforum einrichten "
+
+# @ qm
+#: templates/study/create.php:138
+#, php-format
+msgid ""
+"<strong>Attention Site Admin:</strong> Group forums require the <a href=\"%s"
+"\">correct setup and configuration</a> of a bbPress installation."
+msgstr ""
+"<strong>Achtung Webseiten-Admin:</strong> Gruppenforen erfordern das <a href="
+"\"%s\">korrekte Setup und die Konfiguration</a> einer bbPress-Installation."
+
+# @ qm
+#: templates/study/create.php:164
+msgid ""
+"Upload an image to use as an avatar for this group. The image will be shown "
+"on the main group page, and in search results."
+msgstr ""
+"Laden Sie ein Bild als Avatar für diese Gruppe. Das Bild wird auf der "
+"Gruppenstartseite, und in den Suchergebnissen angezeigt. "
+
+# @ qm
+#: templates/study/create.php:168
+msgid "Upload Image"
+msgstr "Bild hochladen "
+
+# @ qm
+#: templates/study/create.php:172
+msgid "To skip the avatar upload process, hit the \"Next Step\" button."
+msgstr ""
+"Um den Hochladen des Avatars anzuhalten, drücken Sie den \"Nächster Schritt"
+"\" Button."
+
+# @ qm
+#: templates/study/create.php:179
+msgid "Crop Group Avatar"
+msgstr "Gruppenavatar beschneiden"
+
+# @ qm
+#: templates/study/create.php:181
+msgid "Avatar to crop"
+msgstr "Avatar zum Beschneiden "
+
+# @ qm
+#: templates/study/create.php:184
+msgid "Avatar preview"
+msgstr "Avatar Vorschau "
+
+# @ qm
+#: templates/study/create.php:187
+msgid "Crop Image"
+msgstr "Bild beschneiden "
+
+# @ qm
+#: templates/study/create.php:226
+msgid "Select people to invite from your friends list."
+msgstr ""
+"Wählen Sie Personen aus Ihrer Freundesliste aus und laden Sie sie ein. "
+
+# @ qm
+#: templates/study/create.php:244
+msgid "Remove Invite"
+msgstr "Einladung löschen "
+
+# @ qm
+#: templates/study/create.php:261
+msgid ""
+"Once you have built up friend connections you will be able to invite others "
+"to your group."
+msgstr ""
+"Sobald Sie sich mit anderen vernetzt haben, dürfen Sie andere zu Ihrer "
+"Gruppe einladen."
+
+# @ qm
+#: templates/study/create.php:283
+msgid "Back to Previous Step"
+msgstr "Zurück zum vorhergehenden Schritt "
+
+# @ qm
+#: templates/study/create.php:290
+msgid "Next Step"
+msgstr "Nächster Schritt "
+
+# @ qm
+#: templates/study/create.php:297
+msgid "Create Group and Continue"
+msgstr "Erstellen Sie eine Gruppe und fahren Sie fort "
+
+# @ qm
+#: templates/study/create.php:304
+msgid "Finish"
+msgstr "Beenden "
+
+# @ qm
+#: templates/study/index.php:29
+msgid "Become a Teacher"
+msgstr "Trainer werden "
+
+# @ qm
+#: templates/study/index.php:54
+#, php-format
+msgid "All Studies <span>%s</span>"
+msgstr "Alle Kurse <span>%s</span>"
+
+# @ qm
+#: templates/study/index.php:58
+#, php-format
+msgid "My Studies <span>%s</span>"
+msgstr "Meine Kurse <span>%s</span>"
+
+# @ qm
+#: templates/study/index.php:76
+msgid "Order By:"
+msgstr "Sortiert nach: "
+
+# @ qm
+#: templates/study/index.php:78
+msgid "Alphabetical"
+msgstr "Alphabetisch "
+
+# @ qm
+#: templates/study/index.php:79
+msgid "Most Members"
+msgstr "Die meisten Mitglieder "
+
+# @ qm
+#: templates/study/index.php:80
+msgid "Newly Created"
+msgstr "Neueste "
+
+# @ qm
+#: templates/study/index.php:81
+msgid "Highest Rated"
+msgstr "Am besten bewertet "
+
+# @ qm
+#: templates/study/my-studies.php:59
+msgid "Start Study"
+msgstr "Kurs starten "
+
+# @ qm
+#: templates/study/my-studies.php:62
+msgid "Continue Study"
+msgstr "Kurs fortsetzen "
+
+# @ qm
+#: templates/study/my-studies.php:65
+msgid "Study Finished"
+msgstr "Kurs beendet "
+
+# @ qm
+#: templates/study/single/admin.php:27
+msgid "QUIZ SUBMISSIONS"
+msgstr "EINSENDEAUFGABEN "
+
+# @ qm
+#: templates/study/single/admin.php:50
+msgid "Reset Quiz for User"
+msgstr "Quiz für den Benutzer zurücksetzen "
+
+# @ qm
+#: templates/study/single/admin.php:51
+msgid "Evaluate Quiz for User"
+msgstr "Das Quiz für den Benutzer auswerten "
+
+# @ qm
+#: templates/study/single/admin.php:65
+msgid "STUDY SUBMISSIONS"
+msgstr "KURS EINSENDUNGEN "
+
+# @ qm
+#: templates/study/single/admin.php:86
+msgid "Evaluate Study for User"
+msgstr "Den Kurs für den Teilnehmer auswerten "
+
+# @ qm
+#: templates/study/single/admin.php:108
+msgid "Total Number of Students who took this study"
+msgstr "Gesamtzahl aller Teilnehmer, die den Kurs gebucht haben. "
+
+# @ qm
+#: templates/study/single/admin.php:109
+msgid "Average Percentage obtained by Students"
+msgstr "Durchschnittlicher Prozentsatz, den die Teilnehmer erreicht haben "
+
+# @ qm
+#: templates/study/single/admin.php:110 templates/study/single/admin.php:117
+msgid "Number of Students who got a Badge"
+msgstr "Anzahl der Teilnehmer, die einen Badge erhalten haben "
+
+# @ qm
+#: templates/study/single/admin.php:111 templates/study/single/admin.php:116
+msgid "Number of Passed Students"
+msgstr "Anzahl der Teilnehmer, die bestanden haben "
+
+# @ qm
+#: templates/study/single/admin.php:112
+msgid "Number of Students who did not pass "
+msgstr "Anzahl der Teilnehmer, die nicht bestanden haben "
+
+# @ qm
+#: templates/study/single/admin.php:115
+msgid "Average Marks obtained by Students"
+msgstr "Durchschnittliche Bewertung, die die Teilnehmer erreicht haben "
+
+# @ qm
+#: templates/study/single/admin.php:132
+msgid "Average Marks in Quiz "
+msgstr "Durchschnittliche Bewertungen beim Quiz "
+
+# @ qm
+#: templates/study/single/admin.php:140
+msgid "Calculate :"
+msgstr "Berechnen : "
+
+# @ qm
+#: templates/study/single/admin.php:141
+msgid "Calculate Statistics for Study"
+msgstr "Berechnen Sie die Statistiken für den Kurs : "
+
+# @ qm
+#: templates/study/single/admin.php:150 templates/study/single/members.php:9
+msgid "Total number of Students in study"
+msgstr "Anzahl der Kursteilnehmer "
+
+# @ qm
+#: templates/study/single/admin.php:151
+#: templates/study/single/members.php:10
+msgid "Students Currently taking this study"
+msgstr "Aktuelle Kursteilnehmer "
+
+# @ qm
+#: templates/study/single/study-header.php:39
+msgid "Instructors"
+msgstr "Trainer "
+
+# @ qm
+#: templates/study/single/curriculum.php:8
+msgid "Study Curriculum"
+msgstr "Kursablauf "
+
+# @ qm
+#: templates/study/single/curriculum.php:29
+msgid "FREE"
+msgstr "KOSTENLOS "
+
+# @ qm
+#: templates/study/single/front.php:10
+msgid "Requires completition of study "
+msgstr "Erfordert die vollständige Bearbeitung des Kurses "
+
+# @ qm
+#: templates/study/single/home.php:24
+msgid "Structure"
+msgstr "Struktur "
+
+# @ qm
+#: templates/study/single/home.php:29
+msgid "Admin"
+msgstr "Admin "
+
+# @ qm
+#: templates/study/single/home.php:30
+msgid "Units"
+msgstr "Lektionen "
+
+# @ qm
+#: templates/study/single/home.php:106
+msgid "Related Studies"
+msgstr "Verwandte Kurse "

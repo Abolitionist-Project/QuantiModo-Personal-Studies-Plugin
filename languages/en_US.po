@@ -1,0 +1,1998 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qm Custom Types\n"
+"POT-Creation-Date: 2014-05-22 17:49+0530\n"
+"PO-Revision-Date: 2014-05-22 17:49+0530\n"
+"Last-Translator: QuantiModo <quantimodo@gmail.com>\n"
+"Language-Team: QuantiModo <quantimodo@gmail.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-"
+"customtypes\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/"
+"qm-customtypes\n"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-QuantiPress-protected-api.php:67
+#, fuzzy
+msgid "Please enter your QuantiPress Marketplace Username."
+msgstr "Por favor introduzca su nombre de usuario de QuantiPress Marketplace."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-QuantiPress-protected-api.php:71
+#, fuzzy
+msgid "Please enter your QuantiPress Marketplace API Key."
+msgstr "Por favor introduzca su clave API de QuantiPress Marketplace."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-QuantiPress-protected-api.php:96
+#, fuzzy
+msgid "The API \"set\" is a required parameter."
+msgstr "La API \"set\" es un parámetro necesario."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-QuantiPress-protected-api.php:167
+#, fuzzy
+msgid "The QuantiPress Marketplace \"item ID\" is a required parameter."
+msgstr "El QuantiPress Marketplace \"item ID\" es un parámetro necesario."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:376
+#, fuzzy
+msgid "An Unexpected HTTP Error occurred during the API request."
+msgstr "Un error HTTP inesperado ocurrió durante la solicitud de la API."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:376
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:541
+#, fuzzy
+msgid "Try again"
+msgstr "Inténtelo de nuevo"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:417
+#, fuzzy
+msgid "An unknown error occurred"
+msgstr "Ocurrió un error desconocido"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:453
+#, fuzzy
+msgid ""
+"The plugin has been updated, but could not be reactivated. Please reactivate "
+"it manually."
+msgstr ""
+"El plugin ha sido actualizado, pero no pudo ser reactivado. Por favor, "
+"reactívelo manualmente. "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:454
+#, fuzzy
+msgid "Plugin reactivated successfully. "
+msgstr "Plugin reactivado con éxito."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:476
+#, fuzzy
+msgid " Plugin Updates"
+msgstr " Actualizaciones del plugin"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:515
+#, fuzzy
+msgid "Username: "
+msgstr "Nombre de usuario:"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:519
+#, fuzzy
+msgid "Email: "
+msgstr "Correo electrónico:"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:525
+#, fuzzy
+msgid "Key: "
+msgstr "Clave:"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:531
+#, fuzzy
+msgid "<p>Your plugin update is <span style=\"color:green\">active</span></p>"
+msgstr ""
+"<p>Su actualización del plugin está <span style=\"color:green\">activa</"
+"span></p>"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:535
+#, fuzzy
+msgid ""
+"<p>Your input is <span style=\"color:red\">not valid</span>, automatic "
+"updates is <span style=\"color:red\">not active</span>.</p>"
+msgstr ""
+"<p>Su entrada <span style=\"color:red\">no es válida</span>, las "
+"actualizaciones automáticas <span style=\"color:red\">no están activas</"
+"span>.</p>"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:536
+#, fuzzy
+msgid "Edit Key"
+msgstr "Editar clave"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:540
+#, fuzzy
+msgid "<p>Unable to validate update activation.</p>"
+msgstr "<p> No se puede validar la activación de actualización. </p>"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:546
+#, fuzzy
+msgid "Add Key"
+msgstr "Añadir clave"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:632
+#, fuzzy
+msgid "User name"
+msgstr "Nombre de usuario"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:638
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3960
+#, fuzzy
+msgid "Email"
+msgstr "Correo electrónico:"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/autoupdate/class-plugin-update.php:647
+#, fuzzy
+msgid "Themeforest User name ( for Auto-Updates )"
+msgstr "Nombre de usuario Themeforest (para actualizaciones automáticas)"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:16
+#, fuzzy
+msgid "Post Sub-Title"
+msgstr "Título del widget"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:17
+#, fuzzy
+msgid "Post Sub- Title."
+msgstr "Título del widget"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:24
+msgid "Post Template"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:25
+msgid "Select a post template for showing content."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:36
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:136
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:219
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:803
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1543
+msgid "Sidebar"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:37
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:220
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:804
+msgid "Select a Sidebar | Default : mainsidebar"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:43
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:100
+#, fuzzy
+msgid "Show Page Title"
+msgstr "Título del widget"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:44
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:101
+msgid "Show Page/Post Title."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:56
+#, fuzzy
+msgid "Show Author Information"
+msgstr "MOSTRAR ESTADÍSTICAS"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:57
+msgid "Author information below post content."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:70
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:123
+#, fuzzy
+msgid "Show Breadcrumbs"
+msgstr "MOSTRAR ESTADÍSTICAS"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:71
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:124
+#, fuzzy
+msgid "Show breadcrumbs."
+msgstr "MOSTRAR ESTADÍSTICAS"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:82
+msgid "Show Prev/Next Arrows"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:83
+msgid "Show previous/next links on top below the Subheader."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:115
+#, fuzzy
+msgid "Page Sub-Title"
+msgstr "Título del widget"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:116
+#, fuzzy
+msgid "Page Sub- Title."
+msgstr "Título del widget"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:137
+msgid "Select Sidebar | Sidebar : mainsidebar"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:148
+msgid "Media"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:153
+msgid "Disable"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:157
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:181
+msgid "Gallery"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:161
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:188
+msgid "Self Hosted Video"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:165
+msgid "IFrame Video"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:169
+msgid "Self Hosted Audio"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:173
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:206
+msgid "Other"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:182
+#, fuzzy
+msgid "Create a Gallery in post."
+msgstr "Crear grupo y continuar"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:189
+msgid ""
+"Select video files (of same Video): xxxx.mp4,xxxx.ogv,xxxx.ogg for max. "
+"browser compatibility"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:194
+msgid "IFRAME Video"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:195
+msgid "Insert Iframe (Youtube,Vimeo..) embed code of video "
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:200
+msgid "Audio"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:201
+msgid ""
+"Select audio files (of same Audio): xxxx.mp3,xxxx.wav,xxxx.ogg for max. "
+"browser compatibility"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:207
+msgid "Insert Shortcode or relevant content."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:227
+#, fuzzy
+msgid "Total Duration of Course"
+msgstr "Números total de alumnos en el curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:228
+#, fuzzy
+msgid "Duration of Course (in days)."
+msgstr " días"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:235
+#, fuzzy
+msgid "Total number of Students in Course"
+msgstr "Números total de alumnos en el curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:236
+#, fuzzy
+msgid "Total number of Students who have taken this Course."
+msgstr "Número total de alumnos que han tomado este curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:242
+#, fuzzy
+msgid "Auto Evaluation"
+msgstr "In fase di valutazione"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:243
+msgid ""
+"Evalute Courses based on Quizes scores available in Course (* Requires "
+"atleast 1 Quiz in course)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:255
+#, fuzzy
+msgid "Excellence Badge"
+msgstr "Badge"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:256
+msgid "Upload badge image which Students recieve upon course completion"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:262
+#, fuzzy
+msgid "Badge Percentage"
+msgstr "Badge"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:263
+msgid "Badge is given to people passing above percentage (out of 100)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:269
+#, fuzzy
+msgid "Badge Title"
+msgstr "Badge"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:270
+msgid "Title is shown on hovering the badge."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:276
+#, fuzzy
+msgid "Completion Certificate"
+msgstr ""
+"Congratulazioni! Ha completato con successo il Corso e hai ricevuto "
+"l'Attestato di partecipazione!"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:277
+msgid ""
+"Enable Certificate image which Students recieve upon course completion (out "
+"of 100)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:290
+#, fuzzy
+msgid "Certificate Template"
+msgstr "Certificado del curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:291
+#, fuzzy
+msgid "Select a Certificate Template"
+msgstr "Certificado del curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:298
+#, fuzzy
+msgid "Passing Percentage"
+msgstr "Porcentaje del curso (sobre 100)"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:299
+msgid "Course passing percentage, for completion certificate"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:304
+msgid "Drip Feed"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:305
+msgid "Enable Drip Feed course"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:317
+msgid "Drip Feed Duration"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:318
+msgid "Duration between consecutive Drip feed units (in Days)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:326
+#, fuzzy
+msgid "Course Curriculum"
+msgstr "Plan de estudios del curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:327
+msgid ""
+"Set Course Curriculum, prepare units and quizes before setting up curriculum"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:335
+#, fuzzy
+msgid "Pre-Required Course"
+msgstr "La API \"set\" es un parámetro necesario."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:336
+#, fuzzy
+msgid "Pre Required course for this course"
+msgstr "TOMAR ESTE CURSO"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:342
+#, fuzzy
+msgid "Course Forum"
+msgstr "¿Debe este grupo tener un foro?"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:343
+#, fuzzy
+msgid "Connect Forum with Course."
+msgstr "¿Debe este grupo tener un foro?"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:349
+#, fuzzy
+msgid "Course Group"
+msgstr "CURSO: "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:350
+#, fuzzy
+msgid "Connect a Group with Course."
+msgstr "CURSO: "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:355
+#, fuzzy
+msgid "Course Completion Message"
+msgstr "Por favor introduzca su mensaje de invitación"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:356
+msgid "This message is shown to users when they Finish submit the course"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:365
+#, fuzzy
+msgid "Free Course"
+msgstr "FREE"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:366
+#, fuzzy
+msgid "Course is Free for all Members"
+msgstr "Todos los miembros del grupo"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:384
+#, fuzzy
+msgid "PMPro Membership"
+msgstr "MEMBERSHIP"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:385
+#, fuzzy
+msgid "Required Membership levle for this course"
+msgstr "TOMAR ESTE CURSO"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:394
+msgid "Associated Product"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:395
+#, fuzzy
+msgid "Associated Product with the Course."
+msgstr "CURSO: "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:406
+#, fuzzy
+msgid "Unit Description"
+msgstr "Descripción del grupo (necesario)"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:407
+#, fuzzy
+msgid "Small Description."
+msgstr "Descripción del grupo (necesario)"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:413
+#, fuzzy
+msgid "Unit Type"
+msgstr "Selecciona tipo de evento (opcional)"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:414
+msgid "Select Unit type from Video , Audio , Podcast, General , "
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:426
+#, fuzzy
+msgid "Free Unit"
+msgstr "FREE"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:427
+msgid "Set Free unit, viewable to all"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:439
+#, fuzzy
+msgid "Unit Duration"
+msgstr "La unidad estará disponible en"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:440
+#, fuzzy
+msgid "Duration in Minutes"
+msgstr " minuti"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:445
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:632
+msgid "Connect an Assignment"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:446
+msgid "Select an Assignment which you can connect with this Unit"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:452
+#, fuzzy
+msgid "Unit Forum"
+msgstr "La unidad estará disponible en"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:453
+#, fuzzy
+msgid "Connect Forum with Unit."
+msgstr "La unidad estará disponible en"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:463
+#, fuzzy
+msgid "Question Type"
+msgstr "PREGUNTA"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:464
+#, fuzzy
+msgid "Select Question type, "
+msgstr "Selecciona tipo de evento (opcional)"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:477
+msgid "Question Options (For Single/Multiple/Sort/Match Question types)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:478
+msgid "Single/Mutiple Choice question options"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:483
+#, fuzzy
+msgid "Correct Answer"
+msgstr "Respuesta correcta:"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:484
+msgid ""
+"Enter Choice Number (1,2..) or comma saperated Choice numbers (1,2..) or "
+"Correct Answer for small text (All possible answers comma saperated) | 0 for "
+"No Answer or Manual Check"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:493
+#, fuzzy
+msgid "Quiz Subtitle"
+msgstr "Test"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:494
+#, fuzzy
+msgid "Quiz Subtitle."
+msgstr "Test"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:500
+#, fuzzy
+msgid "Connected Course"
+msgstr "CURSO: "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:501
+msgid "Adds a Back to Course button, on quiz submission."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:507
+#, fuzzy
+msgid "Quiz Duration"
+msgstr "Test"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:508
+msgid ""
+"Quiz duration in minutes. Enables Timer & auto submits on expire. 0 to "
+"disable."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:515
+#, fuzzy
+msgid "Auto Evatuate Results"
+msgstr "Resultados"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:516
+msgid ""
+"Evaluate results as soon as quiz is complete. (* No Large text questions ), "
+"Diable for manual evaluate"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:529
+msgid "Number of Extra Quiz Retakes"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:530
+msgid ""
+"Student can reset and start the quiz all over again. Number of Extra retakes "
+"a student can take."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:536
+msgid "Send Notification upon evaluation"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:537
+msgid "Student recieve notification when quiz is evaluated."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:549
+#, fuzzy
+msgid "Post Quiz Message"
+msgstr "Test"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:550
+msgid "This message is shown to users when they submit the quiz"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:557
+msgid "Quiz Questions"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:558
+msgid "Quiz questions"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:570
+#, fuzzy
+msgid "Author Name"
+msgstr "Nombre"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:571
+msgid "Enter the name of the testimonial author."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:576
+msgid "Designation"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:577
+msgid "Enter the testimonial author's designation."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:588
+#, fuzzy
+msgid "Associated Courses"
+msgstr "No se encontraron cursos."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:589
+msgid "Associated Courses with this product. Enables access to the course."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:595
+msgid "Subscription "
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:596
+msgid "Enable if Product is Subscription Type (Price per month)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:608
+msgid "Subscription Duration"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:609
+msgid "Duration for Subscription Products (in days)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:618
+#, fuzzy
+msgid "Event Sub-Title"
+msgstr "EVENTO: "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:619
+#, fuzzy
+msgid "Event Sub-Title."
+msgstr "EVENTO: "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:625
+#, fuzzy
+msgid "Course"
+msgstr "CURSO: "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:626
+msgid "Select Course for which the event is valid"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:633
+msgid "Select an Assignment which you can connect with this Event"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:639
+#, fuzzy
+msgid "Event Icon"
+msgstr "EVENTO: "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:640
+msgid "Click on icon to  select an icon for the event"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:645
+#, fuzzy
+msgid "Event Color"
+msgstr "EVENTO: "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:646
+#, fuzzy
+msgid "Select color for Event"
+msgstr "Selecciona tipo de evento (opcional)"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:651
+#, fuzzy
+msgid "Start Date"
+msgstr "Datos publicados"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:652
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:664
+msgid "Date from which Event Begins"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:657
+#, fuzzy
+msgid "End Date"
+msgstr "Datos publicados"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:658
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:670
+msgid "Date on which Event ends."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:663
+#, fuzzy
+msgid "Start Time"
+msgstr "Tiempo restante"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:669
+#, fuzzy
+msgid "End Time"
+msgstr "Tiempo restante"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:675
+#, fuzzy
+msgid "Show Location"
+msgstr "MOSTRAR ESTADÍSTICAS"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:676
+msgid "Show Location and Google map with the event"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:688
+msgid "Location"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:689
+#, fuzzy
+msgid "Location of event"
+msgstr "EVENTO: "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:694
+msgid "Additional Information"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:695
+msgid "Point wise Additional Information regarding the event"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:700
+#, fuzzy
+msgid "More Information"
+msgstr "Más cursos por "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:701
+msgid "Supports HTML and shortcodes"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:706
+#, fuzzy
+msgid "Private Event"
+msgstr "EVENTO: "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:707
+msgid "Only Invited participants can see the Event"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:723
+#, fuzzy
+msgid "Associated Product for Event Access"
+msgstr "CURSO: "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:724
+msgid "Purchase of this product grants Event access to the member."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:734
+#, fuzzy
+msgid "From"
+msgstr "Usuario eliminado del curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:735
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:741
+msgid "Date on which Payment was done."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:740
+msgid "To"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:746
+#, fuzzy
+msgid "Instructor and Commissions"
+msgstr "Instructor"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:747
+#, fuzzy
+msgid "Instructor commissions"
+msgstr "Instructor"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:755
+#, fuzzy
+msgid "Background Image/Pattern"
+msgstr "Subir imagen"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:756
+#, fuzzy
+msgid "Add background image"
+msgstr "Subir imagen"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:761
+#, fuzzy
+msgid "Enable Print"
+msgstr "Habilitar foro de discusión"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:762
+msgid "Displays a Print Button on top right corner of certificate"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:774
+msgid "Custom Class"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:775
+msgid "Add Custom Class over Certificate container."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:780
+msgid "Custom CSS"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:781
+msgid "Add Custom CSS for Certificate."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:786
+msgid "NOTE:"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:787
+msgid ""
+" USE FOLLOWING SHORTCODES TO DISPLAY RELEVANT DATA : <br />1. "
+"<strong>[certificate_student_name]</strong> : Displays Students Name<br />2. "
+"<strong>[certificate_course]</strong> : Displays Course Name<br />3. "
+"<strong>[certificate_student_marks]</strong> : Displays Students Marks in "
+"Course<br />4. <strong>[certificate_student_date]</strong>: Displays date on "
+"which Certificate was awarded to the Student<br />5. "
+"<strong>[certificate_student_email]</strong>: Displays registered email of "
+"the Student<br />6. <strong>[certificate_code]</strong>: Generates unique "
+"code for Student which can be validated from Certificate page."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:796
+#, fuzzy
+msgid "Assignment Sub-Title"
+msgstr "Título del widget"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:797
+#, fuzzy
+msgid "Assignment Sub-Title."
+msgstr "Título del widget"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:810
+#, fuzzy
+msgid "Assignment Maximum Marks"
+msgstr "RISPOSTE: "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:811
+msgid "Set Maximum marks for the assignment"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:817
+msgid "Assignment Maximum Time limit"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:818
+msgid "Set Maximum Time limit for Assignment ( in Days )"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:824
+#, fuzzy
+msgid "Include in Course Evaluation"
+msgstr "CURSO BAJO EVALUACIÓN"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:825
+msgid "Include assignment marks in Course Evaluation"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:837
+#, fuzzy
+msgid "Include in Course"
+msgstr "CURSO: "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:838
+msgid "Assignments marks will be shown/used in course evaluation"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:844
+#, fuzzy
+msgid "Assignment Submissions"
+msgstr "PRESENTACIONES DEL TEST"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:845
+#, fuzzy
+msgid "Select type of assignment submissions"
+msgstr "Selecciona tipo de evento (opcional)"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:855
+#, fuzzy
+msgid "Attachment Type"
+msgstr "Selecciona tipo de evento (opcional)"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:856
+msgid "Select valid attachment types "
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:897
+#, fuzzy
+msgid "Post Settings"
+msgstr "Ajustes del curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:898
+#, fuzzy
+msgid "Page Settings"
+msgstr "Ajustes del curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:900
+#, fuzzy
+msgid "Course Settings"
+msgstr "Ajustes del curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:902
+#, fuzzy
+msgid "Course Product"
+msgstr "CURSO: "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:904
+#, fuzzy
+msgid "Course Membership"
+msgstr "MEMBERSHIP"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:907
+#, fuzzy
+msgid "Unit Settings"
+msgstr "Ajustes del curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:909
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:910
+#, fuzzy
+msgid "Question Settings"
+msgstr "PREGUNTA"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:913
+msgid "Testimonial Author Information"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:914
+#, fuzzy
+msgid "Payments Settings"
+msgstr "Ajustes del curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:915
+#, fuzzy
+msgid "Certificate Template Settings"
+msgstr "Certificado del curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:918
+#, fuzzy
+msgid "Product Course Settings"
+msgstr "Ajustes del curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:922
+#, fuzzy
+msgid "QuantiPress Events Settings"
+msgstr "QuantiPress Events Widget"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:927
+#, fuzzy
+msgid "QuantiPress Assignments Settings"
+msgstr "QuantiPress Events Widget"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/custom_meta_boxes.php:936
+msgid "Page Builder"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:18
+#, fuzzy
+msgid "Unknown error."
+msgstr "Ocurrió un error desconocido"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:25
+msgid "Please save the changes again."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:26
+msgid "Some Uknown issue appeared, please contact us."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:27
+msgid "Please save the Page Builder changes !"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:28
+msgid "Requested Slider was not found, Please check slider post id !"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:29
+msgid "No Posts Id's found in given Custom Post Type."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:30
+msgid "Author Information missing."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:31
+#, fuzzy
+msgid "You do not have permission to do that."
+msgstr "¿Te gusta hacer clic en chechboxes?"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:32
+msgid "Unable to get tweets from Twitter !"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:33
+msgid "No public tweets found on Twitter !"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:34
+msgid "Term : Taxonomy Mismatch: Selected Term does not exist in Taxonomy !"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:35
+msgid ""
+"Post Type : Taxonomy Mismatch: Selected Taxonomy does not exist in Post "
+"Type !"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:36
+msgid "Featured Component does not Exist !"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:37
+msgid "Incorrect or Incompatible Audio Format !"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:38
+msgid "Incorrect or Incompatible Video Embed Code !"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:39
+msgid "Modal ID Incorrect, please recheck !"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:40
+msgid "Testimonial ID Incorrect, please recheck !"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/errorhandle.php:41
+msgid "Post ID Incorrect, please recheck !"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/featured.php:8
+#, fuzzy
+msgid "Read more"
+msgstr "Más cursos por "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/featured.php:48
+#, fuzzy
+msgid "REVIEWS"
+msgstr "RECENSIONI"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/featured.php:64
+#, fuzzy
+msgid "MEMBERSHIP"
+msgstr "MEMBERSHIP"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/featured.php:66
+#, fuzzy
+msgid "No Level Selected"
+msgstr "Nessun Livello Selezionato"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/featured.php:97
+#, fuzzy
+msgid "Students"
+msgstr " Alumnos"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/featured.php:154
+msgid " Comments"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/featured.php:222
+#, fuzzy
+msgid "Event "
+msgstr "EVENTO: "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/featured.php:227
+#, fuzzy
+msgid "Start Date "
+msgstr "Datos publicados"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/featured.php:230
+#, fuzzy
+msgid "End Date "
+msgstr "Datos publicados"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/featured.php:234
+#, fuzzy
+msgid "Start Time "
+msgstr "Tiempo restante"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/featured.php:237
+#, fuzzy
+msgid "End Time "
+msgstr "Tiempo restante"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/featured.php:240
+msgid "Frequency "
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/featured.php:240
+msgid "Every "
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/featured.php:243
+msgid "Venue "
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/featured.php:246
+#, fuzzy
+msgid "View full details"
+msgstr "ver evento"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:357
+#, fuzzy
+msgid "All"
+msgstr "Tutti i corsi dei Docenti"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:656
+msgid "Loading.."
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:657
+#, fuzzy
+msgid "No more to load"
+msgstr "Más cursos por "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:912
+#, fuzzy
+msgid "Confirm Delete?"
+msgstr "Conferma"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:912
+#, fuzzy
+msgid "Yes"
+msgstr "Sí"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:912
+msgid "No"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:912
+#, fuzzy
+msgid "Saving..."
+msgstr "Salvataggio in corso..."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:912
+#, fuzzy
+msgid "Saved."
+msgstr "Save Lairs"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:947
+msgid "Carousels/Rotating Blocks"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:951
+#, fuzzy
+msgid "Title/Heading"
+msgstr "Título del widget"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:953
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1098
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1205
+msgid "Heading"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:957
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1101
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1208
+#, fuzzy
+msgid "Show Title"
+msgstr "Título del widget"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:964
+msgid "Show Read More link"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:971
+msgid "More Link (User redirected to this page on click)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:977
+#, fuzzy
+msgid "Show Controls"
+msgstr "MOSTRAR ESTADÍSTICAS"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:984
+msgid ""
+"Enter Post Type<br /><span style=\"font-size:11px;\">(Select Post Type from "
+"Posts/Courses/Clients/Products ...)</span>"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:987
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1110
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1217
+msgid "post"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:991
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1221
+msgid ""
+"Enter Taxonomy Slug (optional)<br /><span style=\"font-size:11px;\">(A "
+"\"Taxonomy\" is a grouping mechanism for posts. Like Category for Posts, "
+"Tags for Posts, Portfolio Type for Portfolio etc.. <a href=\"http://codex."
+"wordpress.org/Taxonomies\">more</a>)</span> "
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:997
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1227
+msgid "Enter Taxonomy Term Name (optional, only if above is selected): "
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1002
+#, fuzzy
+msgid "Or Enter Specific Post Ids"
+msgstr "Eventos específicos (introducir ID's separados por comas)"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1007
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1118
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1238
+msgid "Course Types [Only for Post type = Course]"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1016
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1127
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1247
+msgid "recent"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1019
+msgid "Carousel/Rotating Block Style"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1022
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1133
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1253
+msgid "excerpt"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1025
+#, fuzzy
+msgid "Auto slide/rotate"
+msgstr "Valutazione Automatica del Test"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1031
+msgid "Width each crousel block"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1033
+msgid "268"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1036
+msgid "Maximum Number of blocks in One screen"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1038
+#, fuzzy
+msgid "4"
+msgstr "%1$s revisó el %2$s, %3$s, en este sitio %4$s"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1041
+msgid "Minimum Number of blocks in one Screen"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1043
+#, fuzzy
+msgid "2"
+msgstr "Ver eventos para %1$s %2$s"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1046
+#, fuzzy
+msgid "Total Number of Blocks"
+msgstr "Números total de alumnos en el curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1048
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1154
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1288
+msgid "6"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1052
+msgid "Excerpt Length in Block (in characters)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1054
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1149
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1308
+#, fuzzy
+msgid "100"
+msgstr " su"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1057
+msgid "Show Lightbox button on image hover[Opens Full image]"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1063
+msgid "Show Link button on image hover"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1069
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1176
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1326
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1361
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1425
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1477
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1520
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1552
+#, fuzzy
+msgid "Show Advanced settings"
+msgstr "Ajustes del curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1074
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1181
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1331
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1372
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1436
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1482
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1525
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1557
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1653
+msgid "* Custom Class name (Add Custom Class to this Block)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1078
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1185
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1335
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1376
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1440
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1486
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1529
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1561
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1657
+msgid "* Class for on containing Layout column"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1082
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1189
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1339
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1380
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1444
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1490
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1533
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1565
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1661
+msgid ""
+"* Add Custom CSS (Use <strong>.</strong> for class name, <strong>:hover</"
+"strong> for hover styles etc..)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1092
+msgid "Filterable Posts"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1096
+#, fuzzy
+msgid "Filterable Block Title"
+msgstr "Título del widget"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1107
+#, fuzzy
+msgid "Select a Post Type"
+msgstr "Selecciona tipo de evento (opcional)"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1113
+msgid "Enter relevant Taxonomy name used for Filter buttons"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1130
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1250
+msgid "Featured Media Block Style"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1136
+#, fuzzy
+msgid "Show All link"
+msgstr "MOSTRAR ESTADÍSTICAS"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1142
+msgid "Column Width (in px)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1147
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1306
+msgid "Excerpt Length (in characters)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1152
+#, fuzzy
+msgid "Total Number of blocks"
+msgstr "Números total de alumnos en el curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1157
+#, fuzzy
+msgid "Show Pagination"
+msgstr "MOSTRAR ESTADÍSTICAS"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1164
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1312
+msgid "Show Lightbox [Opens Full image]"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1170
+msgid "Show Link [Links to Post]"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1199
+msgid "Post Grid"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1203
+#, fuzzy
+msgid "Grid Title"
+msgstr "Título del widget"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1214
+#, fuzzy
+msgid "Custom Post Type"
+msgstr "Selecciona tipo de evento (opcional)"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1233
+#, fuzzy
+msgid "Or Enter Specific Post Ids (comma saperated)"
+msgstr "Eventos específicos (introducir ID's separados por comas)"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1257
+msgid "Grid Masonry Layout"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1264
+msgid "Grid Columns"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1276
+msgid "Masonry Grid Column Width(in px)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1281
+msgid "Spacing between Columns (in px)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1286
+#, fuzzy
+msgid "Total Number of Blocks in Grid"
+msgstr "Números total de alumnos en el curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1292
+msgid "Infinite Scroll"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1299
+msgid "Enable Pagination (If infinite scroll is off)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1319
+#, fuzzy
+msgid "Show Link"
+msgstr "MOSTRAR ESTADÍSTICAS"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1348
+msgid "WP Editor"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1351
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1392
+#, fuzzy
+msgid "Reference Title"
+msgstr "Título del widget"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1353
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1356
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1397
+#, fuzzy
+msgid "Content"
+msgstr ""
+"El contenido y la actividad del grupo serán visibles para cualquier miembro "
+"del sitio."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1366
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1430
+msgid ""
+"* On-Load CSS3 Animation effect on the block (<a href=\"http://quantimodo."
+"com/forums/showthread.php?914-CSS3-Animation-Effects&p=2488\" target=\"_blank"
+"\">more</a>)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1389
+msgid "Parallax Content"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1394
+#, fuzzy
+msgid "Parallax Title"
+msgstr "Título del widget"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1402
+#, fuzzy
+msgid "Upload Parallax Background image"
+msgstr "Subir imagen"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1407
+msgid "Background Effect"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1415
+msgid "Parallax Block Height (in px)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1420
+msgid "Parallax value (Scroll senstivity, lower value means higher scroll)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1469
+msgid "Revolution Slider"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1472
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1515
+#, fuzzy
+msgid "Select Slider"
+msgstr "Seleziona Docente"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1512
+msgid "Layer Slider"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1546
+#, fuzzy
+msgid "Select a Sidebar"
+msgstr "Seleziona Docente"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1549
+msgid "MainSidebar"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1573
+msgid "FlexSlider"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1576
+msgid "Slider ID (for reference & Css)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1581
+#, fuzzy
+msgid "Slide Style"
+msgstr "Estilo"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1593
+msgid "Animation Effect"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1595
+msgid "fade"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1595
+msgid "slide"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1600
+#, fuzzy
+msgid "Slider settings"
+msgstr "Ajustes del curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1605
+#, fuzzy
+msgid "Auto slide Images"
+msgstr "Valutazione Automatica del Test"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1611
+msgid "Loop Slides"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1617
+msgid "Randomize Slides"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1623
+msgid "Show Slider Direction arrows"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1629
+msgid "Show Slider Control buttons"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1635
+msgid "Animation Duration (in ms)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1641
+msgid "Auto Animation Speed (in ms)"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1646
+msgid "Pause Slider On Hover"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1678
+msgid "1/2 Column"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1679
+msgid "1/3 Column"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1680
+msgid "1/4 Column"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1681
+msgid "2/3 Column"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1682
+msgid "3/4 Column"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1683
+msgid "Full-Width Resizable Column"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1684
+msgid "FullScreen Stripe with Container"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1685
+msgid "FullScreen Stripe"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1710
+msgid "COLUMNS"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1711
+#, fuzzy
+msgid "CONTENT"
+msgstr ""
+"El contenido y la actividad del grupo serán visibles para cualquier miembro "
+"del sitio."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1712
+#, fuzzy
+msgid "SAVED LAYOUTS"
+msgstr "Save Lairs"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1763
+msgid "Enter name of Sample Layout"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1764
+#, fuzzy
+msgid "Save Layout"
+msgstr "Guardar ajustes"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1774
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1862
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1980
+#, fuzzy
+msgid "Save Changes"
+msgstr "Cambios guardados."
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1775
+#, fuzzy
+msgid "Save as New Layout"
+msgstr "Guardar ajustes"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1856
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:1880
+#, fuzzy
+msgid "Settings"
+msgstr "Ajustes del curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/library/qm-editor.php:2057
+#, fuzzy
+msgid "Show Page Content"
+msgstr "MOSTRAR ESTADÍSTICAS"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3697
+msgid "Latitude"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3698
+msgid "Longitude"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3699
+msgid "Closest Matching Address"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3702
+msgid "Street Address"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3703
+msgid "City"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3704
+msgid "State"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3705
+msgid "Zip/Pin Code"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3706
+msgid "Country"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3728
+#, fuzzy
+msgid "Buddypress Groups is not Active"
+msgstr "Widget del curso de BuddyPress"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3736
+#, fuzzy
+msgid "Add Section"
+msgstr "Añadir clave"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3904
+#, fuzzy
+msgid "Add More"
+msgstr "Más cursos por "
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3925
+msgid "None"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3931
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3952
+#, fuzzy
+msgid "Marks for a Correct answer"
+msgstr "Respuesta correcta:"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3956
+#, fuzzy
+msgid "Total marks for the Quiz :"
+msgstr "Promedio de notas en test"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3960
+#, fuzzy
+msgid "Instructor"
+msgstr "Instructor"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3960
+msgid "Commission"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3982
+#, fuzzy
+msgid "Delete image"
+msgstr "Subir imagen"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3982
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:4045
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:4124
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:4187
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:4266
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:4329
+msgid "Delete"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:3996
+#, fuzzy
+msgid "Add Gallery images"
+msgstr "Añadir clave"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:4022
+#, fuzzy
+msgid "Add Images to Gallery"
+msgstr "Añadir clave"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:4024
+#, fuzzy
+msgid "Add to Gallery"
+msgstr "Añadir clave"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:4124
+msgid "Delete audio file"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:4138
+#, fuzzy
+msgid "Add Audio Files"
+msgstr "Añadir clave"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:4164
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:4166
+#, fuzzy
+msgid "Add Audio"
+msgstr "Añadir clave"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:4266
+msgid "Delete video file"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:4280
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:4306
+#, fuzzy
+msgid "Add Video Files"
+msgstr "Añadir clave"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/metaboxes/meta_box.php:4308
+#, fuzzy
+msgid "Add Video"
+msgstr "Añadir clave"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:128
+msgid "Subscriptions"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:133
+#, fuzzy
+msgid "Number of students"
+msgstr "Número de alumnos"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:225
+#, fuzzy
+msgid "Total Students"
+msgstr "Números total de alumnos en el curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:227
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:233
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:239
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:245
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:251
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:491
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:497
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:503
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:509
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:515
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:645
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:651
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:657
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:774
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:780
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:786
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:1058
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:1064
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:1070
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:1076
+#, fuzzy
+msgid "n/a"
+msgstr ""
+"Resultados para %s están fuera. Usted ha recibido %s notas. \n"
+" \n"
+" ver resultados del test %s, evaluado por% s [% s] \n"
+" \n"
+" \n"
+" --------------------- \n"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:231
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:643
+#, fuzzy
+msgid "Total Instructors"
+msgstr "Total"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:237
+#, fuzzy
+msgid "Total Course Taken"
+msgstr "Números total de alumnos en el curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:243
+#, fuzzy
+msgid "Total Badges"
+msgstr "Total"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:249
+#, fuzzy
+msgid "Total Certificates"
+msgstr "Total"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:258
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:793
+msgid "This year's monthly subscriptions"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:260
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:795
+msgid "This month's daily subscriptions"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:356
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:896
+#, fuzzy
+msgid "Number of Courses Started"
+msgstr "Número de cursos a mostrar"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:489
+#, fuzzy
+msgid "Total Students taking courses"
+msgstr "Alumnos que actualmente están realizando este curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:495
+#, fuzzy
+msgid "Courses Started By Students"
+msgstr "Curso comenzado:"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:501
+#, fuzzy
+msgid "Total Courses Finished by Students"
+msgstr "Números total de alumnos en el curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:507
+#, fuzzy
+msgid "Total Units Finished by Students"
+msgstr "Números total de alumnos en el curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:513
+#, fuzzy
+msgid "Total Quiz Finished by Students"
+msgstr "Números total de alumnos en el curso"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:649
+#, fuzzy
+msgid "Total Courses Evaluated by Instructor"
+msgstr "Il Docente ha valutato il Corso per lo studente"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:655
+#, fuzzy
+msgid "Total Quiz Evaluated by Instructor"
+msgstr "Il Docente ha valutato il Test per lo studente"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:772
+#, fuzzy
+msgid "Total Students in My Courses"
+msgstr "Mis cursos"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:778
+msgid "Total Badges given in My Courses"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:784
+msgid "Total Certificates given in My Courses"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:1056
+msgid "Total Students taking my courses"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:1062
+#, fuzzy
+msgid "My Courses Finished by Students"
+msgstr "Mis cursos"
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:1068
+msgid "My Units Finished by Students"
+msgstr ""
+
+#: /Applications/MAMP/htdocs/quantipress/wp-content/plugins/qm-customtypes/statistics.php:1074
+msgid "My Quiz Finished by Students"
+msgstr ""

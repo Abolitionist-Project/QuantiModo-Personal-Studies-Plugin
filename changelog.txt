@@ -1,0 +1,149 @@
+* version 1.6.1
+* FIXED : Duplicate Badge and Certificate assignment
+* FIXED : Warning message in Quiz when no questions defined
+* version 1.6
+* UPDATED : Language FILES [US,FR,PL,DE,ES,IT]
+* ADDED : Hook for resetting study expired students
+* FIXED : Unregistered actions bug
+* FIXED : Draft,Pending,Private,future studies
+* FIXED : Date labels filter
+* ADDED : Filter for Instructor to view studies in user profile
+* UPDATED : Study Members section now show all completed members
+* FIXED: Unit complete scroll issue
+* ADDED : French Translation files
+* version 1.5.5
+* FIXED : Visual composer javascript functions on Units and Unit media locking tooltip bug
+* ADDED: Filter quantipress_study_finished on the Finished content. Used in showing reviews after study is finished
+* FIXED : ADDED a boundary Condition, checks for study array
+* Version 1.5.4
+* UPDATED : Translation files [US,ES,DE,IT,PL]
+* FIXED : by in translation
+* FIXED : Bulk send message bug
+* FIXED : Pagination bug in Study -> Members
+* ADDED: Ajax loader for Quiz
+* ADDED : Custom Functions to check user active status in a study
+* ADDED : Badge & Certificate Assigning form Study Admin
+* FIXED : Added Study action in Activity
+* ADDED :Italian translation files
+* FIXED : Adding per to translation files
+* Version 1.5.3.1
+* ADDED : German Translation files
+* FIXED: Translations bug
+* FIXED : Ajax Quiz bug
+* FIXED : Proceed to Quiz fix for unit locking
+* FIXED : Activity pages blank due to BuddyPress pagination bug
+* Version1.5.3
+* UPDATED : Language Files
+* FIXED : Changed load_textdomain to load_plugin_textdomain
+* FIXED : Warning when Certificates were reset to a string.
+* FIXED : Certificate Print functions
+* ADDED : New HTML Canvas Library
+* FIXED : CSS fixes
+* ADDED : Private Studies
+* ADDED : Instructor ability to add Students
+* ADDED : New Library for printing certificates
+* ADDED : Unit Blocking
+* version 1.5.2
+* FIXED: Quiz submit question appearing.
+* FIXED : BP Study SLUG Added in Quiz Results marks message.
+* v 1.5.1.1
+* FIXED: Quiz timer event bug in Firefox
+* FIXED : Language files
+* FIXED : PMPRO Membership errors
+* UPDATED : Language files updated
+* FIXED : Free Study not show error message for non-logged in users
+* FIXED : Translation fixes in Unit Traverse
+* ADDED : Necessary study functions for various tips and hooks
+* FIXED : All Study Page Title default values
+* FIXED : Alphabetical Sort Order
+* FIX : Timer in Theme Color
+* ADDED : Unit Complete filter
+* Updated : Assignment Submissions CSS
+* Fix : Reset Badges and Certificates on study reset
+* ADDED : Pagination in Members in Studies -> Members
+* Fix : Fallback All Study Page title function added
+* Fix : Consolidating validation in one function
+* Fix: Credits fix
+* version 1.4.1
+* version 1.4.1
+* UPDATED : Language Files
+* ADDED : PMPRO Membership fixes
+* ADDED : Reset Answer Button in Questions
+* FIX : Added Filter quantipress_study_front_details
+* Fix : Reviews Translation
+* Fix : Badge display in Study pages
+* version 1.4
+* Fix : Hide activity Provision
+* Fix : Study button can be placed anywhere
+* FIX : One Question quiz next button
+* adding keywords to translation files
+* FIX : Current menu highlight in Study Menu
+* Optimizing the get Study students function
+* Language files updated
+* v 1.3.4
+* Recording Activity Meta for Instructor Stats
+* Fix for Free Study auto join Group
+* Bug on Quiz submission : Fade added
+* Sort, MCQ and language fixes
+* Sort answer option added
+* Sort Answer Question
+* Localization strings added to Js
+* Instructor Avatar display check in Study Directory.
+* Triggering event for js files to detect and run custom functions. For compatibility with other short code plugins.
+* Badges and Certificate Fix on Auto Evalutation
+* Insecure Query fix
+* v 1.3.3.2
+* Reset Quiz Fix
+* v 1.3.3
+* Language Files updated
+* Activity translation functions added
+* Generic parent print function
+* Quiz Retake option
+* Language fix
+* version 1.3.2
+* Certificate Generator
+* Version 1.3.1
+* Study Search Widget
+* User stats CSS fix
+* User stats CSS fix
+* Study Auto Evaluation
+* Friendly Time filter
+* version 1.2.1
+* Threaded page units nextpage
+* Language changes II
+* Language changes
+* Version 1.2
+* Version 1.2
+* Additional hooks
+* Free Study Price Hooks & Multiple Instructor hook
+* Unit Print
+* BP_STUDY_SLUG Fix
+* Google Microdata fix & addition of hooks and filters
+* Auto Update added
+* Auto Update
+* Study Widget fix
+* Bug Fixes Round 1
+* Instructor filter
+* Ratings  & Reviews fixes
+* Removing alert message
+* Fixes to Quiz Rest & evaluate, Timer & Auto Submit
+* Final changes
+* Fix for Instructor  Widget
+* Study Template
+* final fixes
+* Quiz total
+* Study confim fix
+* Confirm on reset
+* Ajax Fixes
+* Study mod final
+* Study Mod complete
+* Fixing after the merge
+* Study
+* Fixing Study and Starting with Alternate Route
+* Single study page
+* Study archive and all study page
+* Finishing Archive
+* Modifying classes and template
+* Adding study Admin
+* Adding Study Admin panel
+* Study Module Init
