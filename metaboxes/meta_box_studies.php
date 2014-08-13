@@ -38,17 +38,21 @@ class custom_add_meta_box_study {
 		
         wp_enqueue_script( 'jquery-ui-datepicker', array( 'jquery', 'jquery-ui-core' ) );
 		wp_enqueue_script( 'jquery-ui-slider', array( 'jquery', 'jquery-ui-core' ) );
-		wp_enqueue_script( 'timepicker_box', qm_PLUGIN_URL . '/qm-customtypes/metaboxes/js/jquery.timePicker.min.js', array( 'jquery' ) );
-		wp_enqueue_script( 'graph_box', qm_PLUGIN_URL . '/qm-customtypes/metaboxes/js/jquery.flot.min.js', array( 'jquery' ) );
-		wp_enqueue_script( 'graph_resize_box', qm_PLUGIN_URL . '/qm-customtypes/metaboxes/js/jquery.flot.resize.min.js', array( 'jquery' ) );
+		wp_enqueue_script( 'timepicker_box', qm_PLUGIN_URL . '/qm-personal-studies/metaboxes/js/jquery.timePicker.min.js', array( 'jquery' ) );
+		wp_enqueue_script( 'graph_box', qm_PLUGIN_URL . '/qm-personal-studies/metaboxes/js/jquery.flot.min.js', array( 'jquery' ) );
+		wp_enqueue_script( 'graph_resize_box', qm_PLUGIN_URL . '/qm-personal-studies/metaboxes/js/jquery.flot.resize.min.js', array( 'jquery' ) );
+		wp_enqueue_script("correlate", $stylesheet_dir . "/js/correlate.js", array("correlate-charts", "jquery-ui-datepicker", "jquery-ui-button"), false, true);
         wp_enqueue_script( 'meta_box-gmap','http://maps.google.com/maps/api/js?sensor=false');
-        wp_register_style( 'jqueryui', qm_PLUGIN_URL . '/qm-customtypes/metaboxes/css/jqueryui.css' );
-        wp_enqueue_style( 'timepicker', qm_PLUGIN_URL . '/qm-customtypes/metaboxes/css/timePicker.css' );
+        wp_register_style( 'jqueryui', qm_PLUGIN_URL . '/qm-personal-studies/metaboxes/css/jqueryui.css' );
+        wp_enqueue_style( 'timepicker', qm_PLUGIN_URL . '/qm-personal-studies/metaboxes/css/timePicker.css' );
+		
+		
+ 	
 	}
 	
 	function persistent_admin_scripts(){
-		wp_enqueue_script( 'meta_box_js', qm_PLUGIN_URL . '/qm-customtypes/metaboxes/js/scripts.js', array( 'jquery','iris','jquery-ui-core','jquery-ui-sortable','jquery-ui-slider','jquery-ui-datepicker' ) );
-		wp_enqueue_style( 'meta_box_css', qm_PLUGIN_URL . '/qm-customtypes/metaboxes/css/meta_box.css');
+		wp_enqueue_script( 'meta_box_js', qm_PLUGIN_URL . '/qm-personal-studies/metaboxes/js/scripts.js', array( 'jquery','iris','jquery-ui-core','jquery-ui-sortable','jquery-ui-slider','jquery-ui-datepicker' ) );
+		wp_enqueue_style( 'meta_box_css', qm_PLUGIN_URL . '/qm-personal-studies/metaboxes/css/meta_box.css');
 	}
 	// scripts
 	function admin_head() {
@@ -3604,6 +3608,87 @@ class custom_add_meta_box_study {
 							}
 
 							echo '</select><br />' . $desc;
+						break;
+						
+						//for api	
+						case 'api_variable_category':
+							global $wpdb;
+							$results = $wpdb->get_results( 'SELECT name FROM variable_categories');
+                            $querys = $results;
+							if(!empty($querys)){
+							echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">';
+                            echo '<option value="">Variable Category</option>';
+							 foreach ( $querys as $query ){
+						       echo '<option value="' . $query->name . '">' . $query->name . '</option>';
+							 }
+						    echo '</select><br />' . $desc;
+							}
+						   break;
+						   
+						case 'api_variable_unit':
+						echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">
+                        <option value="1to5">1 to 5 rating</option>
+                        <option value="0to1">0 to 1 rating</option>
+						<option value="percent">Percent</option>
+						<option value="-4to4">-4 to 4 rating</option>
+						<option value="0to5">0 to 5 rating</option>
+						</select><br />';
+						break;
+						
+						
+						case 'causeoreffect':
+						echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">
+                        <option value="Effect">As Effect</option>
+                        <option value="Cause">As Cause</option>
+                        </select><br />';
+						break;
+						
+						case 'api_variable':
+						global $wpdb;
+						$result = $wpdb->get_results( 'SELECT name FROM variables');
+                            $variables = $result;
+							if(!empty($variables )){
+							echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">';
+                            echo '<option value="">Variable Name</option>';
+							 foreach ( $variables as $variable ){
+						       echo '<option value="' . $variable->name . '">' . $variable->name . '</option>';
+							 }
+						    echo '</select><br />' . $desc;
+							}
+						break;
+						
+						case 'api_do_min':
+							echo '<input type="text" name="' . $id . '" id="' . $id . '" value="-Infinity" size="20" />
+									/5 <br />' . $desc;
+						break;
+						
+						case 'api_do_max':
+							echo '<input type="text" name="' . $id . '" id="' . $id . '" value="Infinity" size="20" />
+									/5 <br />' . $desc;
+						break;
+						
+						case 'api_do_delay':
+							echo '<input type="text" name="' . $id . '" id="' . $id . '" value="0" size="20" />
+									hrs <br />' . $desc;
+						break;
+						
+						case 'api_do_duration':
+							echo '<input type="text" name="' . $id . '" id="' . $id . '" value="24" size="20" />
+									hrs <br />' . $desc;
+						break;
+						
+						case 'api_do_assume':
+							foreach ( $options as $option )
+								echo '<input type="radio" name="' . $id . '" id="' . $id . '-' . $option['value'] . '" value="' . $option['value'] . '" ' . checked( esc_attr( $meta ), $option['value'], false ) . ' />
+										<label for="' . $id . '-' . $option['value'] . '">' . $option['label'] . '</label><br />';
+							echo '' . $desc;
+							
+							foreach ( $options2 as $option )
+							echo '<input type="radio" name="' . $id . '" id="' . $id . '-' . $option['value'] . '" value="' . $option['value'] . '" ' . checked( esc_attr( $meta ), $option['value'], false ) . ' />
+										<label for="' . $id . '-' . $option['value'] . '">Assume <input type="text" name="' . $id . '" id="' . $id . '" value="" size="20" />
+									for that time</label><br />';
+							echo '' . $desc;
+						
 						break;
 						
 						case 'selectmulticpt':

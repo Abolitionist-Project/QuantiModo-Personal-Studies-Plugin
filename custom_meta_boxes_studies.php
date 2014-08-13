@@ -894,76 +894,110 @@ $quantipress_assignments_metabox = array(
 	        'std'   => 'single'
 		),
 );
-// Study Date Metabox
-$Study_date_metabox = array(
+
+	$api_metabox = array(
 			array( // Text Input
-			'label'	=> __('Study Start Date','qm'), // <label>
-			'desc'	=> __('Date from which Study Started','qm'), // description
-			'id'	=> $prefix.'start_date_study', // field id and name
-			'type'	=> 'date',
-			),
-			array( // Text Input
-			'label'	=> __('Study End Date','qm'), // <label>
-			'desc'	=> __('Study end date.','qm'), // description
-			'id'	=> $prefix.'end_date_study', // field id and name
-			'type'	=> 'date',
-			),
-			array( // Text Input
-			'label'	=> __('Question','qm'), // <label>
-			'desc'	=> __('Your Question?','qm'), // description
-			'id'	=> $prefix.'study_question', // field id and name
-			'type'	=> 'text', // type of field
-			),
-			array( // Text Input
-			'label'	=> __('Answer','qm'), // <label>
-			'desc'	=> __('The Answer.','qm'), // description
-			'id'	=> $prefix.'study_answer', // field id and name
-			'type'	=> 'editor', // type of field
-			),
-			array( // Text Input
-			'label'	=> __('Participant Characteristics','qm'), // <label>
-			'desc'	=> __('','qm'), // description
-			'id'	=> $prefix.'study_participant_characteristics', // field id and name
-			'type'	=> 'editor', // type of field
-			),
-			array( // Text Input
-			'label'	=> __('Limitations','qm'), // <label>
-			'desc'	=> __('','qm'), // description
-			'id'	=> $prefix.'study_limitations', // field id and name
-			'type'	=> 'editor', // type of field
-			),
-			array( // Text Input
-			'label'	=> __('Results','qm'), // <label>
-			'desc'	=> __('Your Results','qm'), // description
-			'id'	=> $prefix.'study_results', // field id and name
-			'type'	=> 'editor', // type of field
-			),
-			array( // Text Input
-			'label'	=> __('Data Interpretation','qm'), // <label>
-			'desc'	=> __('The Data Interpretation','qm'), // description
-			'id'	=> $prefix.'study_data_interpretation', // field id and name
-			'type'	=> 'editor', // type of field
+			'label'	=> __('Variable Category','qm'), // <label>
+			'desc'	=> __('Select Variable Category','qm'), // description
+			'id'	=> $prefix.'variable_category', // field id and name
+			'type'	=> 'api_variable_category',
 			),
 			
+			array( // Text Input
+			'label'	=> __('Variable','qm'), // <label>
+			'desc'	=> __('Select Variable','qm'), // description
+			'id'	=> $prefix.'variables', // field id and name
+			'type'	=> 'api_variable',
+			),
+			
+			array( // Text Input
+			'label'	=> __('Cause or Effect','qm'), // <label>
+			'desc'	=> __('Select cause of effect','qm'), // description
+			'id'	=> $prefix.'causeoreffect', // field id and name
+			'type'	=> 'causeoreffect',
+			),
+	);
+	
+	
+	$api_variable_settings = array(
+			
+			array( // Text Input
+			'label'	=> __('Variable Name','qm'), // <label>
+			'desc'	=> __('Select Variable','qm'), // description
+			'id'	=> $prefix.'variables', // field id and name
+			'type'	=> 'api_variable',
+			),
+			
+			array( // Text Input
+			'label'	=> __('Unit','qm'), // <label>
+			'desc'	=> __('Select Unit','qm'), // description
+			'id'	=> $prefix.'variable_unit', // field id and name
+			'type'	=> 'api_variable_unit',
+			),
+	);
+	
+	$api_data_optimization = array(
+			
+			array( // Text Input
+			'label'	=> __('Minimum Value','qm'), // <label>
+			'desc'	=> __('Add Minimum Value','qm'), // description
+			'id'	=> $prefix.'var_minimum_value', // field id and name
+			'type'	=> 'api_do_min', // type of field
+		),
+			
+		array( // Text Input
+			'label'	=> __('Maximum Value','qm'), // <label>
+			'desc'	=> __('Add Minimum Value','qm'), // description
+			'id'	=> $prefix.'var_minimum_value', // field id and name
+			'type'	=> 'api_do_max', // type of field
+		),
+		
+		array( // Text Input
+			'label'	=> __('Delay Before Onset of Action','qm'), // <label>
+			'desc'	=> __('In Hours','qm'), // description
+			'id'	=> $prefix.'var_minimum_value', // field id and name
+			'type'	=> 'api_do_delay', // type of field
+		),
+		
+		array( // Text Input
+			'label'	=> __('Duration of Action','qm'), // <label>
+			'desc'	=> __('In Hours','qm'), // description
+			'id'	=> $prefix.'var_minimum_value', // field id and name
+			'type'	=> 'api_do_duration', // type of field
+		),
+		
+		array( // Text Input
+			'label'	=> __('When there is no data:','qm'), // <label>
+			'desc'	=> __('','qm'), // description
+			'id'	=> $prefix.'var_assume', // field id and name
+			'type'	=> 'api_do_assume', // type of field
+			'options' => array(
+				array('value'=> 'Assume data is missing','label' => 'Assume data is missing'),
+			),
+			'options2' => array(
+				array('value'=> '','label' => ''),
+			),
+	        'std'   => 'single'
+		),
 	);
 
-
+    $study_api = new custom_add_meta_box_study( 'api-settings', __('Examined Variable','qm'), $api_metabox, 'personal-study', true );
+	$api_var_settings = new custom_add_meta_box_study( 'api-variable-properties', __('Variable Properties','qm'), $api_variable_settings, 'personal-study', true );
+	$api_do = new custom_add_meta_box_study( 'api-do', __('Data Optimization','qm'), $api_data_optimization, 'personal-study', true );
+	
 	$post_metabox = new custom_add_meta_box_study( 'post-settings', __('Post Settings','qm'), $post_metabox, 'post', true );
 	$page_metabox = new custom_add_meta_box_study( 'page-settings', __('Page Settings','qm'), $page_metabox, 'page', true );
 
-	$study_box = new custom_add_meta_box_study( 'page-settings', __('Study Settings','qm'), $study_metabox, 'study', true );
+//	$study_box = new custom_add_meta_box_study( 'page-settings', __('Study Settings','qm'), $study_metabox, 'personal-study', true );
 
 	$study_product = __('Product Studies','qm');
 	if(function_exists('pmpro_getAllLevels')){
 		$study_product = __('Study Membership','qm');
 	}
-	$study_product_box = new custom_add_meta_box_study( 'post-settings', $study_product, $study_product_metabox, 'study', true );
+//	$study_product_box = new custom_add_meta_box_study( 'post-settings', $study_product, $study_product_metabox, 'personal-study', true );
 // Initiator for Study
-//	$Study_datebox = new custom_add_meta_box_study( 'date-settings', __('Study Information','qm'), $Study_date_metabox, 'study', true );
-	$unit_box = new custom_add_meta_box_study( 'page-settings', __('Unit Settings','qm'), $unit_metabox, 'unit', true );
 
-	$question_box = new custom_add_meta_box_study( 'page-settings', __('Question Settings','qm'), $question_metabox, 'question', true );
-	$quiz_box = new custom_add_meta_box_study( 'page-settings', __('Question Settings','qm'), $quiz_metabox, 'quiz', true );
+
 
 	
 	$testimonial_box = new custom_add_meta_box_study( 'testimonial-info', __('Testimonial Author Information','qm'), $testimonial_metabox, 'testimonials', true );
@@ -998,7 +1032,7 @@ function change_default_title( $title ){
     $screen = get_current_screen();
 
     // For CPT 1
-    if  ( 'study' == $screen->post_type ) {
+    if  ( 'personal-study' == $screen->post_type ) {
         $title = 'Enter research question here';}
     
 	return $title;
