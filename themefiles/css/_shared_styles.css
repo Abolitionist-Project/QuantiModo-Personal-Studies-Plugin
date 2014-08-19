@@ -1,25 +1,3 @@
-.indented{
-    margin-left: 14px;
-}
-
-.card-header{
-    cursor: pointer;
-    background: #ffffff;
-    margin-bottom: 0;
-    /* don't allow selecting header content */
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.card-header .heading{
-    margin: 0;
-    margin-left: 14px;
-    margin-right: 14px;
-}
-
 /**************/
 /* Date Range */
 /**************/
@@ -48,106 +26,93 @@
     padding: .4em 0em;
 }
 
-#accordion-content-rangepickers .ui-button{
+#accordion-content-rangepickers .ui-button
+{
     font-size: 1em;
     width: 25%;
 }
-/**************/
-/* Var Picker */
-/**************/
-#variablePickerList{
-    max-height: 600px;
-    overflow-y: scroll;
-}
-#variablePickerFilter{
-    width: 100%;
-    margin-bottom: 14px;
-    padding-left: 4px;
-}
-#variablePickerSettingsButton{
-    margin-top: 0;
-    width: 100%;
-}
 
-#variablePickerList li{
-    cursor: pointer;
-    transition: background 0.2s ease-in-out;
-    -webkit-transition: background 0.2s ease-in-out;
-    -moz-transition: background 0.2s ease-in-out;
-}
-#variablePickerList li:hover{
-    background: #f5f5f5;
-}
-.variablePickerCategory{
-    background: #eeeeee;
-    padding-left: 14px;
-    cursor: default !important;
-}
+
 /**************/
 /*Var Settings*/
 /**************/
-.settingsNav{
-    background: #eee;
-}
-.settingsNav .buttonRow{
-    margin-top: 50px;
-}
-
-.settingsContent{
-    margin-left: 14px;
-    margin-right: 14px;
-    margin-top:10px;
-}
-
-.settings-container{
+#accordion-settings-header{
+    color: #29bdca;
     background: #fff;
-    height: 400px;
-    width: 400px;
-    display: none;
+    border-bottom: solid 3px #229DA5;
+    cursor: auto;
 }
-.settings-container.open{
-    background: #fff;
-    display: block;
+.buttonrow-2{
+    margin: auto;
+    width: 49%;
 }
-
-.settings-container b{
+#accordion-settings-content b{
     font-size: 1.05em;
     display:block;
     color: #29bdca;
 }
-.settings-container table{
+#accordion-settings-content table{
     border: none;
-    width: 100%;
-    margin:0;
+    margin:0px;
     border-collapse:collapse;
 }
-.settings-container td{
+#accordion-settings-content td{
     padding-bottom:4px;
     padding-top: 4px;
     border: none;
     vertical-align:middle;
 }
-.settings-container td:last-child{
+#accordion-settings-content td:first-child{
+    padding-left:8px;
+}
+#accordion-settings-content td:last-child{
     float:right;
     height: 40px;
     line-height:20px;
+    width: 150px;
 }
-.settings-container input[type="radio"]{
+#accordion-settings-content div{
+    padding-left: 8px;
+    padding-bottom:4px;
+    padding-top: 4px;
+    border: none;
     vertical-align:middle;
 }
-.settings-container input[type="radio"] + label{
+#accordion-settings-content .ui-sortable{
+    list-style: none;
+}
+#accordion-settings-content .ui-sortable li {
+    height:30px;
+    background:none;
+    border: none;
+}
+#accordion-settings-content .ui-sortable li label {
+    line-height:28px;
+    vertical-align:middle;
+    font-weight: normal;
+    color: gray;
+}
+#accordion-settings-content .ui-sortable li span{
+    display:inline-block;
+    vertical-align:middle;
+}
+#accordion-settings-content input[type="radio"]{
+    vertical-align:middle;
+}
+#accordion-settings-content input[type="radio"] + label{
     vertical-align: middle;
     padding-left: 8px;
 }
-.settings-container td:first-child{
+#accordion-settings-content td:first-child{
     white-space: nowrap;
 }
 
 #joinedVariablePicker{
-    position: relative;
-    top: -10px;
     opacity: 0;
     width: 0px;
+    height: 30px;
+    margin-top: 3px;
+    padding-top:4px;
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -157,11 +122,10 @@
     width :230px;
 }
 #addJoinedVariableButton{
-    position: relative;
     display: inline;
     width: 36px;
     height: 36px;
-    margin-left: -14px;
+    margin-left:-24px;
     background-color: #cccccc;
     border: none;
     background: url('https://i.imgur.com/jf3AOBR.png');
@@ -334,6 +298,9 @@
     padding-right: 5%;
     margin-left: auto;
     margin-right: auto;
+    border-bottom: solid 3px #DDDDDD;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
 
@@ -356,6 +323,9 @@
     padding-right: 5%;
     margin-left: auto;
     margin-right: auto;
+    border-bottom: solid 3px #DDDDDD;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 .addmeasurement-content .inner{
     padding-top: 12px;
@@ -441,13 +411,17 @@
     margin-top: 12px;
 }
 .accordion-content{
+    overflow:hidden;
     width: 100%;
     box-sizing:border-box;
     background-color: #FFFFFF;
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 5%;
+    padding-right: 5%;
     margin-left: auto;
     margin-right: auto;
+    border-bottom: solid 3px #DDDDDD;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 .accordion-content .inner{
     padding-top: 12px;
@@ -481,13 +455,12 @@
 /*************/
 .gear-icon{
     cursor: pointer;
-    margin-top: -2px;
+    margin-top: 7px;
     margin-right: 7px;
-    width: 26px;
-    height:26px;
+    width: 28px;
+    height:28px;
     float: right;
-    /*background:url('https://i.imgur.com/dw7YcYP.png');*/
-    background-image: url('https://i.imgur.com/WDuw5IF.png');
+    background:url('https://i.imgur.com/dw7YcYP.png');
     background-repeat: no-repeat;
     background-size: contain;
 }

@@ -1,13 +1,13 @@
 var AnalyzePage = function() {
 	var timezone = jstz.determine().name();
 	
-	var selectedInputVariableName;		// This holds the variable that was last selected in the bargraph
+	var selectedCauseVariableName;		// This holds the variable that was last selected in the bargraph
 
 	var quantimodoUnits = {};
 	var quantimodoVariables = {};
-	var inputMeasurements;
-	var outputMeasurements;
-        
+	var causeMeasurements;
+	var effectMeasurements;
+
 	var dateRangeStart, dateRangeEnd;
 
 	var dateSelectorVisible;
@@ -24,8 +24,12 @@ var AnalyzePage = function() {
 			{
 				refreshMeasurementsRange(function() {
 					refreshVariables([], function() {
+						categoryListUpdated();
+						outputCategoryUpdated();
+						getBargraph();
+						refreshInputData();
 					});
-				}); 
+				});
 				refreshUnits(function() {
 					unitListUpdated();
 				});
@@ -42,28 +46,31 @@ var AnalyzePage = function() {
 		});
 
 	};
-        
-    /* Initialize events */
-	var initEvents = function()
-	{
-        jQuery("#card-header-detail").click(function(){
-            jQuery("#gauge-graph-content").slideToggle();
-        });
-	};
-        
+
 	/* Initialize left menubar */
-	var initVariablePicker = function()
+	var initAccordion = function()
 	{
 		jQuery('.questionMark').tooltip();
 		
-		jQuery("#variablePickerSettingsButton").on('click', function()
+		jQuery("#button-input-varsettings").on('click', function()
 		{
-			VariableSettings.show(AnalyzePage.lastInputVariable);
+			variableSettings.show(AnalyzePage.lastCauseVariable);
 		});
-
-		jQuery("#variablePickerSettingsButton").on('click', function()
+		jQuery("#button-output-varsettings").on('click', function()
 		{
-			VariableSettings.show(AnalyzePage.lastInputVariable);
+			variableSettings.show(AnalyzePage.lastEffectVariable);
+		});
+	};
+
+	var initVariableSelectors = function()
+	{
+		jQuery('#selectOutputCategory').change(outputCategoryUpdated);
+		jQuery('#selectEffectVariable').change(function() {
+			effectVariableUpdated();
+			getBargraph();
+		});		
+		jQuery('#selectOutputAsType').change(function() {
+			getBargraph(true);
 		});
 	};
 
@@ -74,8 +81,8 @@ var AnalyzePage = function() {
 		if (newStartTime !== lastStartTime)
 		{
 			lastStartTime = newStartTime;
-			//refreshInputData();
-			//refreshOutputData();
+			refreshInputData();
+			refreshOutputData();
 		}
 	};
 
@@ -86,8 +93,8 @@ var AnalyzePage = function() {
 		if (newEndTime !== lastEndTime)
 		{
 			lastEndTime = newEndTime;
-			//refreshInputData();
-			//refreshOutputData();
+			refreshInputData();
+			refreshOutputData();
 		}
 	};
 
@@ -99,8 +106,8 @@ var AnalyzePage = function() {
 		{
 			lastStartTime = newStartTime;
 			lastEndTime = newEndTime;
-			//refreshInputData();
-			//refreshOutputData();
+			refreshInputData();
+			refreshOutputData();
 		}
 	};
 
@@ -117,35 +124,97 @@ var AnalyzePage = function() {
 		if (newPeriod !== lastPeriod)
 		{
 			lastPeriod = newPeriod;
-			//refreshInputData();
-			//refreshOutputData();
+			refreshInputData();
+			refreshOutputData();
 		}
+	};
+
+	var categoryListUpdated = function()
+	{
+				
+		jQuery('#selectOutputCategory').empty();
+		jQuery('#selectVariableCategorySetting').empty();
+		jQuery.each(Object.keys(AnalyzePage.quantimodoVariables).sort(function(a, b)
+		{
+			return a.toLowerCase().localeCompare(b.toLowerCase());
+		}), function(_, category)
+		{
+			//output category set values
+			if(AnalyzePage.lastEffectVariable != null  && AnalyzePage.lastEffectVariable.category == category)
+			{
+				jQuery('#selectOutputCategory').append(jQuery('<option/>').attr('selected', 'selected').attr('value', category).text(category));
+ 			}
+			else
+			{
+				jQuery('#selectOutputCategory').append(jQuery('<option/>').attr('value', category).text(category));
+			}
+
+			//jQuery('#selectOutputCategory').append(jQuery('<option/>').attr('value', category).text(category));
+			jQuery('#selectVariableCategorySetting').append(jQuery('<option/>').attr('value', category).text(category));
+		});
 	};
 
 	var unitListUpdated = function()
 	{
 	};
 
-	var lastInputVariable = null;
-	var inputVariableUpdated = function()
+	var lastCauseVariable = null;
+	var causeVariableUpdated = function()
 	{
-		var newInputVariable = AnalyzePage.getInputVariable();
-		if (newInputVariable !== AnalyzePage.lastInputVariable)
+		var newCauseVariable = AnalyzePage.getCauseVariable();
+		if (newCauseVariable !== AnalyzePage.lastCauseVariable)
 		{
-			//refreshInputData();
-			AnalyzePage.lastInputVariable = newInputVariable;
-			saveSetting('lastInputVariableName', AnalyzePage.lastInputVariable.originalName);
-			AnalyzePage.selectedInputVariableName = AnalyzePage.lastInputVariable.originalName;
+			refreshInputData();
+			AnalyzePage.lastCauseVariable = newCauseVariable;
+			saveSetting('lastCauseVariableName', AnalyzePage.lastCauseVariable.originalName);
+			AnalyzePage.selectedCauseVariableName = AnalyzePage.lastCauseVariable.originalName;
 		}
 	};
 
-	var lastOutputVariable = null;
-	var outputVariableUpdated = function(newOutputVariable) {
-		if (lastOutputVariable == null || newOutputVariable !== AnalyzePage.lastOutputVariable) {
-			//refreshOutputData();
-			getBargraph(newOutputVariable, false);
-			AnalyzePage.lastOutputVariable = newOutputVariable;
-			saveSetting('lastOutputVariableName', AnalyzePage.lastOutputVariable.originalName);
+	var lastOutputCategory = null;
+	var outputCategoryUpdated = function()
+	{
+		var newOutputCategory = AnalyzePage.getOutputCategory();
+
+		jQuery('#selectEffectVariable').empty();
+		jQuery.each(AnalyzePage.quantimodoVariables[newOutputCategory], function(_, variable)
+		{
+			//	if (variable.name == variable.originalName)
+	 		// 	{
+ 				if(AnalyzePage.lastEffectVariable != null && AnalyzePage.lastEffectVariable.originalName == variable.originalName)
+ 				{
+					jQuery('#selectEffectVariable').append(jQuery('<option/>').attr('selected', 'selected').attr('value', variable.originalName).text(variable.name));
+ 				}
+ 				else
+ 				{
+					jQuery('#selectEffectVariable').append(jQuery('<option/>').attr('value', variable.originalName).text(variable.name));
+ 				}
+			//	}
+
+			// if (variable.name == variable.originalName)
+			// {
+			// 	jQuery('#selectEffectVariable').append(jQuery('<option/>').attr('value', variable.name).text(variable.name));
+			// }
+			// else
+			// {
+			// 	jQuery('#selectEffectVariable').append(jQuery('<option/>').attr('value', variable.name).text(variable.name + " (" + variable.originalName + ")"));
+			// }
+
+		});
+		lastOutputCategory = newOutputCategory;
+		effectVariableUpdated();
+		jQuery("#selectEffectVariable").change();
+		refreshOutputData();
+
+	};
+
+	var lastEffectVariable = null;
+	var effectVariableUpdated = function() {
+		var newEffectVariable = AnalyzePage.getEffectVariable();
+		if (newEffectVariable !== AnalyzePage.lastEffectVariable) {
+			refreshOutputData();
+			AnalyzePage.lastEffectVariable = newEffectVariable;
+			saveSetting('lastEffectVariableName', AnalyzePage.lastEffectVariable.originalName);
 		}
 	};
 
@@ -156,7 +225,7 @@ var AnalyzePage = function() {
 			dateSelectorVisible = (window.localStorage["dateSelectorVisible"] || "true") == "true" ? true : false;
 			inputSelectorVisible = (window.localStorage["inputSelectorVisible"] || "true") == "true" ? true : false;
 			outputSelectorVisible = (window.localStorage["outputSelectorVisible"] || "true") == "true" ? true : false;
-			AnalyzePage.selectedInputVariableName = window.localStorage["lastInputVariableName"];                        
+			AnalyzePage.selectedCauseVariableName = window.localStorage["lastCauseVariableName"];
 		}
 	};
 
@@ -213,7 +282,7 @@ var AnalyzePage = function() {
 		jQuery("#share-dialog-background")  .css( {'display':'block', 'opacity':0.5} );
 		jQuery("#share-dialog")             .css( {'display':'block', 'opacity':1} );
 	}
-		
+        
 	var selectVariableName = function(variableName) 
 	{
 		var variable = AnalyzePage.getVariableFromName(variableName);
@@ -226,9 +295,9 @@ var AnalyzePage = function() {
 			jQuery("#addmeasurement-variable-datetime").val('');
 			return false;
 		} else {
-					if(variable)
-						jQuery("#addmeasurement-variable-original-name").val(variable.originalName);
-				}
+                    if(variable)
+                        jQuery("#addmeasurement-variable-original-name").val(variable.originalName);
+                }
 		Quantimodo.getMeasurements(
 		{
 			'variableName': variableName,
@@ -376,8 +445,8 @@ var AnalyzePage = function() {
 	var share = function(onDoneListener)
 	{
 		var shareObject = {	'type':'correlate',
-							'inputVariable': 	AnalyzePage.lastInputVariable.originalName,
-							'outputVariable': 	AnalyzePage.lastOutputVariable.originalName,
+							'causeVariable': 	AnalyzePage.lastCauseVariable.originalName,
+							'effectVariable': 	AnalyzePage.lastEffectVariable.originalName,
 							'startTime': 		AnalyzePage.getStartTime(),
 							'endTime': 			AnalyzePage.getEndTime(),
 							'groupingWidth': 	AnalyzePage.getPeriod(),
@@ -389,14 +458,14 @@ var AnalyzePage = function() {
 	};
 
 	return {
-		lastInputVariable : lastInputVariable,
-		lastOutputVariable : lastOutputVariable,
+		lastCauseVariable : lastCauseVariable,
+		lastEffectVariable : lastEffectVariable,
 		quantimodoUnits: quantimodoUnits,
 		quantimodoVariables: quantimodoVariables,
-		inputMeasurements: inputMeasurements,
-		outputMeasurements: outputMeasurements,               
+		causeMeasurements: causeMeasurements,
+		effectMeasurements: effectMeasurements,
 
-		selectedInputVariableName: selectedInputVariableName,
+		selectedCauseVariableName: selectedCauseVariableName,
 
 		dateRangeStart: dateRangeStart,
 		dateRangeEnd: dateRangeEnd,
@@ -404,7 +473,8 @@ var AnalyzePage = function() {
 		getTimezone:       function() { return timezone; },
 		getStartTime:      function() { return AnalyzePage.dateRangeStart; },
 		getEndTime:        function() { return AnalyzePage.dateRangeEnd; },
-		getVariableFromName: function(variableName) 
+		getOutputCategory: function() { return jQuery('#selectOutputCategory :selected').val(); },
+                getVariableFromName: function(variableName) 
 									  {
 											var selectedVariable;
 											var categories = Object.keys(AnalyzePage.quantimodoVariables);
@@ -418,11 +488,11 @@ var AnalyzePage = function() {
 													if(currentVariable.name == variableName)
 													{
 														selectedVariable = jQuery.extend({}, currentVariable);	// Create a copy so that modifications won't pollute the original set					
-														return selectedVariable;
+									                    return selectedVariable;
 													}
 												}
 											}
-											return null;
+									        return null;
 									  },
 		getVariableFromOriginalName: function(originalVariableName) 
 									  {
@@ -438,24 +508,33 @@ var AnalyzePage = function() {
 													if(currentVariable.originalName == originalVariableName)
 													{
 														selectedVariable = jQuery.extend({}, currentVariable);	// Create a copy so that modifications won't pollute the original set					
-														return selectedVariable;
+									                    return selectedVariable;
 													}
 												}
 											}
-											return null;
+									        return null;
 									  },
-		getInputVariable:  function() {                                         
-											return AnalyzePage.getVariableFromOriginalName(AnalyzePage.selectedInputVariableName);
+		getCauseVariable:  function() {
+											return AnalyzePage.getVariableFromOriginalName(AnalyzePage.selectedCauseVariableName);
 									  },
-                getOutputVariable:  function() {                                         
-											return AnalyzePage.lastOutputVariable;
+		getEffectVariable: function() {
+											var categoryName = jQuery('#selectOutputCategory :selected').val();
+											var variableName = jQuery('#selectEffectVariable :selected').val();
+											var wantedVariable;
+											jQuery.each(AnalyzePage.quantimodoVariables[categoryName], function(_, variable)
+											{
+												if (variable.originalName == variableName)
+												{
+													wantedVariable = variable;
+													return;
+												}
+											});
+											return wantedVariable;
 									  },
-		setInputVariable: function(originalVariableName)
+		setCauseVariable: function(originalVariableName)
 									  {                                                                                        
-											AnalyzePage.selectedInputVariableName = originalVariableName;
-											inputVariableUpdated();
-                                                                                        refreshOutputData();
-                                                                                        refreshInputData();                                                                                        
+									  		AnalyzePage.selectedCauseVariableName = originalVariableName;
+											causeVariableUpdated();
 									  },
 		getPeriod:         function() {
 			switch (jQuery('#accordion-content-rangepickers :radio:checked + label').text())
@@ -475,37 +554,41 @@ var AnalyzePage = function() {
 			if (isLoggedIn)
 			{
 				refreshMeasurementsRange(function() {
-					refreshVariables([], function() {                                       
+					refreshVariables([], function() {
+						categoryListUpdated();
+						outputCategoryUpdated();
+						getBargraph();
+						refreshInputData();
 					});
-				}); 
+				});
 				refreshUnits(function() {
 					unitListUpdated();
 				});
 			}
 			initDateRangeSelector();
-			VariablePicker.init({
-				variablePickedCallback : function(variable) {
-					outputVariableUpdated(variable);
-				}
-			});
-			VariableSettings.init({
+			initVariableSelectors();
+			variableSettings.init({
 				saveCallback : function() {
 					refreshVariables([], function() {
+						categoryListUpdated();
+						outputCategoryUpdated();
+						getBargraph();
+						refreshInputData();
 					});	//TODO replace this with something that updates the variables locally, since this triggers
 				}
 			});
 			initLoginDialog();
 			initSharing();
-			initVariablePicker();
-			initDeleteMeasurements();
-            initEvents();                        
+			initAddMeasurement();
+            initDeleteMeasurements();
+            initAccordion();
 		},
 		hideScatterplot: function() { if (scatterplotVisible) {toggleElement('#scatterplot-graph'); scatterplotVisible = false;} },
 		showScatterplot: function() { if (!scatterplotVisible) {toggleElement('#scatterplot-graph'); scatterplotVisible = true} },
 		hideCorrelationGauge: function() { if (correlationGaugeVisible) {toggleElement('#correlation-gauge'); correlationGaugeVisible = false;} },
 		showCorrelationGauge: function() { if (!correlationGaugeVisible) {toggleElement('#correlation-gauge'); correlationGaugeVisible = true} },
 		showSettingsForVariableFromGraph: function(variableName) {
-			VariableSettings.show(AnalyzePage.getVariableFromOriginalName(variableName));
+			variableSettings.show(AnalyzePage.getVariableFromOriginalName(variableName));
 		},
 		getVariableSelectedFromBarGraph: function(variableName) {
 			return variableSelectedFromBarGraph(variableName);
@@ -550,15 +633,15 @@ var AnalyzePage = function() {
 				}
 			});
 			
-			if(variableName != null && variableName !== undefined) {
-				variableName = unescape(variableName);
-				var variable = AnalyzePage.getVariableFromOriginalName(variableName);
-				jQuery("#addmeasurement-variable-name").val(variable.name);
-				jQuery("#addmeasurement-variable-original-name").val(variable.originalName);
-				selectVariableName(variable.name);
-			} else {
-				selectVariableName('');
-			}
+                        if(variableName != null && variableName !== undefined) {
+                            variableName = unescape(variableName);
+                            var variable = AnalyzePage.getVariableFromOriginalName(variableName);
+                            jQuery("#addmeasurement-variable-name").val(variable.name);
+                            jQuery("#addmeasurement-variable-original-name").val(variable.originalName);
+                            selectVariableName(variable.name);
+                        } else {
+                            selectVariableName('');
+                        }
 						
 			
 			jQuery("#addmeasurement-variable-datetime").datetimepicker();
@@ -578,32 +661,14 @@ jQuery(AnalyzePage.init);
 
 function getSettingsForm(variableName) 
 {      
-	AnalyzePage.showSettingsForVariableFromGraph(unescape(variableName));		
+    AnalyzePage.showSettingsForVariableFromGraph(unescape(variableName));		
 }
 
-function setInputVariable(variableName) {                
-    showGraphAndScatterplotOnFancyBox();
-    jQuery('.fancybox-wrap').css('margin-top', '30px');
-    jQuery(window).trigger('resize');
-    var variable = AnalyzePage.getVariableFromOriginalName(unescape(variableName)); 
-    AnalyzePage.setInputVariable(variable.originalName);    
+function setCauseVariable(variableName) {
+    var variable = AnalyzePage.getVariableFromOriginalName(unescape(variableName));    
+    AnalyzePage.setCauseVariable(variable.originalName);
 }
 
-function showGraphAndScatterplotOnFancyBox() {
-    // Create the fancybox dialog
-    var graphAndScatterplot = jQuery('#section-analyze');
-    jQuery.fancybox(graphAndScatterplot, { 
-        closeBtn: true,
-        helpers: {
-            overlay: {
-                closeClick : false
-            }
-        },
-        keys : {
-            close  : null
-        }
-    });
-}
 
 var bargraph;
 var bargraphData;
@@ -647,13 +712,13 @@ function jsonCallback(data)
 		jQuery('.barloading').hide();
 		jQuery('#graph-bar').show();
 		
-		sortedByCorrelation = new Array();
-		sortedByCausality = new Array();
-		
-		var valAs = jQuery('#selectOutputAsType').val();		
-				
+                sortedByCorrelation = new Array();
+                sortedByCausality = new Array();
+                
+                var valAs = jQuery('#selectOutputAsType').val();		
+                
 		for (var i in data) {
-						dataArray[i] = ((valAs === 'cause') ? { 'originalName' : data[i].originalEffect,  'name' : data[i].effect} : { 'originalName' : data[i].originalCause,  'name' : data[i].cause});                        			
+                        dataArray[i] = ((valAs === 'cause') ? { 'originalName' : data[i].originalEffect,  'name' : data[i].effect} : { 'originalName' : data[i].originalCause,  'name' : data[i].cause});                        			
 			var value = data[i].correlationCoefficient;
 			var label = data[i].cause;
 			var category = data[i].causeCategory;
@@ -716,56 +781,55 @@ function jsonCallback(data)
 		constructBarGraph(data.length, sortedByCorrelation, dataArray);
 
 		bargraphData = data;
-				
-				jQuery("#minimumNumberOfSamples").keypress(function(event) {
-					var code = (event.keyCode ? event.keyCode : event.which);
-					if (code == 13) {
-						event.stopImmediatePropagation();
-						var numberOfPairs = parseInt(jQuery("#minimumNumberOfSamples").val());
-						if (isNaN(numberOfPairs))
-						{
-							alert("Invalid filling value, must be a number.");
-							return;
-						}
-						filterByNumberOfPairs(numberOfPairs);
+                
+                jQuery("#minimumNumberOfSamples").keypress(function(event) {
+                    var code = (event.keyCode ? event.keyCode : event.which);
+                    if (code == 13) {
+                        event.stopImmediatePropagation();
+                        var numberOfPairs = parseInt(jQuery("#minimumNumberOfSamples").val());
+                        if (isNaN(numberOfPairs))
+                        {
+                            alert("Invalid filling value, must be a number.");
+                            return;
+                        }
+                        filterByNumberOfPairs(numberOfPairs);
 				if (jQuery("#gauge-timeline-settingsicon").hasClass("dropdown-open")) 
 				{
-							jQuery("#gauge-timeline-settingsicon").removeClass("dropdown-open");
-							jQuery("#dropdown-barchart-settings").hide();
-						}
-					}
+                            jQuery("#gauge-timeline-settingsicon").removeClass("dropdown-open");
+                            jQuery("#dropdown-barchart-settings").hide();
+                        }
+                    }
 		});
 	}
 }
 
-function getBargraph(variable, bUseCache)
+function getBargraph(bUseCache)
 {
-	jQuery('#graph-bar').bind('mouseenter', function(event) {
-		jQuery('#graph-bar').css('cursor', 'pointer');
-	});
-	jQuery('#graph-bar').bind('mouseleave', function(event) {
-		jQuery('#graph-bar').css('cursor', 'auto');
-		if(overBargraphRowIndex != null && overBargraphRowIndex != selectedBargraphRowIndex) {
-			overBargraphRowIndex.attr('fill', '#FFF');  
-			overVarNameOnBargraphRow.attr('style', ''); 
-		}
-		if(settingsIconsOnBargraphRow != null) {
-				settingsIconsOnBargraphRow.attr('style', '');
-		}        
-	});
-	
-	jQuery('#graph-bar').hide();
-	jQuery('.barloading').show();
-	var url = Quantimodo.url + 'correlations';
+    jQuery('#graph-bar').bind('mouseenter', function(event) {
+        jQuery('#graph-bar').css('cursor', 'pointer');
+    });
+    jQuery('#graph-bar').bind('mouseleave', function(event) {
+        jQuery('#graph-bar').css('cursor', 'auto');
+        if(overBargraphRowIndex != null && overBargraphRowIndex != selectedBargraphRowIndex) {
+            overBargraphRowIndex.attr('fill', '#FFF');  
+            overVarNameOnBargraphRow.attr('style', ''); 
+        }
+        if(settingsIconsOnBargraphRow != null) {
+                settingsIconsOnBargraphRow.attr('style', '');
+        }        
+    });
+    
+    jQuery('#graph-bar').hide();
+    jQuery('.barloading').show();
+    var val = jQuery('#selectEffectVariable').val();
+    var url = Quantimodo.url + 'correlations';
 
 	var valAs = jQuery('#selectOutputAsType').val();
+	var jsonParam = {effect: val};
 	if (valAs == 'cause')
-		var jsonParam = {cause: variable.originalName};
-	else
-		var jsonParam = {effect: variable.originalName};
+		jsonParam = {cause: val};
 
-
-	if (valAs == 'effect' &&  variable.causeOnly == 1) 
+	if (valAs == 'effect' &&  AnalyzePage.getVariableFromOriginalName(val).causeOnly == 1) 
 	{
 		jQuery('.no-data').show();
 		jQuery('#graph-bar').hide();
@@ -793,14 +857,14 @@ function getBargraph(variable, bUseCache)
 		}
 	}
 	
-	jQuery.get(url, jsonParam).done(function(data)
-	{
+    jQuery.get(url, jsonParam).done(function(data)
+    {
 		if(valAs == 'cause')
 			bargraphDataAsCause = data;
 		else
 			bargraphDataAsEffect = data;
 		jsonCallback(data);
-	})
+    })
 }
 function resetBarGraph() {
 	jQuery(".no-data").hide();
@@ -809,15 +873,15 @@ function resetBarGraph() {
 }
 
 function constructBarGraph(count, dataOfSerie, dataSeries) {
-	resetBarGraph();
-	
-	var GraphContainerHeight = (count * 40.5);
-	var height = 50;
-	var new_height = height + GraphContainerHeight;
+    resetBarGraph();
+    
+    var GraphContainerHeight = (count * 40.5);
+    var height = 50;
+    var new_height = height + GraphContainerHeight;
 
-	selectedVariableName = sortedByCorrelation[0].label;
+    selectedVariableName = sortedByCorrelation[0].label;
 	
-	var varName = "";
+	var varName = jQuery('#selectEffectVariable').val();
 	var valAs = jQuery('#selectOutputAsType').val();
 	var headerText = "Effect on ";
 	if (valAs == 'cause')
@@ -838,72 +902,72 @@ function constructBarGraph(count, dataOfSerie, dataSeries) {
 	}
 	jQuery(jQuery("#bar-graph-header div")[0]).html(headerTextTruncated);   
 
-	var pBands = new Array();
+    var pBands = new Array();
 	resetHighlightStuff();
-	for (var i = 0; i < dataSeries.length; i++) {        
-		pBands[i] = { 
-				cursor: 'pointer',
-				color: '#FFF',
-				from: i - 0.5,
-				to: i + 0.5,
-				events: {
-					click: function(e) {                        
-						setInputVariable(escape(this.axis.categories[this.options.from + 0.5].originalName));
+    for (var i = 0; i < dataSeries.length; i++) {        
+        pBands[i] = { 
+                cursor: 'pointer',
+                color: '#FFF',
+                from: i - 0.5,
+                to: i + 0.5,
+                events: {
+                    click: function(e) {                        
+                        setCauseVariable(escape(this.axis.categories[this.options.from + 0.5].originalName));
 			if (selectedBargraphRowIndex != null) {
-							selectedBargraphRowIndex.attr('fill', this.options.color);
-							selectedVarNameOnBargraphRow.attr('style', '');
-						}
-						this.svgElem.attr('fill', '#29bdca');
-						selectedBargraphRowIndex = this.svgElem;    
-						selectedVarNameOnBargraphRow = jQuery("div[data-row=\'"+ escape(this.axis.categories[this.options.from + 0.5].originalName) + "\']");
-						selectedVarNameOnBargraphRow.attr('style', 'color:#FFF;');
-					},
-					mouseover: function(e) {                        
-						overBargraphRowIndex = this.svgElem;
-						overVarNameOnBargraphRow = jQuery("div[data-row=\'"+ escape(this.axis.categories[this.options.from + 0.5].originalName) + "\']");
-						if(leaveBargraphRowIndex != null && leaveBargraphRowIndex != overBargraphRowIndex && leaveBargraphRowIndex != selectedBargraphRowIndex) {
-							leaveBargraphRowIndex.attr('fill', this.options.color); 
-							leaveVarNameOnBargraphRow.attr('style', '');
-						}
-						if(leaveBargraphRowIndex != null && leaveBargraphRowIndex != overBargraphRowIndex && settingsIconsOnBargraphRow != null) {                            
-							settingsIconsOnBargraphRow.attr('style', '');                                  
-						}
-						this.svgElem.attr('fill', '#29bdca');
-						overVarNameOnBargraphRow.attr('style', 'color:#FFF;');
-						settingsIconsOnBargraphRow = jQuery("div[data-row=\'"+ escape(this.axis.categories[this.options.from + 0.5].originalName) + "\'] .setButton");
-						settingsIconsOnBargraphRow.attr('style', 'opacity:1;');
-						leaveBargraphRowIndex = overBargraphRowIndex;
-						leaveVarNameOnBargraphRow = overVarNameOnBargraphRow;
-					 }
-				}
-		}
-	}
-	
-	barchart = new Highcharts.Chart({
-		chart: {renderTo: 'graph-bar', type: 'bar', marginLeft: 0, marginRight: 2, height: new_height},
-		title: {text: name, align: 'left', x: i === 0 ? 90 : 0},
-		credits: {enabled: false},
+                            selectedBargraphRowIndex.attr('fill', this.options.color);
+                            selectedVarNameOnBargraphRow.attr('style', '');
+                        }
+                        this.svgElem.attr('fill', '#29bdca');
+                        selectedBargraphRowIndex = this.svgElem;    
+                        selectedVarNameOnBargraphRow = jQuery("div[data-row=\'"+ escape(this.axis.categories[this.options.from + 0.5].originalName) + "\']");
+                        selectedVarNameOnBargraphRow.attr('style', 'color:#FFF;');
+                    },
+                    mouseover: function(e) {                        
+                        overBargraphRowIndex = this.svgElem;
+                        overVarNameOnBargraphRow = jQuery("div[data-row=\'"+ escape(this.axis.categories[this.options.from + 0.5].originalName) + "\']");
+                        if(leaveBargraphRowIndex != null && leaveBargraphRowIndex != overBargraphRowIndex && leaveBargraphRowIndex != selectedBargraphRowIndex) {
+                            leaveBargraphRowIndex.attr('fill', this.options.color); 
+                            leaveVarNameOnBargraphRow.attr('style', '');
+                        }
+                        if(leaveBargraphRowIndex != null && leaveBargraphRowIndex != overBargraphRowIndex && settingsIconsOnBargraphRow != null) {                            
+                            settingsIconsOnBargraphRow.attr('style', '');                                  
+                        }
+                        this.svgElem.attr('fill', '#29bdca');
+                        overVarNameOnBargraphRow.attr('style', 'color:#FFF;');
+                        settingsIconsOnBargraphRow = jQuery("div[data-row=\'"+ escape(this.axis.categories[this.options.from + 0.5].originalName) + "\'] .setButton");
+                        settingsIconsOnBargraphRow.attr('style', 'opacity:1;');
+                        leaveBargraphRowIndex = overBargraphRowIndex;
+                        leaveVarNameOnBargraphRow = overVarNameOnBargraphRow;
+                     }
+                }
+        }
+    }
+    
+    barchart = new Highcharts.Chart({
+        chart: {renderTo: 'graph-bar', type: 'bar', marginLeft: 0, marginRight: 2, height: new_height},
+        title: {text: name, align: 'left', x: i === 0 ? 90 : 0},
+        credits: {enabled: false},
 		xAxis: {
 			categories: dataSeries, 
 			labels: {
 				align: 'left', 
 				step: 1,
 				x: 10,
-				useHTML: true,
-				formatter: function() { 
+                useHTML: true,
+                formatter: function() { 
 					return '<div class="variableInBarGraph" data-row="' + escape(this.value.originalName) + '">' +
-								'<div class="variableRowInBarGraph" onclick="highlightBargraphRow(); setInputVariable(\'' + escape(this.value.originalName) + '\');">' +
+								'<div class="variableRowInBarGraph" onclick="highlightBargraphRow(); setCauseVariable(\'' + escape(this.value.originalName) + '\');">' +
 									'<div class="variableName">' + this.value.name + ' </div>' +
 									'<div class="setButton icon-cog icon-large gear" onclick="event.stopPropagation(); getSettingsForm(\'' + escape(this.value.originalName) + '\');"></div>' +
 									'<div class="setButton icon-plus icon-large plus" onclick="event.stopPropagation(); AnalyzePage.showAddMeasurementDialog(\'' + escape(this.value.originalName) + '\');"></div>' +
 								'</div>' +
 							'</div>';
-					},
-			},
-			lineColor: '#FFF',
-			tickWidth: 0,
-			plotBands: pBands
-		},
+                    },
+            },
+            lineColor: '#FFF',
+            tickWidth: 0,
+            plotBands: pBands
+        },
 		yAxis: {
 			allowDecimals: false, 
 			title: {text: null},
@@ -912,88 +976,88 @@ function constructBarGraph(count, dataOfSerie, dataSeries) {
 			gridLineWidth: 0, 
 			labels: {enabled: false}
 		},
-		legend: {enabled: false},
-		series: [{data: dataOfSerie}],
-		tooltip: {
-			shared: false,
-			formatter: function()
-			{
-				var vax = this.series.options.data;
-				//for (var i in vax) {
-				var rex = vax[this.series.data.indexOf(this.point)];
+        legend: {enabled: false},
+        series: [{data: dataOfSerie}],
+        tooltip: {
+            shared: false,
+            formatter: function()
+            {
+                var vax = this.series.options.data;
+                //for (var i in vax) {
+                var rex = vax[this.series.data.indexOf(this.point)];
 
-				var serie = this.series;
-				//	var s = '<b>' + Highcharts.dateFormat('%A, %b %e, %Y', this.x) + '</b><br>';
-				var s = '<span style="color:' + serie.color + '">' + rex.name + '</span>: <b>' + this.y + '</b><br/>';
-				jQuery.each(rex.composition, function(name, value) {
-					s += '<b>' + name + ':</b> ' + value + '<br>';
-				});
-				return s;
-			}
-		}
-	});    
+                var serie = this.series;
+                //	var s = '<b>' + Highcharts.dateFormat('%A, %b %e, %Y', this.x) + '</b><br>';
+                var s = '<span style="color:' + serie.color + '">' + rex.name + '</span>: <b>' + this.y + '</b><br/>';
+                jQuery.each(rex.composition, function(name, value) {
+                    s += '<b>' + name + ':</b> ' + value + '<br>';
+                });
+                return s;
+            }
+        }
+    });    
 }
 
 function highlightBargraphRow() {
-	if(selectedBargraphRowIndex != null) {
-		selectedBargraphRowIndex.attr('fill', '#FFF');  
-		selectedVarNameOnBargraphRow.attr('style', '');
-	}
-	overBargraphRowIndex.attr('fill', '#29bdca');
-	selectedBargraphRowIndex = overBargraphRowIndex; 
-	selectedVarNameOnBargraphRow = overVarNameOnBargraphRow;
+    if(selectedBargraphRowIndex != null) {
+        selectedBargraphRowIndex.attr('fill', '#FFF');  
+        selectedVarNameOnBargraphRow.attr('style', '');
+    }
+    overBargraphRowIndex.attr('fill', '#29bdca');
+    selectedBargraphRowIndex = overBargraphRowIndex; 
+    selectedVarNameOnBargraphRow = overVarNameOnBargraphRow;
 }
 
 function sortByCorrelation()
 {    
-	jQuery("#minimumNumberOfSamples").val('');
-	constructBarGraph(bargraphData.length, sortedByCorrelation, dataArray);
+    jQuery("#minimumNumberOfSamples").val('');
+    constructBarGraph(bargraphData.length, sortedByCorrelation, dataArray);
 }
 
 function sortByCausality()
 {    
-	jQuery("#minimumNumberOfSamples").val('');
-	constructBarGraph(bargraphData.length, sortedByCausality, dataArray);
+    jQuery("#minimumNumberOfSamples").val('');
+    constructBarGraph(bargraphData.length, sortedByCausality, dataArray);
 }
 
 function filterByNumberOfPairs(numberOfPairs) {
 
-	if (bargraphData != null && bargraphData.length > 0) {
-		var causesFiltered = new Array();  
-		var filteredByNumberOfPairs = new Array();
-		var k = 0;
-		var isEffect = (jQuery('#selectOutputAsType').val() === 'cause');
-		for (var i in bargraphData)
-		{
-			// bargraphData.sort(compare);
-			if (numberOfPairs < parseInt(bargraphData[i].numberOfPairs))
-			{              
+    if (bargraphData != null && bargraphData.length > 0) {
+        var causesFiltered = new Array();  
+        var filteredByNumberOfPairs = new Array();
+        var k = 0;
+        var isEffect = (jQuery('#selectOutputAsType').val() === 'cause');
+        for (var i in bargraphData)
+        {
+            // bargraphData.sort(compare);
+            if (numberOfPairs < parseInt(bargraphData[i].numberOfPairs))
+            {              
 		causesFiltered.push((isEffect ? { 'originalName' : bargraphData[i].originalEffect,  'name' : bargraphData[i].effect} : { 'originalName' : bargraphData[i].originalCause,  'name' : bargraphData[i].cause}));
-				var color = 'blue';
-				if (bargraphData[i].correlationCoefficient > 0)
-				{
-					color = 'red';
-				}
-				filteredByNumberOfPairs[k] = {y: bargraphData[i].correlationCoefficient,
-					color: color,
-					name: 'Correlation',
-					label: causesFiltered[k].name,
-					category: bargraphData[i].causeCategory,
-					composition: {
-						//'Causality Factor': bargraphData[i].causalityFactor,
-						'Duration Of Action': bargraphData[i].durationOfAction,
-						//'Effect': bargraphData[i].effect,
-						//'Effect Size': bargraphData[i].effectSize,
-						'Number Of Pairs': bargraphData[i].numberOfPairs,
-						'Onset Delay': bargraphData[i].onsetDelay,
-						//'Reverse Correlation': bargraphData[i].reverseCorrelation,
-						//'Statistical Significance': bargraphData[i].statisticalSignificance,
-					},
-				};//end data
-				k++;
-			}
-		}  
-		 
+                var color = 'blue';
+                if (bargraphData[i].correlationCoefficient > 0)
+                {
+                    color = 'red';
+                }
+                filteredByNumberOfPairs[k] = {y: bargraphData[i].correlationCoefficient,
+                    color: color,
+                    name: 'Correlation',
+                    label: causesFiltered[k].name,
+                    category: bargraphData[i].causeCategory,
+                    composition: {
+                        //'Causality Factor': bargraphData[i].causalityFactor,
+                        'Duration Of Action': bargraphData[i].durationOfAction,
+                        //'Effect': bargraphData[i].effect,
+                        //'Effect Size': bargraphData[i].effectSize,
+                        'Number Of Pairs': bargraphData[i].numberOfPairs,
+                        'Onset Delay': bargraphData[i].onsetDelay,
+                        //'Reverse Correlation': bargraphData[i].reverseCorrelation,
+                        //'Statistical Significance': bargraphData[i].statisticalSignificance,
+                    },
+                };//end data
+                k++;
+            }
+        }  
+         
 		if (causesFiltered.length > 0) {
 			constructBarGraph(causesFiltered.length, filteredByNumberOfPairs, causesFiltered);
 			// if(causesFiltered.length < 4 && barchart != null) {
@@ -1003,14 +1067,14 @@ function filterByNumberOfPairs(numberOfPairs) {
 			resetBarGraph();
 			//jQuery(".no-data").show();
 		} 
-	}
+    }
 }
 
 function compare(a, b) {
-	if (a.correlationCoefficient > b.correlationCoefficient)
-		return -1;
-	if (a.correlationCoefficient < b.correlationCoefficient)
-		return 1;
-	return 0;
+    if (a.correlationCoefficient > b.correlationCoefficient)
+        return -1;
+    if (a.correlationCoefficient < b.correlationCoefficient)
+        return 1;
+    return 0;
 }
 

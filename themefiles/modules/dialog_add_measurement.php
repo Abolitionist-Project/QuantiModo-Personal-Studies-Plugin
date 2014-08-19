@@ -7,6 +7,7 @@
 		</div>
 	</div>
 	<div class="addmeasurement-content" id="addmeasurement-dialog-content">
+                <input type="hidden" id="addmeasurement-variable-original-name">
 		<table border="0" cellspacing="0">
 			<tr>
 				<td>Variable</td>

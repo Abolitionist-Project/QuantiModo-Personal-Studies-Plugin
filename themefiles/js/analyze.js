@@ -18,17 +18,9 @@ var AnalyzePage = function() {
 			if (data.result === true)
 			{
 				refreshMeasurementsRange(function() {
-					refreshVariables([], function(vars) {
-						if (vars.length == 0)
-						{
-							jQuery("#addVariableMenu").hide();
-							jQuery(isCurrentUser ? ".no-vars" : ".no-shared-vars").show();
-						}
-						else
-						{						
-							categoryListUpdated();                    
-							restoreChart();
-						}
+					refreshVariables([], function() {
+						categoryListUpdated();                    
+						restoreChart();
 					});
 				});
 				refreshUnits(function() {
@@ -60,11 +52,11 @@ var AnalyzePage = function() {
 					{
 						newVariableSelected(originalVariableName, ui.item.attr('category'), ui.item.attr('source'), null, false);
 						//ui.item.addClass("ui-state-disabled");
-                        var variableSelectElement = jQuery("#addVariableMenu li[variable='" + originalVariableName + "'][category='" + ui.item.attr('category') + "'][source='" + ui.item.attr('source') + "']");
-                        if(!variableSelectElement.hasClass("ui-state-disabled")) 
-                        {
-                            variableSelectElement.addClass("ui-state-disabled");
-                        }
+                                                var variableSelectElement = jQuery("#addVariableMenu li[variable='" + originalVariableName + "'][category='" + ui.item.attr('category') + "'][source='" + ui.item.attr('source') + "']");
+                                                if(!variableSelectElement.hasClass("ui-state-disabled")) 
+                                                {
+                                                    variableSelectElement.addClass("ui-state-disabled");
+                                                }
 					}
 				}
 		});
@@ -80,8 +72,9 @@ var AnalyzePage = function() {
 			// Remove it from the selected variables so that we won't get the data when refreshing                        
                         for (var i = 0; i < AnalyzePage.selectedVariables.length; i++)
                         {   
-                            var selVariable = AnalyzePage.selectedVariables[i];
-                            if(selVariable.originalName === selectedOriginalName && (selectedSource === selVariable.source)) {                                
+                            var selVariable = AnalyzePage.selectedVariables[i];                            
+                            
+                            if(selVariable.originalName === selectedOriginalName && (selectedSource === selVariable.source)) {
                                 if(oceanFiveInUse.length > 0) {
                                     var index = jQuery.inArray(selVariable.color, oceanFiveInUse);
                                     if(index > -1) {
@@ -153,7 +146,7 @@ var AnalyzePage = function() {
 				var currentVariable = currentCategory[i];
 				if (currentVariable.originalName == selectedOriginalName && currentVariable.category == selectedCategoryName)
 				{
-					VariableSettings.show(currentVariable);
+					variableSettings.show(currentVariable);
 					break;
 				}
 			}
@@ -205,8 +198,6 @@ var AnalyzePage = function() {
 		{
 			variable.color = getRandomColor();
 		}
-
-		filters.user = displayedUser;
 		
 		Quantimodo.getMeasurements(filters, function(measurements) 
 		{
@@ -257,34 +248,27 @@ var AnalyzePage = function() {
 				variableEntryString += ' (' + source + ')';
 			}
 			
-            var variableEntryStringTruncated = variableEntryString;                          
-            if (variableEntryStringTruncated != null && variableEntryStringTruncated.length > 25) {
-                //the indexOf will return the position of the first space starting from the 10th
-                var tempHeader = variableEntryStringTruncated;
-                for(var i=23; i>=10; i--) {
-                    tempHeader = variableEntryStringTruncated.indexOf(' ',i) != -1 ? variableEntryStringTruncated.substring(0, variableEntryStringTruncated.indexOf(' ',i)) + "..." : variableEntryStringTruncated;
-                    if(tempHeader.length < 26) {                    
-                        break;
-                    }
-                }
-                variableEntryStringTruncated = tempHeader;
-            } 
-            var sourceAttr = source == undefined || source == null || source == '' ? 'source' : 'source="' + source + '"'; 
-			jQuery('#selectedVariables').append(
-				'<li variable="' + selectedVariable.originalName + '" ' + sourceAttr + ' category="' + category + '">' +
-					'<div class="colorIndicator loading" style="background-color: ' + variableColor + '"></div>' +
-					'<span title="'+variableEntryString+'">' + variableEntryStringTruncated + '</span>' +
-					'<div class="closeButton icon-cross icon-large"></div>' +
-					'<div class="eyeballButton icon-eye icon-large"></div>' +
-					(isCurrentUser ? '<div class="settingsButton icon-cog icon-large" category="' + category + '"></div>' : '') +
-				'</li>'
-			);
+                        var variableEntryStringTruncated = variableEntryString;                          
+                        if (variableEntryStringTruncated != null && variableEntryStringTruncated.length > 25) {
+                            //the indexOf will return the position of the first space starting from the 10th
+                            var tempHeader = variableEntryStringTruncated;
+                            for(var i=23; i>=10; i--) {
+                                tempHeader = variableEntryStringTruncated.indexOf(' ',i) != -1 ? variableEntryStringTruncated.substring(0, variableEntryStringTruncated.indexOf(' ',i)) + "..." : variableEntryStringTruncated;
+                                if(tempHeader.length < 26) {                    
+                                    break;
+                                }
+                            }
+                            variableEntryStringTruncated = tempHeader;
+                        } 
+                        var sourceAttr = source == undefined || source == null || source == '' ? 'source' : 'source="' + source + '"'; 
+			jQuery('#selectedVariables').append('<li variable="' + selectedVariable.originalName + '" ' + sourceAttr + ' category="' + category + '"><div class="colorIndicator loading" style="background-color: ' + variableColor + '"></div><span title="'+variableEntryString+'">' + variableEntryStringTruncated + '</span><div class="closeButton icon-remove icon-large"></div><div class="eyeballButton icon-eye-open icon-large"></div><div class="settingsButton icon-cog icon-large" category="' + category + '"></div></li>');
+
 
 			AnalyzePage.selectedVariables.push(selectedVariable);
-            // we store only we select new variable from menu, during restoring no sence to store again which is already in local storage.
-            if(!restoreFromLocalStorage) {
-                storeSelectedVariable(selectedVariable, variableColor);
-            }
+                        // we store only we select new variable from menu, during restoring no sence to store again which is already in local storage.
+                        if(!restoreFromLocalStorage) {
+                            storeSelectedVariable(selectedVariable, variableColor);
+                        }
 		}
 	}
 
@@ -379,34 +363,33 @@ var AnalyzePage = function() {
 			jQuery('#addVariableMenuCategories').append(jQuery('<li><a>' + category + '</a><ul class="variableContainer">'));
 			jQuery.each(AnalyzePage.quantimodoVariables[category], function(index, variable)
 			{                          
-                if(variable.parent != null) 
-                {
-                    // this variable has parent do not display it on variables list, it will be displayed above sources of its parent
-                    return true;
-                }
+                                if(variable.parent != null) {
+                                    // this variable has parent do not display it on variables list, it will be displayed above sources of its parent
+                                    return true;
+                                }
 				// Variable entry
 				jQuery('#addVariableMenuCategories .variableContainer').last().append(jQuery('<li category="' + variable.category + '" variable="' + variable.originalName + '" source=""><a>' + variable.name + '</a><ul class="sourceContainer">'));
 
-                // "Sub variables" if we have
-                if(variable.subVariables != null && variable.subVariables.length > 0) {                                    
-                    for(var k = 0; k < variable.subVariables.length; k++)
-                    {
-                        var subVariable = variable.subVariables[k];
-                        jQuery('#addVariableMenuCategories .sourceContainer').last().append(jQuery('<li category="' + subVariable.category + '" variable="' + subVariable.originalName + '" source=""><a>' + subVariable.name + '</a><ul class="sourceContainerSubVars">'));
-                        
-                        // "All sources" entry for subVariable, hope we do not go deep than one level, I do not know use case. 
-                        // also hope no deadlocks in the future
-                        jQuery('#addVariableMenuCategories .sourceContainerSubVars').last().append(jQuery('<li category="' + subVariable.category + '" variable="' + subVariable.originalName + '" source=""><a>All sources</a>'));
-                        var sourcesSubVariable = subVariable.sources.split(',');
-                        for(var j = 0; j < sourcesSubVariable.length; j++)
-                        {                                        
-                            jQuery('#addVariableMenuCategories .sourceContainerSubVars').last().append(jQuery('<li category="' + subVariable.category + '" variable="' + subVariable.originalName + '" source="' + sourcesSubVariable[j] + '"><a>' + sourcesSubVariable[j] + '</a>'));
-                        }
+                                // "Sub variables" if we have
+                                if(variable.subVariables != null && variable.subVariables.length > 0) {                                    
+                                    for(var k = 0; k < variable.subVariables.length; k++)
+                                    {
+                                        var subVariable = variable.subVariables[k];
+                                        jQuery('#addVariableMenuCategories .sourceContainer').last().append(jQuery('<li category="' + subVariable.category + '" variable="' + subVariable.originalName + '" source=""><a>' + subVariable.name + '</a><ul class="sourceContainerSubVars">'));
+                                        
+                                        // "All sources" entry for subVariable, hope we do not go deep than one level, I do not know use case. 
+                                        // also hope no deadlocks in the future
+                                        jQuery('#addVariableMenuCategories .sourceContainerSubVars').last().append(jQuery('<li category="' + subVariable.category + '" variable="' + subVariable.originalName + '" source=""><a>All sources</a>'));
+                                        var sourcesSubVariable = subVariable.sources.split(',');
+                                        for(var j = 0; j < sourcesSubVariable.length; j++)
+                                        {                                        
+                                            jQuery('#addVariableMenuCategories .sourceContainerSubVars').last().append(jQuery('<li category="' + subVariable.category + '" variable="' + subVariable.originalName + '" source="' + sourcesSubVariable[j] + '"><a>' + sourcesSubVariable[j] + '</a>'));
+                                        }
 
-                        jQuery('#addVariableMenuCategories .sourceContainer').last().append(jQuery('</ul></li>'));
-                    }
-                    jQuery('#addVariableMenuCategories .sourceContainer').last().append('<hr/>');
-                }
+                                        jQuery('#addVariableMenuCategories .sourceContainer').last().append(jQuery('</ul></li>'));
+                                    }
+                                    jQuery('#addVariableMenuCategories .sourceContainer').last().append('<hr/>');
+                                }
 
 				// "All sources" entry
 				jQuery('#addVariableMenuCategories .sourceContainer').last().append(jQuery('<li category="' + variable.category + '" variable="' + variable.originalName + '" source=""><a>All sources</a>'));
@@ -472,7 +455,7 @@ var AnalyzePage = function() {
                                             oceanFiveInUse.push(storedVariable.color);
                                         }
                                             
-					// Add the variable
+                                        // Add the variable    
 					newVariableSelected(storedVariable.name, storedVariable.cat, storedVariable.src, storedVariable.color, true);
 
 					// Disable the entry in the variable picker
@@ -537,10 +520,10 @@ var AnalyzePage = function() {
 	var share = function(onDoneListener)
 	{
 		var shareObject = {"type":"analyze",
-						"inputMeasurements":inputMeasurements,
-						"outputMeasurements":outputMeasurements,
-						"inputVariable":lastInputVariable,
-						"outputVariable":lastOutputVariable};
+						"causeMeasurements":causeMeasurements,
+						"effectMeasurements":effectMeasurements,
+						"causeVariable":lastCauseVariable,
+						"effectVariable":lastEffectVariable};
 		Quantimodo.postAnalyzeShare(shareObject, function(response)
 		{
 			onDoneListener(response['id']);
@@ -575,17 +558,9 @@ var AnalyzePage = function() {
 			if (isLoggedIn)
 			{
 				refreshMeasurementsRange(function() {
-					refreshVariables([], function(vars) {
-						if (vars.length == 0)
-						{
-							jQuery("#addVariableMenu").hide();
-							jQuery(isCurrentUser ? ".no-vars" : ".no-shared-vars").show();
-						}
-						else
-						{						
-							categoryListUpdated();                    
-							restoreChart();
-						}
+					refreshVariables([], function() {
+						categoryListUpdated();                    
+						restoreChart();
 					});
 				});
 				refreshUnits(function() {
@@ -596,7 +571,7 @@ var AnalyzePage = function() {
 			retrieveSettings();
 			initVariableCard();
 			
-			VariableSettings.init({
+			variableSettings.init({
 				saveCallback : function() {
 					refreshVariables([], function() {
 						categoryListUpdated();                    

@@ -81,4 +81,55 @@ function study_taxonomy() {
 // Hook into the 'init' action
 add_action( 'init', 'study_taxonomy', 0 );
 }
+
+
+function animation_effects_ps(){
+        $animate=array(
+                        ''=>'none',
+                        'animate cssanim flash'=> 'Flash',
+                        'animate zoom' => 'Zoom',
+                        'animate scale' => 'Scale',
+                        'animate slide' => 'Slide (Height)', 
+                        'animate expand' => 'Expand (Width)',
+                        'animate cssanim shake'=> 'Shake',
+                        'animate cssanim bounce'=> 'Bounce',
+                        'animate cssanim tada'=> 'Tada',
+                        'animate cssanim swing'=> 'Swing',
+                        'animate cssanim wobble'=> 'Flash',
+                        'animate cssanim wiggle'=> 'Flash',
+                        'animate cssanim pulse'=> 'Flash',
+                        'animate cssanim flip'=> 'Flash',
+                        'animate cssanim flipInX'=> 'Flip Left',
+                        'animate cssanim flipInY'=> 'Flip Top',
+                        'animate cssanim fadeIn'=> 'Fade',
+                        'animate cssanim fadeInUp'=> 'Fade Up',
+                        'animate cssanim fadeInDown'=> 'Fade Down',
+                        'animate cssanim fadeInLeft'=> 'Fade Left',
+                        'animate cssanim fadeInRight'=> 'Fade Right',
+                        'animate cssanim fadeInUptBig'=> 'Fade Big Up',
+                        'animate cssanim fadeInDownBig'=> 'Fade Big Down',
+                        'animate cssanim fadeInLeftBig'=> 'Fade Big Left',
+                        'animate cssanim fadeInRightBig'=> 'Fade Big Right',
+                        'animate cssanim bounceInUp'=> 'Bounce Up',
+                        'animate cssanim bounceInDown'=> 'Bounce Down',
+                        'animate cssanim bounceInLeft'=> 'Bounce Left',
+                        'animate cssanim bounceInRight'=> 'Bounce Right',
+                        'animate cssanim rotateIn'=> 'Rotate',
+                        'animate cssanim rotateInUpLeft'=> 'Rotate Up Left',
+                        'animate cssanim rotateInUpRight'=> 'Rotate Up Right',
+                        'animate cssanim rotateInDownLeft'=> 'Rotate Down Left',
+                        'animate cssanim rotateInDownRight'=> 'Rotate Down Right',
+                        'animate cssanim speedIn'=> 'Speed In',
+                        'animate cssanim rollIn'=> 'Roll In',
+                        'animate ltr'=> 'Left To Right',
+                        'animate rtl' => 'Right to Left', 
+                        'animate btt' => 'Bottom to Top',
+                        'animate ttb'=>'Top to Bottom',
+                        'animate smallspin'=> 'Small Spin',
+                        'animate spin'=> 'Infinite Spin'
+                        );
+    return $animate;
+    }
+
+
 ?>

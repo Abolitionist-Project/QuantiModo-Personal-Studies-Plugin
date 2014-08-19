@@ -5,8 +5,8 @@ var AnalyzePage = function() {
 
 	var quantimodoUnits = {};
 	var quantimodoVariables = {};
-	var inputMeasurements;
-	var outputMeasurements;
+	var causeMeasurements;
+	var effectMeasurements;
 
 	var dateRangeStart, dateRangeEnd;
 
@@ -91,11 +91,11 @@ var AnalyzePage = function() {
 
 		jQuery("#button-input-varsettings").click(function()
 		{
-			showVariableSettings(lastInputVariable);
+			showVariableSettings(lastCauseVariable);
 		});
 		jQuery("#button-output-varsettings").click(function()
 		{
-			showVariableSettings(lastOutputVariable);
+			showVariableSettings(lastEffectVariable);
 		});
 	};
 	
@@ -582,8 +582,8 @@ var AnalyzePage = function() {
 	{
 		jQuery('#selectInputCategory').change(inputCategoryUpdated);
 		jQuery('#selectOutputCategory').change(outputCategoryUpdated);
-	 	jQuery('#selectInputVariable').change(inputVariableUpdated);
-		jQuery('#selectOutputVariable').change(outputVariableUpdated);
+	 	jQuery('#selectCauseVariable').change(causeVariableUpdated);
+		jQuery('#selectEffectVariable').change(effectVariableUpdated);
 	};
 
 	var refreshUnits = function()
@@ -616,18 +616,18 @@ var AnalyzePage = function() {
 
  		Quantimodo.getVariables({}, function(variables)
 		{
-			storedLastInputVariableName = window.localStorage['lastInputVariableName'];
-	 		storedLastOutputVariableName = window.localStorage['lastOutputVariableName'];
+			storedLastCauseVariableName = window.localStorage['lastCauseVariableName'];
+	 		storedLastEffectVariableName = window.localStorage['lastEffectVariableName'];
 			quantimodoVariables = {};
 			jQuery.each(variables, function(_, variable)
 			{
-				if(variable.originalName == storedLastInputVariableName)
+				if(variable.originalName == storedLastCauseVariableName)
 				{
-					lastInputVariable = variable;
+					lastCauseVariable = variable;
 				}
-				else if(variable.originalName == storedLastOutputVariableName)
+				else if(variable.originalName == storedLastEffectVariableName)
 				{
-					lastOutputVariable = variable;
+					lastEffectVariable = variable;
 				}
 				var category = quantimodoVariables[variable.category];
 				if (category === undefined)
@@ -655,7 +655,7 @@ var AnalyzePage = function() {
 
 	var refreshInputData = function()
 	{
-		var variable = AnalyzePage.getInputVariable();
+		var variable = AnalyzePage.getCauseVariable();
 		Quantimodo.getMeasurements(
 		{
 			'variableName': variable.originalName,
@@ -664,12 +664,12 @@ var AnalyzePage = function() {
 			'groupingWidth': AnalyzePage.getPeriod(),
 			'groupingTimezone': AnalyzePage.getTimezone()
 		},
-		function(measurements) { inputMeasurements = measurements; AnalyzeChart.setInputData(variable, measurements); });
+		function(measurements) { causeMeasurements = measurements; AnalyzeChart.setInputData(variable, measurements); });
 	};
 
 	var refreshOutputData = function()
 	{
-		var variable = AnalyzePage.getOutputVariable();
+		var variable = AnalyzePage.getEffectVariable();
 		Quantimodo.getMeasurements(
 		{
 			'variableName': variable.originalName,
@@ -678,7 +678,7 @@ var AnalyzePage = function() {
 			'groupingWidth': AnalyzePage.getPeriod(),
 			'groupingTimezone': AnalyzePage.getTimezone()
 		},
-		function(measurements) { outputMeasurements = measurements; AnalyzeChart.setOutputData(variable, measurements); });
+		function(measurements) { effectMeasurements = measurements; AnalyzeChart.setOutputData(variable, measurements); });
 	};
 
 	var lastStartTime = null;
@@ -740,7 +740,7 @@ var AnalyzePage = function() {
 		}), function(_, category)
 		{
 
-			if(lastInputVariable != null  && lastInputVariable.category == category)
+			if(lastCauseVariable != null  && lastCauseVariable.category == category)
 			{
 				jQuery('#selectInputCategory').append(jQuery('<option/>').attr('selected', 'selected').attr('value', category).text(category));
  			}
@@ -749,7 +749,7 @@ var AnalyzePage = function() {
 				jQuery('#selectInputCategory').append(jQuery('<option/>').attr('value', category).text(category));
 			}
 			//output category set values
-			if(lastOutputVariable != null  && lastOutputVariable.category == category)
+			if(lastEffectVariable != null  && lastEffectVariable.category == category)
 			{
 				jQuery('#selectOutputCategory').append(jQuery('<option/>').attr('selected', 'selected').attr('value', category).text(category));
  			}
@@ -774,40 +774,40 @@ var AnalyzePage = function() {
 	{
 		var newInputCategory = AnalyzePage.getInputCategory();
 
-		jQuery('#selectInputVariable').empty();
+		jQuery('#selectCauseVariable').empty();
 		jQuery.each(quantimodoVariables[newInputCategory], function(_, variable)
 		{
 			if (variable.name == variable.originalName)
  			{
- 				if(lastInputVariable != null && lastInputVariable.originalName == variable.originalName)
+ 				if(lastCauseVariable != null && lastCauseVariable.originalName == variable.originalName)
  				{
  
-					jQuery('#selectInputVariable').append(jQuery('<option/>').attr('selected', 'selected').attr('value', variable.originalName).text(variable.name));
- 					jQuery("#selectInputVariable").change();
+					jQuery('#selectCauseVariable').append(jQuery('<option/>').attr('selected', 'selected').attr('value', variable.originalName).text(variable.name));
+ 					jQuery("#selectCauseVariable").change();
 
  				}
  				else
-					jQuery('#selectInputVariable').append(jQuery('<option/>').attr('value', variable.originalName).text(variable.name));
+					jQuery('#selectCauseVariable').append(jQuery('<option/>').attr('value', variable.originalName).text(variable.name));
 			}
 		});
 
 		lastInputCategory = newInputCategory;
-	 	inputVariableUpdated();
+	 	causeVariableUpdated();
 		//keep default state refreshed
 		refreshInputData(); // added
 
 	};
 
-	var lastInputVariable = null;
-	var inputVariableUpdated = function()
+	var lastCauseVariable = null;
+	var causeVariableUpdated = function()
 	{
 
-		var newInputVariable = AnalyzePage.getInputVariable();
-		if (newInputVariable !== lastInputVariable)
+		var newCauseVariable = AnalyzePage.getCauseVariable();
+		if (newCauseVariable !== lastCauseVariable)
 		{
 			refreshInputData();
-			lastInputVariable = newInputVariable;
-			saveSetting('lastInputVariableName', lastInputVariable.originalName);
+			lastCauseVariable = newCauseVariable;
+			saveSetting('lastCauseVariableName', lastCauseVariable.originalName);
 		}
 	};
 
@@ -816,44 +816,44 @@ var AnalyzePage = function() {
 	{
 		var newOutputCategory = AnalyzePage.getOutputCategory();
 
-		jQuery('#selectOutputVariable').empty();
+		jQuery('#selectEffectVariable').empty();
 		jQuery.each(quantimodoVariables[newOutputCategory], function(_, variable)
 		{
 			if (variable.name == variable.originalName)
  			{
- 				if(lastOutputVariable != null && lastOutputVariable.originalName == variable.originalName)
+ 				if(lastEffectVariable != null && lastEffectVariable.originalName == variable.originalName)
  				{
  
-					jQuery('#selectOutputVariable').append(jQuery('<option/>').attr('selected', 'selected').attr('value', variable.originalName).text(variable.name));
+					jQuery('#selectEffectVariable').append(jQuery('<option/>').attr('selected', 'selected').attr('value', variable.originalName).text(variable.name));
 
  				}
  				else
-					jQuery('#selectOutputVariable').append(jQuery('<option/>').attr('value', variable.originalName).text(variable.name));
+					jQuery('#selectEffectVariable').append(jQuery('<option/>').attr('value', variable.originalName).text(variable.name));
 			}
 
 
 			// if (variable.name == variable.originalName)
 			// {
-			// 	jQuery('#selectOutputVariable').append(jQuery('<option/>').attr('value', variable.name).text(variable.name));
+			// 	jQuery('#selectEffectVariable').append(jQuery('<option/>').attr('value', variable.name).text(variable.name));
 			// }
 			// else
 			// {
-			// 	jQuery('#selectOutputVariable').append(jQuery('<option/>').attr('value', variable.name).text(variable.name + " (" + variable.originalName + ")"));
+			// 	jQuery('#selectEffectVariable').append(jQuery('<option/>').attr('value', variable.name).text(variable.name + " (" + variable.originalName + ")"));
 			// }
 		});
 		lastOutputCategory = newOutputCategory;
-		outputVariableUpdated();
-		jQuery("#selectOutputVariable").change();
+		effectVariableUpdated();
+		jQuery("#selectEffectVariable").change();
 		refreshOutputData();
 	};
 
-	var lastOutputVariable = null;
-	var outputVariableUpdated = function() {
-		var newOutputVariable = AnalyzePage.getOutputVariable();
-		if (newOutputVariable !== lastOutputVariable) {
+	var lastEffectVariable = null;
+	var effectVariableUpdated = function() {
+		var newEffectVariable = AnalyzePage.getEffectVariable();
+		if (newEffectVariable !== lastEffectVariable) {
 			refreshOutputData();
-			lastOutputVariable = newOutputVariable;
-			saveSetting('lastOutputVariableName', lastOutputVariable.originalName);
+			lastEffectVariable = newEffectVariable;
+			saveSetting('lastEffectVariableName', lastEffectVariable.originalName);
 
 		}
 	};
@@ -928,8 +928,8 @@ var AnalyzePage = function() {
 	var share = function(onDoneListener)
 	{
 		var shareObject = {	'type':'correlate',
-							'inputVariable': 	lastInputVariable.originalName,
-							'outputVariable': 	lastOutputVariable.originalName,
+							'causeVariable': 	lastCauseVariable.originalName,
+							'effectVariable': 	lastEffectVariable.originalName,
 							'startTime': 		AnalyzePage.getStartTime(),
 							'endTime': 			AnalyzePage.getEndTime(),
 							'groupingWidth': 	AnalyzePage.getPeriod(),
@@ -946,9 +946,9 @@ var AnalyzePage = function() {
 		getEndTime:        function() { return Math.floor(dateRangeEnd.getTime() / 1000); },
 		getInputCategory:  function() { return jQuery('#selectInputCategory :selected').text(); },
 		getOutputCategory: function() { return jQuery('#selectOutputCategory :selected').text(); },
-		getInputVariable:  function() {
+		getCauseVariable:  function() {
 											var categoryName = jQuery('#selectInputCategory :selected').val();
-											var variableName = jQuery('#selectInputVariable :selected').val();
+											var variableName = jQuery('#selectCauseVariable :selected').val();
 											var wantedVariable;
 											jQuery.each(quantimodoVariables[categoryName], function(_, variable)
 											{
@@ -960,9 +960,9 @@ var AnalyzePage = function() {
 											});
 											return wantedVariable;
 									  },
-		getOutputVariable: function() {
+		getEffectVariable: function() {
 											var categoryName = jQuery('#selectOutputCategory :selected').val();
-											var variableName = jQuery('#selectOutputVariable :selected').val();
+											var variableName = jQuery('#selectEffectVariable :selected').val();
 											var wantedVariable;
 											jQuery.each(quantimodoVariables[categoryName], function(_, variable)
 											{

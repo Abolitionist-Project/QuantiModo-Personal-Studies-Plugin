@@ -1,6 +1,6 @@
 var refreshMeasurementsRange = function(callback)
 {
-	Quantimodo.getMeasurementsRange({'user' : displayedUser}, function(range) {
+	Quantimodo.getMeasurementsRange([], function(range) {
 		AnalyzePage.dateRangeStart = range['lowerLimit'];
 		AnalyzePage.dateRangeEnd = range['upperLimit'];
 
@@ -40,21 +40,21 @@ var refreshUnits = function(callback)
 
 var refreshVariables = function(variables, callback)
 {
-	Quantimodo.getVariables({'user' : displayedUser}, function(variables)
+	Quantimodo.getVariables({}, function(variables)
 	{
-		var storedLastInputVariableName = window.localStorage['lastInputVariableName'],
-			storedLastOutputVariableName = window.localStorage['lastOutputVariableName'];
+		var storedLastCauseVariableName = window.localStorage['lastCauseVariableName'],
+			storedLastEffectVariableName = window.localStorage['lastEffectVariableName'];
 
 		AnalyzePage.quantimodoVariables = {};
 		jQuery.each(variables, function(_, variable)
 		{
-			if(variable.originalName == storedLastInputVariableName)
+			if(variable.originalName == storedLastCauseVariableName)
 			{
-				AnalyzePage.lastInputVariable = variable;
+				AnalyzePage.lastCauseVariable = variable;
 			}
-			else if(variable.originalName == storedLastOutputVariableName)
+			else if(variable.originalName == storedLastEffectVariableName)
 			{
-				AnalyzePage.lastOutputVariable = variable;
+				AnalyzePage.lastEffectVariable = variable;
 			}
 
 			var category = AnalyzePage.quantimodoVariables[variable.category];
@@ -75,50 +75,43 @@ var refreshVariables = function(variables, callback)
 			});
 		});
 
-		if(VariablePicker)
-		{
-			VariablePicker.refresh();
-		}
-		
 		if (callback) 
 		{
-			callback(variables);
+			callback();
 		}
 	});
 };
 
 var refreshInputData = function()
 {
-	var variable = AnalyzePage.getInputVariable();
+	var variable = AnalyzePage.getCauseVariable();
 	if (variable == null)
 	{
 		return;
 	}
 	Quantimodo.getMeasurements({
-		'user' : displayedUser,
 		'variableName': variable.originalName,
 		'startTime': AnalyzePage.getStartTime(),
 		'endTime': AnalyzePage.getEndTime(),
 		'groupingWidth': AnalyzePage.getPeriod(),
 		'groupingTimezone': AnalyzePage.getTimezone()
 	}, function(measurements) {
-		AnalyzePage.inputMeasurements = measurements;
+		AnalyzePage.causeMeasurements = measurements;
 		AnalyzeChart.setInputData(variable, measurements);
 	});
 };
 
 var refreshOutputData = function()
 {
-	var variable = AnalyzePage.getOutputVariable();
+	var variable = AnalyzePage.getEffectVariable();
 	Quantimodo.getMeasurements({
-		'user' : displayedUser,
 		'variableName': variable.originalName,
 		'startTime': AnalyzePage.getStartTime(),
 		'endTime': AnalyzePage.getEndTime(),
 		'groupingWidth': AnalyzePage.getPeriod(),
 		'groupingTimezone': AnalyzePage.getTimezone()
 	}, function(measurements) {
-		AnalyzePage.outputMeasurements = measurements;
+		AnalyzePage.effectMeasurements = measurements;
 		AnalyzeChart.setOutputData(variable, measurements); 
 	});
 };
@@ -129,7 +122,7 @@ var refreshData = function()
 	for (var i = 0; i < AnalyzePage.selectedVariables.length; i++)
 	{
 		var variable = AnalyzePage.selectedVariables[i];
-		var filters = {
+                var filters = {
 			'variableName': variable.originalName,
 			'startTime': AnalyzePage.dateRangeStart,
 			'endTime': AnalyzePage.dateRangeEnd,
@@ -144,9 +137,6 @@ var refreshData = function()
 		{
 			variable.color = AnalyzePage.getRandomColor();
 		}
-
-		filters.user = displayedUser;
-
 		Quantimodo.getMeasurements(filters,
 		function(vari)
 		{

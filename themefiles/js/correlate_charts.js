@@ -3,7 +3,7 @@ AnalyzeChart = function() {
 
 	var inputData = { variableName: '(Data not loaded)', unit: '(Data not loaded)', timeSeries: [], interpolant: function() { return 0; } };
 	var outputData = { variableName: '(Data not loaded)', unit: '(Data not loaded)', timeSeries: [], interpolant: function() { return 0; } };
-	var inputVariable, outputVariable;
+	var causeVariable, effectVariable;
 
 	var timelineChart, scatterplotChart, correlationGauge;
 
@@ -365,14 +365,14 @@ AnalyzeChart = function() {
 
 	var setInputData = function(variable, data)
 	{
-		inputVariable = variable;
+		causeVariable = variable;
 		inputData = prepDataForGraphing(variable, data);
 		updateGraphs();
 	};
 
 	var setOutputData = function(variable, data)
 	{
-		outputVariable = variable;
+		effectVariable = variable;
 		outputData = prepDataForGraphing(variable, data);
 		updateGraphs();
 	};

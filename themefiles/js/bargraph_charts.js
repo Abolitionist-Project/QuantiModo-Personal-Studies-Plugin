@@ -3,14 +3,7 @@ AnalyzeChart = function() {
 
 	var inputData = { variableName: '(Data not loaded)', unit: '(Data not loaded)', timeSeries: [], interpolant: function() { return 0; } };
 	var outputData = { variableName: '(Data not loaded)', unit: '(Data not loaded)', timeSeries: [], interpolant: function() { return 0; } };
-	var inputVariable, outputVariable;
-
-	jQuery('#accordion-date-header div[class="icon-question-sign icon-large"]').simpletip({ content: "Select the resolution at which <br/>you'd like your data to be grouped.", fixed: false});
-	jQuery('#accordion-output-header div[class="icon-question-sign icon-large"]').simpletip({ content: "This is the variable to be examined. <br/>It can be considered to be a hypothetical cause for the variables in the bar graph or hypothetical effect of the variables in the bar graph by changing the setting below.", fixed: false});
-	
-	jQuery('#correlation-gauge-header div[class="icon-question-sign icon-large"]').simpletip({ content: "Displays the correlation coefficient in the range of -1(strong negative) to 1(strong positive).", fixed: false});
-	jQuery('#scatterplot-graph-header div[class="icon-question-sign icon-large"]').simpletip({ content: "Displays the collection of measurement points, each having the value of examined variable on the horizontal axis and the value of the other variable on the vertical axis.", fixed: false});
-	jQuery('#timeline-graph-header div[class="icon-question-sign icon-large"]').simpletip({ content: "Shows the measurement data in the order of measurement dates.", fixed: false});
+	var causeVariable, effectVariable;
 	
 	var timelineChart, scatterplotChart, correlationGauge;
 
@@ -188,7 +181,7 @@ AnalyzeChart = function() {
 
 		var cause, effect;
 		var inputIsCause = (jQuery('#selectOutputAsType').val() == 'effect');
-                
+
 		if (inputIsCause) {
 			cause = inputData;
                         causeColor = inputColor;
@@ -207,7 +200,7 @@ AnalyzeChart = function() {
 
 		}
 		else 
-		{                    
+		{
 			Quantimodo.getPairs({
 				'effect': effect.originalName,
 				'cause': cause.originalName,
@@ -223,9 +216,9 @@ AnalyzeChart = function() {
 					
 					for (var i in measurements) 
 					{
-                                                var dot = {
-                                                        x: measurements[i].inputMeasurement,
-							y: measurements[i].outputMeasurement                                                        						
+						var dot = {
+                                                    x: measurements[i].causeMeasurement,
+                                                    y: measurements[i].effectMeasurement
 						};
 
 						dot.time = measurements[i].timestamp * 1000;
@@ -240,15 +233,16 @@ AnalyzeChart = function() {
 
 					yMax = yMax * 1.1;
 					xMax = xMax * 1.1;
-
+                                        
 					scatterplotChart.setTitle({ text: versus });
 					scatterplotChart.yAxis[0].update({ min: yMin, max: yMax, title: { text: effect.variableName + ' (' + effect.unit + ')'} }, false);
 					scatterplotChart.xAxis[0].update({ min: xMin, max: xMax, title: { text: cause.variableName  + ' (' + cause.unit + ')'} }, false);
-					scatterplotChart.tooltip.options.formatter = function() {
+                                        scatterplotChart.tooltip.options.formatter = function() {
                                                 return '<b>' + Highcharts.dateFormat('%Y %b %d', this.point.time) + '</b><br>' +
                                                     '<span style="color: ' + effectColor + ';">' + Highcharts.numberFormat(this.point.y, 2) + effect.unit + ' (' + effect.source + ')</span> with ' +
                                                     '<span style="color: ' + causeColor + ';">' + Highcharts.numberFormat(this.point.x, 2) + cause.unit + ' (' + cause.source + ')</span>';
-                                        };
+                                            };
+					
 					scatterplotChart.series[0].setData(QuantimodoMath.linearRegressionEndpoints(scatterplotDots, cause.minimum, cause.maximum), false);
 					scatterplotChart.series[1].update({ name: versus }, false);
 					scatterplotChart.series[1].setData(scatterplotDots, false);			
@@ -491,14 +485,14 @@ AnalyzeChart = function() {
 
 	var setInputData = function(variable, data)
 	{
-		inputVariable = variable;
+		causeVariable = variable;
 		inputData = prepDataForGraphing(variable, data);
 		updateGraphs();
 	};
 
 	var setOutputData = function(variable, data)
 	{
-		outputVariable = variable;
+		effectVariable = variable;
 		outputData = prepDataForGraphing(variable, data);
 		updateGraphs();
 	};
@@ -517,7 +511,7 @@ AnalyzeChart = function() {
 								'</div>'+
 							'</div>';				
 		timelineChart = new Highcharts.StockChart({
-			chart: { renderTo: 'graph-timeline', zoomType: 'x', marginTop: 80},
+			chart: { renderTo: 'graph-timeline', zoomType: 'x'},
 			title: { text: '(Data not loaded)' },
 			subtitle: { text: 'from Quantimodo.com'+resolution, useHTML:true },
 			legend: { enabled: false },
@@ -600,17 +594,17 @@ AnalyzeChart = function() {
 			credits: {
 				enabled: false
 			},
-	        rangeSelector: {                     
+	        rangeSelector: { 
 	            inputBoxWidth: 120,
 	            inputBoxHeight: 18
 	        }
 		});            
 	};
 
-	var initScatterplotChart = function()
-	{                                
+        var initScatterplotChart = function()
+	{
 		scatterplotChart = new Highcharts.Chart({
-			chart: { renderTo: 'graph-scatterplot', type: 'scatter', zoomType: 'xy', backgroundColor:'rgba(255, 255, 255, 0.1)'},
+			chart: { renderTo: 'graph-scatterplot', type: 'scatter', zoomType: 'xy'},
 			title: { text: '(Data not loaded)' },
 			subtitle: { text: 'from Quantimodo.com' },
 			xAxis: {
@@ -655,7 +649,7 @@ AnalyzeChart = function() {
 			chart: {
 				renderTo: 'gauge-correlation',
 				type: 'gauge',
-				width: 360
+				width: 255
 			},
 			tooltip: {
 				enabled: false,
@@ -664,8 +658,8 @@ AnalyzeChart = function() {
 				text: ''
 			},
 			pane: {
-				startAngle: -90,
-				endAngle: 90,
+				startAngle: -180,
+				endAngle: 0,
 				background: null
 			},
 			yAxis: [{

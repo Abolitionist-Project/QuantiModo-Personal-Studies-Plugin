@@ -19,8 +19,8 @@ var AnalyzePage = function() {
 			},
 			function(result) {
 				sharedData = result;
-				AnalyzeChart.setInputData(sharedData['inputVariable'], sharedData['inputMeasurements']);
-				AnalyzeChart.setOutputData(sharedData['outputVariable'], sharedData['outputMeasurements']);
+				AnalyzeChart.setInputData(sharedData['causeVariable'], sharedData['causeMeasurements']);
+				AnalyzeChart.setOutputData(sharedData['effectVariable'], sharedData['effectMeasurements']);
 			});
 		}
 		else

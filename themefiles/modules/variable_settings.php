@@ -1,52 +1,28 @@
-<div id="section-configure-settings" style="display: none;">
-
-	<div class="col-md-3 col-sm-3">
-		<div class="settingsNav">
-			<ul>
-				<li>
-					<button id="button-properties">Properties</button>
-					</li>
-				<li>
-					<button id="button-optimization">Optimization</button>
-				</li>
-				<li>
-					<button id="button-joins">Joins</button>
-				</li>
-				<li>
-					<button id="button-sharing">Sharing</button>
-				</li>
-			</ul>
-
-			<ul class="buttonRow">
-				<li>
-					<button id="button-save">Save</button>
-					</li>
-				<li>
-					<button id="button-cancel">Cancel</button>
-				</li>
-			</ul>
+<div class="closed" id="section-configure-settings" style="display: none;">
+	<div class="inner">
+		<div class="accordion-header" id="accordion-settings-header">
+			<div class="dialog-header">
+				Settings
+			</div>
+			<div style="float: right; margin-top:3px; margin-right:10px;">
+				<img id="deleteVariableMeasurements" style="cursor:pointer;" src=" <?php echo get_template_directory_uri(); ?>-qm/css/images/trash.png" title="Delete the Measurements for this variable">
+				<input id="input-variable-id" type="hidden">
+			</div>
 		</div>
-	</div>
-
-	<div class="col-md-9 col-sm-9">
-		<div id="propertiesContent" class="settings-container open">
-			<header class="card-header">
-				<h3 class="heading">
-					<span>Variable Properties</span>
-				</h3>
-			</header>
-			<div class="settingsContent">
+		<div class="accordion-content closed" id="accordion-settings-content">
+			<div class="inner">
+				<div class="loading-overlay" id="settings-loading"></div>
+				<b style="margin-top: 12px;">Properties</b>
 				<table border="0" cellspacing="0">
 					<tr>
 				    	<td>Variable name</td>
-						<td>
-							<input id="input-variable-name" type="text" placeholder="">
-						</td>
+						<td><input id="input-variable-name" type="text" placeholder=""></td>
 					</tr>
 					<tr>
 						<td>Unit</td>
 						<td>
-							<select id="selectVariableUnitSetting"></select>
+							<select id="selectVariableUnitSetting">
+							</select>
 						</td>
 					</tr>
 					<tr>
@@ -57,89 +33,55 @@
 						</td>
 					</tr>
 				</table>
-			</div>
-		</div>
-
-		<div id="optimizationContent" class="settings-container">
-			<header class="card-header">
-				<h3 class="heading">
-					<span>Data Optimization</span>
-				</h3>
-			</header>
-			<div class="settingsContent">
+				
+				<b style="margin-top: 8px;">Data Optimization</b>
 				<table border="0" style="border-collapse:collapse;" cellspacing="0">
 				    <tr>
 				    	<td>Minimum value</td>
-						<td><input type="text" id="variableMinimumValueSetting" placeholder=""><label id="unitForMinValue" class="unitlabel"></label></td>
+						<td><input type="text" id="variableMinimumValueSetting" placeholder="" style="width: 60%"><label id="unitForMinValue" class="unitlabel"></label></td>
 					</tr>
 					<tr>
 						<td>Maximum value</td>
-						<td><input type="text" id="variableMaximumValueSetting" placeholder=""><label id="unitForMaxValue" class="unitlabel"></label></td>
+						<td><input type="text" id="variableMaximumValueSetting" placeholder="" style="width: 60%"><label id="unitForMaxValue" class="unitlabel"></label></td>
 					</tr>
 					<tr>
 						<td>Delay Before <br/>Onset of Action</td>
-						<td><input type="text" id="variableOnsetDelayValueSetting" placeholder=""><label id="unitForOnsetDelay" class="unitlabel">hrs</label></td>
+						<td><input type="text" id="variableOnsetDelayValueSetting" placeholder=""  style="width: 60%"><label id="unitForOnsetDelay" class="unitlabel">hrs</label></td>
 					</tr>
 					<tr>
 						<td>Duration of Action</td>
-						<td><input type="text" id="variableDurationOfActionValueSetting" placeholder=""><label id="unitForDurationAction" class="unitlabel">hrs</label></td>
+						<td><input type="text" id="variableDurationOfActionValueSetting" placeholder="" style="width: 60%"><label id="unitForDurationAction" class="unitlabel">hrs</label></td>
 					</tr>
 				</table>
-
 				<div>
 					When there's no data:
-					<div class="indented">
+					<div>
 						<input type="radio" name="missingAssumptionGroup" id="assumeMissing" checked="true">
-						<label for="assumeMissing">Assume data is missing</label>
+						<label>Assume data is missing</label>
 					</div>
-					<div class="indented">
+					<div>
 						<input type="radio" name="missingAssumptionGroup" id="assumeValue">
-						<label for="assumeValue">Assume <input id="variableFillingValueSetting" style="text-align: center; width: 50px; height: 26px;" type="text" id="inputVariableMaximumValueSetting" placeholder=""> for that time</label>
+						<label>Assume <input id="variableFillingValueSetting" style="text-align: center; width: 50px; height: 26px;" type="text" id="causeVariableMaximumValueSetting" placeholder=""> for that time</label>
 					</div>
 				</div>
-			</div>
-		</div>
-
-		
-		<div id="joinsContent" class="settings-container">
-			<header class="card-header">
-				<h3 class="heading">
-					<span>Joined Variables</span>
-				</h3>
-			</header>
-			<div class="settingsContent">
-				<ul id="joinedVariablesList">
-				</ul>
-				<select id="joinedVariablePicker"></select>
-				<button id="addJoinedVariableButton"></button>
-			</div>
-		</div>
-
-		<div id="sharingContent" class="settings-container">
-			<header class="card-header">
-				<h3 class="heading">
-					<span>Sharing</span>
-				</h3>
-			</header>
-			<div class="settingsContent">
-				Members:
-				<div class="indented">
-					<input type="radio" name="membersSharing" id="notShared" checked="true">
-					<label for="notShared">Not shared</label>
+				
+				<b style="margin-top: 8px;">Joined variables</b>
+				<div style="margin-bottom: 8px;">
+					<ul id="joinedVariablesList">
+					</ul>
+					<select id="joinedVariablePicker"></select>
+					<button id="addJoinedVariableButton"></button>
 				</div>
-				<div class="indented">
-					<input type="radio" disabled="disabled" name="membersSharing" id="sharedWithFriends" checked="true">
-					<label for="sharedWithFriends" disabled="disabled">With friends only</label>
-				</div>
-				<div class="indented">
-					<input type="radio" name="membersSharing" id="sharedWithMembers" checked="true">
-					<label for="sharedWithMembers">With all members</label>
-				</div>
-
-				Groups:
-				<div class="indented">
-					<p style="font-weight: 600;">Not shared with any group</p>
-				</div>
+				<!--<b style="margin-top: 4px;">Sources</b>
+				<div>
+					<ul id="sourcesSortable">
+					  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><label>Medhelper</label></li>
+					  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><label>My Pillbox</label></li>
+					  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><label>MediGuard</label></li>
+					</ul>
+				</div>-->
+				<button class="button-cancel buttonrow-2">Cancel</button>
+				<button class="button-save buttonrow-2" style="margin-bottom: 12px">Save</button>
 			</div>
 		</div>
 	</div>

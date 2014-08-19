@@ -3610,39 +3610,25 @@ class custom_add_meta_box_study {
 							echo '</select><br />' . $desc;
 						break;
 						
-						//for api	
+						/*
+                         For API 
+						*/
+						// API Category
 						case 'api_variable_category':
 							global $wpdb;
 							$results = $wpdb->get_results( 'SELECT name FROM variable_categories');
                             $querys = $results;
-							if(!empty($querys)){
+							
 							echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">';
                             echo '<option value="">Variable Category</option>';
 							 foreach ( $querys as $query ){
-						       echo '<option value="' . $query->name . '">' . $query->name . '</option>';
+						       echo '<option' . selected( esc_attr( $meta ), $query->name, false ) . ' value="' . $query->name . '">' . $query->name . '</option>';
 							 }
 						    echo '</select><br />' . $desc;
-							}
+							
 						   break;
 						   
-						case 'api_variable_unit':
-						echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">
-                        <option value="1to5">1 to 5 rating</option>
-                        <option value="0to1">0 to 1 rating</option>
-						<option value="percent">Percent</option>
-						<option value="-4to4">-4 to 4 rating</option>
-						<option value="0to5">0 to 5 rating</option>
-						</select><br />';
-						break;
-						
-						
-						case 'causeoreffect':
-						echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">
-                        <option value="Effect">As Effect</option>
-                        <option value="Cause">As Cause</option>
-                        </select><br />';
-						break;
-						
+						// API Variable
 						case 'api_variable':
 						global $wpdb;
 						$result = $wpdb->get_results( 'SELECT name FROM variables');
@@ -3651,44 +3637,71 @@ class custom_add_meta_box_study {
 							echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">';
                             echo '<option value="">Variable Name</option>';
 							 foreach ( $variables as $variable ){
-						       echo '<option value="' . $variable->name . '">' . $variable->name . '</option>';
+						       echo '<option' . selected( esc_attr( $meta ), $variable->name, false ) . ' value="' . $variable->name . '">' . $variable->name . '</option>';
 							 }
 						    echo '</select><br />' . $desc;
 							}
 						break;
-						
-						case 'api_do_min':
-							echo '<input type="text" name="' . $id . '" id="' . $id . '" value="-Infinity" size="20" />
-									/5 <br />' . $desc;
-						break;
-						
-						case 'api_do_max':
-							echo '<input type="text" name="' . $id . '" id="' . $id . '" value="Infinity" size="20" />
-									/5 <br />' . $desc;
-						break;
-						
-						case 'api_do_delay':
-							echo '<input type="text" name="' . $id . '" id="' . $id . '" value="0" size="20" />
-									hrs <br />' . $desc;
-						break;
-						
-						case 'api_do_duration':
-							echo '<input type="text" name="' . $id . '" id="' . $id . '" value="24" size="20" />
-									hrs <br />' . $desc;
-						break;
-						
-						case 'api_do_assume':
+						   
+						// API Variable Unit
+						case 'api_variable_unit':
+						echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">';
+						if($meta == '' || !isset($meta)){$meta=$std;}
 							foreach ( $options as $option )
-								echo '<input type="radio" name="' . $id . '" id="' . $id . '-' . $option['value'] . '" value="' . $option['value'] . '" ' . checked( esc_attr( $meta ), $option['value'], false ) . ' />
-										<label for="' . $id . '-' . $option['value'] . '">' . $option['label'] . '</label><br />';
-							echo '' . $desc;
-							
-							foreach ( $options2 as $option )
-							echo '<input type="radio" name="' . $id . '" id="' . $id . '-' . $option['value'] . '" value="' . $option['value'] . '" ' . checked( esc_attr( $meta ), $option['value'], false ) . ' />
-										<label for="' . $id . '-' . $option['value'] . '">Assume <input type="text" name="' . $id . '" id="' . $id . '" value="" size="20" />
-									for that time</label><br />';
-							echo '' . $desc;
+								echo '<option' . selected( esc_attr( $meta ), $option['value'], false ) . ' value="' . $option['value'] . '">' . $option['label'] . '</option>';
+							echo '</select><br />' . $desc;
+                        break;
 						
+						// API Cause/Effect
+						case 'causeoreffect':
+									echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">';
+						if($meta == '' || !isset($meta)){$meta=$std;}
+							foreach ( $options as $option )
+								echo '<option' . selected( esc_attr( $meta ), $option['value'], false ) . ' value="' . $option['value'] . '">' . $option['label'] . '</option>';
+							echo '</select><br />' . $desc;
+						
+						break;
+						
+						// API Data Optimization Settings 
+						
+						// Data Optimization Minimum Value
+						case 'api_do_min':
+							if($meta == '' || !isset($meta)){$meta=$std;}
+							echo '<input type="text" name="' . $id . '" id="' . $id . '" value="' . esc_attr( $meta ) . '" size="20" />
+									/5 <br />' . $desc;
+						break;
+						
+						// Data Optimization Maximum Value
+						case 'api_do_max':
+							if($meta == '' || !isset($meta)){$meta=$std;}
+							echo '<input type="text" name="' . $id . '" id="' . $id . '" value="' . esc_attr( $meta ) . '" size="20" />
+									/5 <br />' . $desc;
+						break;
+						
+						// Data Optimization Delay Value
+						case 'api_do_delay':
+							if($meta == '' || !isset($meta)){$meta=$std;}
+							echo '<input type="number" name="' . $id . '" id="' . $id . '" value="' . esc_attr( $meta ) . '" size="20" />
+									hrs <br />' . $desc;
+						break;
+						
+						// Data Optimization Duration Value
+						case 'api_do_duration':
+							if($meta == '' || !isset($meta)){$meta=$std;}
+							echo '<input type="number" name="' . $id . '" id="' . $id . '" value="' . esc_attr( $meta ) . '" size="20" />
+									hrs <br />' . $desc;
+						break;
+						
+						// Data Optimization Data
+						case 'api_do_data':
+						if($meta == '' || !isset($meta)){$meta=$std;}
+							echo 'Assume <input type="text" name="' . $id . '" id="' . $id . '" value="' . esc_attr( $meta ) . '" size="20" />
+									for that time.<br />' . $desc;
+						
+						$check = get_post_meta( $post->ID, 'quantimodo_var_data', true );
+						if (empty($check)){
+						update_post_meta($post->ID, 'quantimodo_var_data', 'empty'); 
+						}
 						break;
 						
 						case 'selectmulticpt':
@@ -3725,7 +3738,8 @@ class custom_add_meta_box_study {
 										<label for="' . $id . '-' . $option['value'] . '">' . $option['label'] . '</label><br />';
 							echo '' . $desc;
 						break;
-                        case 'radio_img': 
+                       
+					   case 'radio_img': 
                             if($meta == '' || !isset($meta)){$meta=$std;}
 							foreach ( $options as $option )
 								echo '<div class="radio-image-wrapper">

@@ -1,35 +1,32 @@
 @charset "utf-8";
 
-#availableConnectors{
-	background: white;
-	margin-top: 30px;
-}
-#connectedConnectors {
-	background: white;
+#content {
+	background: #f2f2f2;
+	padding: 0px 12px 12px 12px;
 }
 
-.connectorContainer{
-	padding-top: 15px;
-	padding-bottom: 15px;
-	padding-left: 15px;
-	padding-right: 15px;
+#connectorInfoTable {
+	width: 70%;
+	margin: auto;
+	text-align: center;
+	padding-top: 25px;
 }
 
 .connectorBlock {
+	border-radius: 15px;
 	display: inline-block;
+	margin: 3px;
 	width: 150px;
 	height: 150px;
 	vertical-align: top;
-	transition: all 0.2s ease-in-out;
-	-webkit-transition: all 0.2s ease-in-out;
-	-moz-transition: all 0.2s ease-in-out;
-	-o-transition: all 0.2s ease-in-out;
 }
 
-.connectorBlock:hover {
-	box-shadow: 0 0 5px rgba(120, 200, 206, 1);
-    -webkit-box-shadow: 0 0 5px rgba(120, 200, 206, 1);
-    -moz-box-shadow: 0 0 5px rgba(120, 200, 206, 1);
+.connectorBlock:HOVER {
+	border: solid;
+	border-width: 3px;
+	border-color: activeborder;
+	opacity: .6;
+	cursor: hand;
 }
 
 .connectorLogo {
@@ -53,7 +50,7 @@
 	width: 598px;
 	text-align:center;
 	line-height:30px;
-	transition: height 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 	-webkit-transition: height 0.3s ease-in-out;
 	-moz-transition: height 0.3s ease-in-out;
 	-o-transition: height 0.3s ease-in-out;
@@ -225,4 +222,18 @@
 }
 .updates-table tbody tr:nth-child(even) {
 	background: #f0f0f0;
+}
+
+
+/******************/
+/* get it now url */
+/******************/
+.getitnow-container {
+	border-top: 1px dashed black;
+	text-align: center;
+	padding-top: 5px;
+	margin-top: 10px;
+}
+.getitnow-container a {
+	font-weight: bold;
 }

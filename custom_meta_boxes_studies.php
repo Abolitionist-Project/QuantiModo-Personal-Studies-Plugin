@@ -915,25 +915,25 @@ $quantipress_assignments_metabox = array(
 			'desc'	=> __('Select cause of effect','qm'), // description
 			'id'	=> $prefix.'causeoreffect', // field id and name
 			'type'	=> 'causeoreffect',
-			),
-	);
-	
-	
-	$api_variable_settings = array(
-			
-			array( // Text Input
-			'label'	=> __('Variable Name','qm'), // <label>
-			'desc'	=> __('Select Variable','qm'), // description
-			'id'	=> $prefix.'variables', // field id and name
-			'type'	=> 'api_variable',
-			),
+			'options' => array(
+				array('value'=> 'as-cause','label' => 'As Cause'),
+				array('value'=> 'as-effect','label' => 'As Effect'),
+				),
+		     ),
 			
 			array( // Text Input
 			'label'	=> __('Unit','qm'), // <label>
 			'desc'	=> __('Select Unit','qm'), // description
 			'id'	=> $prefix.'variable_unit', // field id and name
 			'type'	=> 'api_variable_unit',
-			),
+			'options' => array(
+				array('value'=> '1to5','label' => '1 to 5 rating'),
+				array('value'=> '0to1','label' => '0 to 1 rating'),
+				array('value'=> 'percent','label' => 'Percent'),
+				array('value'=> '-4to4','label' => '-4 to 4 rating'),
+				array('value'=> '0to5','label' => '0 to 5 rating'),
+			    ),
+		    ),
 	);
 	
 	$api_data_optimization = array(
@@ -948,41 +948,35 @@ $quantipress_assignments_metabox = array(
 		array( // Text Input
 			'label'	=> __('Maximum Value','qm'), // <label>
 			'desc'	=> __('Add Minimum Value','qm'), // description
-			'id'	=> $prefix.'var_minimum_value', // field id and name
+			'id'	=> $prefix.'var_maximum_value', // field id and name
 			'type'	=> 'api_do_max', // type of field
 		),
 		
 		array( // Text Input
 			'label'	=> __('Delay Before Onset of Action','qm'), // <label>
 			'desc'	=> __('In Hours','qm'), // description
-			'id'	=> $prefix.'var_minimum_value', // field id and name
+			'id'	=> $prefix.'var_delay_value', // field id and name
 			'type'	=> 'api_do_delay', // type of field
 		),
 		
 		array( // Text Input
 			'label'	=> __('Duration of Action','qm'), // <label>
 			'desc'	=> __('In Hours','qm'), // description
-			'id'	=> $prefix.'var_minimum_value', // field id and name
+			'id'	=> $prefix.'var_duration_value', // field id and name
 			'type'	=> 'api_do_duration', // type of field
 		),
 		
 		array( // Text Input
-			'label'	=> __('When there is no data:','qm'), // <label>
-			'desc'	=> __('','qm'), // description
-			'id'	=> $prefix.'var_assume', // field id and name
-			'type'	=> 'api_do_assume', // type of field
-			'options' => array(
-				array('value'=> 'Assume data is missing','label' => 'Assume data is missing'),
+			'label'	=> __('If there is data','qm'), // <label>
+			'desc'	=> __('If you leave this field empty, it is assumed that there is no data','qm'), // description
+			'id'	=> $prefix.'var_data', // field id and name
+			'type'	=> 'api_do_data', // type of field
 			),
-			'options2' => array(
-				array('value'=> '','label' => ''),
-			),
-	        'std'   => 'single'
-		),
+	    
 	);
-
-    $study_api = new custom_add_meta_box_study( 'api-settings', __('Examined Variable','qm'), $api_metabox, 'personal-study', true );
-	$api_var_settings = new custom_add_meta_box_study( 'api-variable-properties', __('Variable Properties','qm'), $api_variable_settings, 'personal-study', true );
+	
+	
+	$study_api = new custom_add_meta_box_study( 'api-settings', __('Examined Variable','qm'), $api_metabox, 'personal-study', true );
 	$api_do = new custom_add_meta_box_study( 'api-do', __('Data Optimization','qm'), $api_data_optimization, 'personal-study', true );
 	
 	$post_metabox = new custom_add_meta_box_study( 'post-settings', __('Post Settings','qm'), $post_metabox, 'post', true );

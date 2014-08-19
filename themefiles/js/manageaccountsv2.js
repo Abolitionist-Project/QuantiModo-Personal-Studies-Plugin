@@ -1,12 +1,13 @@
 ManageAccountsPage = function() 
 {
-	var api = new Quantimodo.connectorsInterface();
+	var api = new Quantimodo.connectorsInterface('/');
 
 	var reloadConnectorData = function() 
 	{
 		api.listConnectors(function(connectors) {
 			for (var i in connectors) {
-				connectors[i].lastUpdate = new Date(connectors[i].lastUpdate * 1000).toUTCString()
+				connectors[i].lastUpdate = new Date(connectors[i].lastUpdate * 1000).toUTCString();
+				connectors[i].showGetItButton = (connectors[i].getItUrl != '');
 			}
 			renderConnectors(connectors);	
 		});
@@ -14,31 +15,11 @@ ManageAccountsPage = function()
 
 	var renderConnectors = function(connectors)
 	{
-		var connectedConnectors = [];
-		var availableConnectors = [];
-		for(var i = 0; i < connectors.length; i++)
-		{
-			if(connectors[i].connected)
-			{
-				connectedConnectors.push(connectors[i])
-			}
-			else
-			{
-				availableConnectors.push(connectors[i])
-			}
-		}
-
 		// Render the connector template
-		jQuery('#connectedConnectors .connectorContainer').html(
+		jQuery('#connectorInfoTable').html(
 			Mustache.render(
 				jQuery("#connectorsTemplate").html(), 
-				{ "connectors" : connectedConnectors }
-			)
-		);
-		jQuery('#availableConnectors .connectorContainer').html(
-			Mustache.render(
-				jQuery("#connectorsTemplate").html(), 
-				{ "connectors" : availableConnectors }
+				{ "connectors" : connectors }
 			)
 		);
 

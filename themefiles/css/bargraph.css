@@ -1,40 +1,19 @@
 @charset "utf-8";
 
+#content{
+    background: #f2f2f2;
+    padding: 0px 12px 12px 12px;
+    overflow:hidden;
+    width: 100%;
+}
 #section-configure{
     float: left;
     width: 320px;
 }
-#section-bargraph{
+#section-analyze{
     overflow: hidden;
-    padding-left: 30px;
+    padding-left: 12px;
 }
-#section-analyze{   
-    overflow: hidden;   
-}
-
-/*******************/
-/* Scatterplot card*/
-/*******************/
-#scatterplot-graph{    
-   margin-top:30px;    
-   overflow: hidden;
-}
-#scatterplot-graph .graph-content{   
-    height: 350px;
-}
-
-/****************/
-/* Timeline card*/
-/****************/
-#timeline-graph{
-    margin-top:30px;
-    overflow: hidden;
-}
-#timeline-graph .graph-content{    
-    height: 480px;
-}
-
-
 
 #section-analyze-top{
     overflow: hidden;
@@ -44,14 +23,24 @@
 /***************************************/
 /* Analyze section 					    */
 /***************************************/
-
+.graph-header{
+    width: 100%;
+    height: 42px;
+    color: #fff;
+    display: block;
+    font-size: 1.2em;
+    text-indent: 12px;
+    background: #29bdca;
+    border-bottom: solid 3px #229DA5;
+    margin-top: 12px;
+}
 .graph-content{
     width:100%; 
     background:#FFFFFF;
    /* border-bottom: solid 3px #DDDDDD;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;*/
-   // overflow: hidden;
+    overflow: hidden;
 }
 
 /***************************************/
@@ -98,7 +87,6 @@
     border: solid 1px #ddd;
 }
 #button-output-varsettings{
-    margin-top: 0;
     width: 100%;
 }
 
@@ -108,33 +96,50 @@
 #correlation-gauge{
     font-size: 1.15em;
    // padding-left: 12px;
-   // width: 400px;
-   // float: left;
+    width: 400px;
+    float: left;
 }
 #correlation-gauge .graph-content{
-    height: 206px;
+    height: 350px;
 }
 #correlation-gauge td{
     vertical-align: middle;
     border: none;
-    padding-right: 10px;
 }
 #correlation-gauge tr:nth-child(even) {
     background-color: #F5FBFB;
 }
 
+/*******************/
+/* Scatterplot card*/
+/*******************/
+#scatterplot-graph{
+    // padding-left: 12px;
+    overflow: hidden;
+}
+#scatterplot-graph .graph-content{
+    height: 350px;
+}
 
 /*******************/
 /* Bar Graph card*/
 /*******************/
 #bar-graph{
-    overflow: hidden;   
+    overflow: hidden;
 }
 #bar-graph .graph-content{
-    height: 902px; 
-    overflow-y: scroll;
+
 }
 
+/****************/
+/* Timeline card*/
+/****************/
+#timeline-graph{
+    overflow: hidden;
+}
+#timeline-graph .graph-content{
+    height: 450px;
+}
 
 .inoutstate{ float: left; width:200px};
 .outstate { }
@@ -142,7 +147,7 @@
 
 /* Responsive stuffs */
 @media only screen and (max-width: 1480px) {
-       
+
 
 }
 @media only screen and (max-width: 1100px) {
@@ -163,14 +168,10 @@
         overflow: visible;
         padding: 0;
     }
-    #bar-graph .graph-content{
-        height: 300px; 
-    }
 }
 
-
 .variableInBarGraph .variableName{
-    margin-right:10px;
+    width:125px;
     float:left;
 }
 
@@ -190,7 +191,7 @@
 }
 
 .variableInBarGraph {
-   
+    width:170px;
     cursor: pointer; 
 }
 
@@ -287,21 +288,7 @@
     right:12px;
     
 }
-
-.resolutionOnTimeLine { height:22px !important;padding:0px !important; }
-.resolutionOnTimeLine span { padding-top: 2.5px !important; padding-bottom: 2.5px !important;}  
-.resolutionLabel { position:absolute; top: 23px;left: 87px;font-size: 12px; font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif; color: #666; fill: #666;}
-.resolutionCover { padding: 0px !important; position:absolute !important;top:20px !important;left: 151px !important; width:200px !important;border-bottom:none !important; }
-
-#scatterplot-graph {
-    background:#FFFFFF;
-}
-#scatterplot-graph .graph-content{
-    width:100%;    
-    border-bottom: solid 3px #DDDDDD;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    overflow: hidden;
-    background: url(images/QM-LOGO-Mike.png) center no-repeat;
-    background-size: 50% auto;
-}
+  .resolutionOnTimeLine { height:22px !important;padding:0px !important; }
+  .resolutionOnTimeLine span { padding-top: 2.5px !important; padding-bottom: 2.5px !important;}  
+  .resolutionLabel { position:absolute; top: 31px;left: -60px;color: #666;font-size: 12px; font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #666; fill: #666;}
+  .resolutionCover { position:absolute !important;top:28px !important; width:200px !important;border-bottom:none !important; }
