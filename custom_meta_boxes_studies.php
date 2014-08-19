@@ -3,6 +3,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
 
 function add_qm_metaboxes_study(){
 	$prefix = 'quantimodo_';
+	$perfixtwo = 'study-options-';
 	$sidebars=$GLOBALS['wp_registered_sidebars'];
 	$sidebararray=array();
 	foreach($sidebars as $sidebar){
@@ -899,21 +900,21 @@ $quantipress_assignments_metabox = array(
 			array( // Text Input
 			'label'	=> __('Variable Category','qm'), // <label>
 			'desc'	=> __('Select Variable Category','qm'), // description
-			'id'	=> $prefix.'variable_category', // field id and name
+			'id'	=> $perfixtwo.'variable-category', // field id and name
 			'type'	=> 'api_variable_category',
 			),
 			
 			array( // Text Input
 			'label'	=> __('Variable','qm'), // <label>
 			'desc'	=> __('Select Variable','qm'), // description
-			'id'	=> $prefix.'variables', // field id and name
+			'id'	=> $perfixtwo.'variable', // field id and name
 			'type'	=> 'api_variable',
 			),
 			
 			array( // Text Input
 			'label'	=> __('Cause or Effect','qm'), // <label>
 			'desc'	=> __('Select cause of effect','qm'), // description
-			'id'	=> $prefix.'causeoreffect', // field id and name
+			'id'	=> $perfixtwo.'causeoreffect', // field id and name
 			'type'	=> 'causeoreffect',
 			'options' => array(
 				array('value'=> 'as-cause','label' => 'As Cause'),
@@ -924,7 +925,7 @@ $quantipress_assignments_metabox = array(
 			array( // Text Input
 			'label'	=> __('Unit','qm'), // <label>
 			'desc'	=> __('Select Unit','qm'), // description
-			'id'	=> $prefix.'variable_unit', // field id and name
+			'id'	=> $perfixtwo.'variable-unit', // field id and name
 			'type'	=> 'api_variable_unit',
 			'options' => array(
 				array('value'=> '1to5','label' => '1 to 5 rating'),
@@ -941,35 +942,35 @@ $quantipress_assignments_metabox = array(
 			array( // Text Input
 			'label'	=> __('Minimum Value','qm'), // <label>
 			'desc'	=> __('Add Minimum Value','qm'), // description
-			'id'	=> $prefix.'var_minimum_value', // field id and name
+			'id'	=> $perfixtwo.'variable-min-value', // field id and name
 			'type'	=> 'api_do_min', // type of field
 		),
 			
 		array( // Text Input
 			'label'	=> __('Maximum Value','qm'), // <label>
 			'desc'	=> __('Add Minimum Value','qm'), // description
-			'id'	=> $prefix.'var_maximum_value', // field id and name
+			'id'	=> $perfixtwo.'variable-max-value', // field id and name
 			'type'	=> 'api_do_max', // type of field
 		),
 		
 		array( // Text Input
 			'label'	=> __('Delay Before Onset of Action','qm'), // <label>
 			'desc'	=> __('In Hours','qm'), // description
-			'id'	=> $prefix.'var_delay_value', // field id and name
+			'id'	=> $perfixtwo.'variable-onset-delay', // field id and name
 			'type'	=> 'api_do_delay', // type of field
 		),
 		
 		array( // Text Input
 			'label'	=> __('Duration of Action','qm'), // <label>
 			'desc'	=> __('In Hours','qm'), // description
-			'id'	=> $prefix.'var_duration_value', // field id and name
+			'id'	=> $perfixtwo.'variable-duration-value', // field id and name
 			'type'	=> 'api_do_duration', // type of field
 		),
 		
 		array( // Text Input
 			'label'	=> __('If there is data','qm'), // <label>
 			'desc'	=> __('If you leave this field empty, it is assumed that there is no data','qm'), // description
-			'id'	=> $prefix.'var_data', // field id and name
+			'id'	=> $perfixtwo.'variable-filling-value', // field id and name
 			'type'	=> 'api_do_data', // type of field
 			),
 	    

@@ -3698,9 +3698,9 @@ class custom_add_meta_box_study {
 							echo 'Assume <input type="text" name="' . $id . '" id="' . $id . '" value="' . esc_attr( $meta ) . '" size="20" />
 									for that time.<br />' . $desc;
 						
-						$check = get_post_meta( $post->ID, 'quantimodo_var_data', true );
+						$check = get_post_meta( $post->ID, $id, true );
 						if (empty($check)){
-						update_post_meta($post->ID, 'quantimodo_var_data', 'empty'); 
+						update_post_meta($post->ID, $id, 'empty'); 
 						}
 						break;
 						
