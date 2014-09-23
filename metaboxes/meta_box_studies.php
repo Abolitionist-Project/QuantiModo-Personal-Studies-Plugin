@@ -3630,17 +3630,15 @@ class custom_add_meta_box_study {
 						   
 						// API Variable
 						case 'api_variable':
-						global $wpdb;
-						$result = $wpdb->get_results( 'SELECT name FROM variables');
-                            $variables = $result;
-							if(!empty($variables )){
+						    global $wpdb;
+						    $result = $wpdb->get_results( 'SELECT name FROM variables');
+                        	$variables = $result;
 							echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">';
                             echo '<option value="">Variable Name</option>';
 							 foreach ( $variables as $variable ){
 						       echo '<option' . selected( esc_attr( $meta ), $variable->name, false ) . ' value="' . $variable->name . '">' . $variable->name . '</option>';
 							 }
 						    echo '</select><br />' . $desc;
-							}
 						break;
 						   
 						// API Variable Unit
