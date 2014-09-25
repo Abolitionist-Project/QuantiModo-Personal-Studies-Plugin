@@ -3615,30 +3615,42 @@ class custom_add_meta_box_study {
 						*/
 						// API Category
 						case 'api_variable_category':
-							global $wpdb;
-							$results = $wpdb->get_results( 'SELECT name FROM variable_categories');
-                            $querys = $results;
+							check_empty_table('variable_categories', $response);
+							$querys = $response;
 							
+							if(empty($querys)){
+                            importdata('variable_categories.sql');
+							}
+							
+							if(!empty($querys)){
 							echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">';
                             echo '<option value="">Variable Category</option>';
 							 foreach ( $querys as $query ){
 						       echo '<option' . selected( esc_attr( $meta ), $query->name, false ) . ' value="' . $query->name . '">' . $query->name . '</option>';
 							 }
-						    echo '</select><br />' . $desc;
+						    echo '</select><br />' . $desc; 
+							}
+							
 							
 						   break;
 						   
 						// API Variable
 						case 'api_variable':
-						    global $wpdb;
-						    $result = $wpdb->get_results( 'SELECT name FROM variables');
-                        	$variables = $result;
-							echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">';
+						    check_empty_table('variables', $response);
+							$variables = $response;
+							
+							if(empty($variables)){
+                            importdata('variables.sql');
+							}
+							
+							if(!empty($variables)){
+						    echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">';
                             echo '<option value="">Variable Name</option>';
 							 foreach ( $variables as $variable ){
 						       echo '<option' . selected( esc_attr( $meta ), $variable->name, false ) . ' value="' . $variable->name . '">' . $variable->name . '</option>';
 							 }
-						    echo '</select><br />' . $desc;
+						    echo '</select><br />' . $desc;}
+							
 						break;
 						   
 						// API Variable Unit
