@@ -1,5 +1,5 @@
 {
-    "name": "abolitionist-project/quantiModo-personal-studies-plugin",
+    "name": "abolitionist-project/quantimodo-personal-studies-plugin",
     "description": "Allows citizen scientists to select cause and effect variables and publish their findings on the relationship between them.",
     "type": "wordpress-plugin",
     "require": {
