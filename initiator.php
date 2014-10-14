@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: QuantiModo Personal Studies
-Description: This plugin creates Studies as a post types and render's its components
+Description: A WordPress plugin to allow citizen scientists to share their discoveries. This plugin could be used to automatically create studies using the "Study" custom post by selecting one or more variables.
 Version: 1.1
 Author: Zain Sohail
 */

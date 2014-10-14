@@ -3623,7 +3623,7 @@ class custom_add_meta_box_study {
 							}
 							
 							if(!empty($querys)){
-							echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">';
+							echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select" style="max-width: 40%;">';
                             echo '<option value="">Variable Category</option>';
 							 foreach ( $querys as $query ){
 						       echo '<option' . selected( esc_attr( $meta ), $query->name, false ) . ' value="' . $query->name . '">' . $query->name . '</option>';
@@ -3644,7 +3644,7 @@ class custom_add_meta_box_study {
 							}
 							
 							if(!empty($variables)){
-						    echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">';
+						    echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select" style="max-width: 40%;">';
                             echo '<option value="">Variable Name</option>';
 							 foreach ( $variables as $variable ){
 						       echo '<option' . selected( esc_attr( $meta ), $variable->name, false ) . ' value="' . $variable->name . '">' . $variable->name . '</option>';
