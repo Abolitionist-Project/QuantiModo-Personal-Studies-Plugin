@@ -2,7 +2,7 @@
 /*
 Plugin Name: QuantiModo Personal Studies
 Description: This plugin creates Studies as a post types and render's its components
-Version: 1.0
+Version: 1.1
 Author: Zain Sohail
 */
 

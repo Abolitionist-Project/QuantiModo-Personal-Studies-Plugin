@@ -3,14 +3,13 @@
  * FILE: qm-layout-editor.php 
  * Created on Oct 29, 2012 at 2:22:06 PM 
  * Credits: www.QuantiModo.do
- * Project: vEstate
  */
 
 
-add_action( 'init', 'qm_layout_editor' );
-function qm_layout_editor(){
-	add_action( 'admin_enqueue_scripts', 'qm_scripts_styles', 10, 1 );
-	function qm_scripts_styles( $hook ) {
+add_action( 'init', 'layout_editor_ps' );
+function layout_editor_ps(){
+	add_action( 'admin_enqueue_scripts', 'qm_scripts_styles_ps', 10, 1 );
+	function qm_scripts_styles_ps( $hook ) {
 		if ( in_array( $hook, array( 'post-new.php', 'post.php' ) ) ){
       if( (isset($_GET['post_type']) && ($_GET['post_type'] == 'page')) || (isset($_GET['post']) && (get_post_type($_GET['post']) == 'page'))){
         qm_new_settings_page_js();
@@ -1364,7 +1363,7 @@ $v_modules['carousel'] = array(
             'animation_effect' => array(
                'title' => __('* On-Load CSS3 Animation effect on the block (<a href="http://quantimodo.com/forums/showthread.php?914-CSS3-Animation-Effects&p=2488" target="_blank">more</a>)', 'qm'),
                'type' => 'select',
-               'options' => animation_effects(),
+               'options' => animation_effects_ps(),
                'std' => ''
              ),             
             'css_class' => array(
@@ -1428,7 +1427,7 @@ $v_modules['carousel'] = array(
                 'animation_effect' => array(
                          'title' => __('* On-Load CSS3 Animation effect on the block (<a href="http://quantimodo.com/forums/showthread.php?914-CSS3-Animation-Effects&p=2488" target="_blank">more</a>)', 'qm'),
                          'type' => 'select',
-                         'options' => animation_effects(),
+                         'options' => animation_effects_ps(),
                          'std' => ''
                            ),            
                 'css_class' => array(
@@ -1696,7 +1695,7 @@ $v_modules['slider'] = array(
 		
 	}
 
-	function qm_qm_layout_editor(){
+	function qm_layout_editor(){
 		global $v_modules, $v_columns, $v_sample_layouts, $post;
 		$v_helper_class = '';
 		$v_convertible_settings = get_post_meta( $post->ID, '_builder_settings', true );
