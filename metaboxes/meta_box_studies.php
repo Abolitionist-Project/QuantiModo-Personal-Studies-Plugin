@@ -3612,7 +3612,9 @@ class custom_add_meta_box_study {
 						
 						/*
                          For API 
+						 
 						*/
+						
 						// API Category
 						case 'api_variable_category':
 							check_empty_table('variable_categories', $response);
@@ -3643,7 +3645,8 @@ class custom_add_meta_box_study {
                             importdata('variables.sql');
 							}
 							
-							if(!empty($variables)){
+						// Changed the width of table
+						if(!empty($variables)){
 						    echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select" style="max-width: 40%;">';
                             echo '<option value="">Variable Name</option>';
 							 foreach ( $variables as $variable ){
