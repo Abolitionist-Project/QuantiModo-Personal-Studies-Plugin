@@ -1,6 +1,9 @@
 <?php
 if ( !defined( 'ABSPATH' ) ) exit;
 
+/**
+ *
+ */
 function add_qm_metaboxes_study(){
 	$prefix = 'quantimodo_';
 	$perfixtwo = 'study-options-';
@@ -141,10 +144,7 @@ function add_qm_metaboxes_study(){
 	                'options' => $sidebararray
 	                ),
 	    );
-
-
-
-	$featured_metabox = array(
+    $featured_metabox = array(
 	     array( // Select box
 			'label'	=> __('Media','qm'), // <label>
 			'id'	=> $prefix.'select_featured', // field id and name
@@ -212,10 +212,7 @@ function add_qm_metaboxes_study(){
 		
 	    );
 
-
-
-
-	$study_metabox = array(  
+    $study_metabox = array(
 		array( // Single checkbox
 			'label'	=> __('Sidebar','qm'), // <label>
 			'desc'	=> __('Select a Sidebar | Default : mainsidebar','qm'), // description
@@ -401,7 +398,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 		);
 }
 
-$unit_types = apply_filters('quantipress_unit_types',array(
+    $unit_types = apply_filters('quantipress_unit_types',array(
                       array( 'label' =>__('Video','qm'),'value'=>'play'),
                       array( 'label' =>__('Audio','qm'),'value'=>'music-file-1'),
                       array( 'label' =>__('Podcast','qm'),'value'=>'podcast'),
@@ -459,8 +456,7 @@ $unit_types = apply_filters('quantipress_unit_types',array(
 		),
 	);
 
-
-	$question_metabox = array(  
+    $question_metabox = array(
 		array( // Text Input
 			'label'	=> __('Question Type','qm'), // <label>
 			'desc'	=> __('Select Question type, ','qm'), // description
@@ -582,10 +578,7 @@ $unit_types = apply_filters('quantipress_unit_types',array(
 		),
 	);
 
-
-
-
-	$product_metabox = array(  
+    $product_metabox = array(
 		array( // Text Input
 			'label'	=> __('Associated Studys','qm'), // <label>
 			'desc'	=> __('Associated Studys with this product. Enables access to the study.','qm'), // description
@@ -614,8 +607,7 @@ $unit_types = apply_filters('quantipress_unit_types',array(
 		),
 	);
 
-
-$quantipress_events_metabox = array(  
+	$quantipress_events_metabox = array(
 		array( // Single checkbox
 			'label'	=> __('Event Sub-Title','qm'), // <label>
 			'desc'	=> __('Event Sub-Title.','qm'), // description
@@ -731,7 +723,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 		);
 }
 
-$payments_metabox = array(  
+	$payments_metabox = array(
 		array( // Text Input
 			'label'	=> __('From','qm'), // <label>
 			'desc'	=> __('Date on which Payment was done.','qm'), // description
@@ -752,7 +744,7 @@ $payments_metabox = array(
 		),
 	);
 
-$certificate_metabox = array(  
+	$certificate_metabox = array(
 		array( // Text Input
 			'label'	=> __('Background Image/Pattern','qm'), // <label>
 			'desc'	=> __('Add background image','qm'), // description
@@ -793,7 +785,7 @@ $certificate_metabox = array(
 	);	
 
 
-$quantipress_assignments_metabox = array(  
+	$quantipress_assignments_metabox = array(
 	array( // Single checkbox
 			'label'	=> __('Assignment Sub-Title','qm'), // <label>
 			'desc'	=> __('Assignment Sub-Title.','qm'), // description
@@ -896,45 +888,42 @@ $quantipress_assignments_metabox = array(
 		),
 );
 
-	$api_metabox = array(
+	$examined_variable = array(
 			array( // Text Input
-			'label'	=> __('Variable Category','qm'), // <label>
-			'desc'	=> __('Select Variable Category','qm'), // description
-			'id'	=> $perfixtwo.'variable-category', // field id and name
-			'type'	=> 'api_variable_category',
-			),
-			
-			array( // Text Input
-			'label'	=> __('Variable','qm'), // <label>
-			'desc'	=> __('Select Variable','qm'), // description
-			'id'	=> $perfixtwo.'variable', // field id and name
-			'type'	=> 'api_variable',
-			),
-			
-			array( // Text Input
-			'label'	=> __('Cause or Effect','qm'), // <label>
-			'desc'	=> __('Select cause of effect','qm'), // description
-			'id'	=> $perfixtwo.'causeoreffect', // field id and name
-			'type'	=> 'causeoreffect',
-			'options' => array(
-				array('value'=> 'as-cause','label' => 'As Cause'),
-				array('value'=> 'as-effect','label' => 'As Effect'),
-				),
-		     ),
-			
-			array( // Text Input
+			'label_col1'	=> __('Cause Variable','qm'), // <label>
 			'label'	=> __('Unit','qm'), // <label>
-			'desc'	=> __('Select Unit','qm'), // description
-			'id'	=> $perfixtwo.'variable-unit', // field id and name
+			'desc'	=> __('','qm'), // description
+			'id_col1'	=> $perfixtwo.'cause_variables', // field id and name
+			'id'	=> $perfixtwo.'cause_variables_unit', // field id and name
+			'type_col1' =>	'cause-variables',
 			'type'	=> 'api_variable_unit',
+			'type_col3'	=> 'cause-variables',
 			'options' => array(
 				array('value'=> '1to5','label' => '1 to 5 rating'),
 				array('value'=> '0to1','label' => '0 to 1 rating'),
 				array('value'=> 'percent','label' => 'Percent'),
 				array('value'=> '-4to4','label' => '-4 to 4 rating'),
 				array('value'=> '0to5','label' => '0 to 5 rating'),
-			    ),
-		    ),
+			   ),
+			),
+
+		array( // Text Input
+			'label_col1'	=> __('Effect Variable','qm'), // <label>
+			'label'	=> __('Unit','qm'), // <label>
+			'desc'	=> __('','qm'), // description
+			'id_col1'	=> $perfixtwo.'effect_variables', // field id and name
+			'id'	=> $perfixtwo.'effect_variables_unit', // field id and name
+			'type_col1' =>	'effect-variables',
+			'type'	=> 'api_variable_unit',
+			'type_col3'	=> 'effect-variables',
+			'options' => array(
+				array('value'=> '1to5','label' => '1 to 5 rating'),
+				array('value'=> '0to1','label' => '0 to 1 rating'),
+				array('value'=> 'percent','label' => 'Percent'),
+				array('value'=> '-4to4','label' => '-4 to 4 rating'),
+				array('value'=> '0to5','label' => '0 to 5 rating'),
+			),
+		),
 	);
 	
 	$api_data_optimization = array(
@@ -975,26 +964,67 @@ $quantipress_assignments_metabox = array(
 			),
 	    
 	);
-	
-	
-	$study_api = new custom_add_meta_box_study( 'api-settings', __('Examined Variable','qm'), $api_metabox, 'personal-study', true );
-	$api_do = new custom_add_meta_box_study( 'api-do', __('Data Optimization','qm'), $api_data_optimization, 'personal-study', true );
-	
+
+	$study_parameters = array(
+
+		array( // Text Input
+			'label_col1'	=> __('Start Date','qm'), // <label>
+			'desc'	=> __('','qm'), // description
+			'id_col1'	=> $perfixtwo.'start_date', // field id and name
+			'type_col1'	=> 'date', // type of field
+		),
+
+		array( // Text Input
+			'label_col1'	=> __('End Date','qm'), // <label>
+			'desc'	=> __('','qm'), // description
+			'id_col1'	=> $perfixtwo.'end_date', // field id and name
+			'type_col1'	=> 'date', // type of field
+		),
+
+		array( // Text Input
+			'label_col1'	=> __('Delay Before Onset of Action','qm'), // <label>
+			'desc'	=> __('','qm'), // description
+			'id_col1'	=> $perfixtwo.'variable_onset_delay', // field id and name
+			'type_col1'	=> 'api_do_delay', // type of field
+		),
+
+		array( // Text Input
+			'label_col1'	=> __('Duration of Action','qm'), // <label>
+			'desc'	=> __('','qm'), // description
+			'id_col1'	=> $perfixtwo.'variable_duration_value', // field id and name
+			'type_col1'	=> 'api_do_duration', // type of field
+		),
+
+	);
+
+     // Summary if Findings Metabox
+	$sof = array(
+
+		array( // Text Input
+			'label'	=> __('Summary of Findings','qm'), // <label>
+			'desc'	=> __('','qm'), // description
+			'id'	=> $perfixtwo.'sof', // field id and name
+			'type_col1'	=> 'label-sof', // type of field
+			'type'	=> 'sof', // type of field
+
+		),
+
+	);
+
+
+	$study_api = new custom_add_meta_box_study( 'api-settings', __('Examined Variable','qm'), $examined_variable, 'personal-study', true );
+	// $api_do = new custom_add_meta_box_study( 'api-do', __('Data Optimization','qm'), $api_data_optimization, 'personal-study', true );
+	$studyparameters = new custom_add_meta_box_study( 'study_parameters', __('Study Parameters (Optional)','qm'), $study_parameters, 'personal-study', true );
+    $summary_of_findings = new custom_add_meta_box_study( 'summary-of-findings', __('Summary','qm'), $sof, 'personal-study', true );
+
 	$post_metabox = new custom_add_meta_box_study( 'post-settings', __('Post Settings','qm'), $post_metabox, 'post', true );
 	$page_metabox = new custom_add_meta_box_study( 'page-settings', __('Page Settings','qm'), $page_metabox, 'page', true );
-
-//	$study_box = new custom_add_meta_box_study( 'page-settings', __('Study Settings','qm'), $study_metabox, 'personal-study', true );
 
 	$study_product = __('Product Studies','qm');
 	if(function_exists('pmpro_getAllLevels')){
 		$study_product = __('Study Membership','qm');
 	}
-//	$study_product_box = new custom_add_meta_box_study( 'post-settings', $study_product, $study_product_metabox, 'personal-study', true );
-// Initiator for Study
 
-
-
-	
 	$testimonial_box = new custom_add_meta_box_study( 'testimonial-info', __('Testimonial Author Information','qm'), $testimonial_metabox, 'testimonials', true );
 	$payments_metabox = new custom_add_meta_box_study( 'page-settings', __('Payments Settings','qm'), $payments_metabox, 'payments', true );
 	$certificates_metabox = new custom_add_meta_box_study( 'page-settings', __('Certificate Template Settings','qm'), $certificate_metabox, 'certificate', true );
@@ -1026,13 +1056,40 @@ if(!function_exists('add_qm_editor')){
 function change_default_title( $title ){
     $screen = get_current_screen();
 
-    // For CPT 1
-    if  ( 'personal-study' == $screen->post_type ) {
+	if  ( 'personal-study' == $screen->post_type ) {
         $title = 'Enter research question here';}
-    
-	return $title;
+    return $title;
 }
 add_filter( 'enter_title_here', 'change_default_title' );
+
+// Move TinyMCE Editor to the bottom
+add_action( 'add_meta_boxes', 'action_add_meta_boxes', 0 );
+function action_add_meta_boxes() {
+	global $_wp_post_type_features;
+	if (isset($_wp_post_type_features['personal-study']['editor']) && $_wp_post_type_features['personal-study']['editor']) {
+		unset($_wp_post_type_features['personal-study']['editor']);
+		add_meta_box(
+			'description_section',
+			__('Description'),
+			'inner_custom_box',
+			'personal-study', 'normal', 'low'
+		);
+	}
+	add_action( 'admin_head', 'action_admin_head'); //white background
+}
+function action_admin_head() {
+	?>
+	<style type="text/css">
+		.wp-editor-container{background-color:#fff;}
+	</style>
+<?php
+}
+function inner_custom_box( $post ) {
+	echo '<div class="wp-editor-wrap">';
+	//the_editor is deprecated in WP3.3, use instead:
+	wp_editor($post->post_content, 'content', array('dfw' => true, 'tabindex' => 1) );
+	echo '</div>';
+}
 
 function attachment_getMaximumUploadFileSize_study(){
     $maxUpload      = (int)(ini_get('upload_max_filesize'));
@@ -1040,3 +1097,13 @@ function attachment_getMaximumUploadFileSize_study(){
     $memoryLimit    = (int)(ini_get('memory_limit'));
     return min($maxUpload, $maxPost, $memoryLimit);
 }
+
+// Remove Extra metaboxes
+function remove_extra_fields() {
+	remove_meta_box( 'postcustom', 'personal-study', 'normal' );
+	remove_meta_box( 'commentstatusdiv', 'personal-study', 'normal' );
+	remove_meta_box( 'commentsdiv', 'personal-study', 'normal' );
+	remove_meta_box( 'authordiv', 'personal-study', 'normal' );
+}
+add_action( 'admin_menu' , 'remove_extra_fields' );
+?>

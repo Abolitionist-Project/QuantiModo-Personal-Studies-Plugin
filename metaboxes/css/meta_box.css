@@ -1,16 +1,32 @@
 /* 
  * Meta box styles
  */
-.form-table.meta_box th label {
-	font-weight:bold;
+
+.form-table.meta_box td label {
+    float: left;
+    width: 150px;
+    padding-right: 10px;
+    padding-top: 3px;
+    font-weight:bold;
 }
+
+.form-table.meta_box td {width:33%;}
 
 .form-table.meta_box .description {
 	font-size:11px;
 	color:#777;
 	font-style:italic;
-        clear:both;
-        float:left;
+    clear:both;
+       float:left;
+}
+
+.qm_metabox_btn{
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: rgb(66, 184, 221);
+    width:170px ;
+    height:35px;
 }
 .small_link{font-size:11px;text-decoration:none;font-weight:600;padding-left:30px;}
 #featured-media th{
@@ -727,3 +743,4 @@ float: right;
 
 .ultable strong{float:left;}
 .ultable span{float:right;}
+

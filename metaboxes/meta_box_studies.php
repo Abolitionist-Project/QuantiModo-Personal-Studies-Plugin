@@ -2,7 +2,7 @@
 
 function meta_box_find_field_type_study( $needle, $haystack ) {
     foreach ( $haystack as $item )
-        if ( $item['type'] == $needle )
+        if ( $item['type'] && $item['type_col1'] == $needle )
             return true;
     return false;
 }
@@ -32,27 +32,27 @@ class custom_add_meta_box_study {
 		add_action( 'admin_head',  array( $this, 'admin_head' ) );
 		add_action( 'admin_menu', array( $this, 'add_box' ) );
 		add_action( 'save_post',  array( $this, 'save_box' ));
+	    add_action( 'save_post',  array( $this, 'save_col1' ));
+	    add_action( 'save_post',  array( $this, 'save_col3' ));
+
+
     }
 	
 	function admin_enqueue_scripts() {
-		
-        wp_enqueue_script( 'jquery-ui-datepicker', array( 'jquery', 'jquery-ui-core' ) );
+		wp_enqueue_script( 'jquery-ui-datepicker', array( 'jquery', 'jquery-ui-core' ) );
 		wp_enqueue_script( 'jquery-ui-slider', array( 'jquery', 'jquery-ui-core' ) );
-		wp_enqueue_script( 'timepicker_box', qm_PLUGIN_URL . '/qm-personal-studies/metaboxes/js/jquery.timePicker.min.js', array( 'jquery' ) );
-		wp_enqueue_script( 'graph_box', qm_PLUGIN_URL . '/qm-personal-studies/metaboxes/js/jquery.flot.min.js', array( 'jquery' ) );
-		wp_enqueue_script( 'graph_resize_box', qm_PLUGIN_URL . '/qm-personal-studies/metaboxes/js/jquery.flot.resize.min.js', array( 'jquery' ) );
-		wp_enqueue_script("correlate", $stylesheet_dir . "/js/correlate.js", array("correlate-charts", "jquery-ui-datepicker", "jquery-ui-button"), false, true);
+		wp_enqueue_script( 'timepicker_box', plugins_url( '/metaboxes/js/jquery.timePicker.min.js', __FILE__ ) , array( 'jquery' ) );
+		wp_enqueue_script( 'graph_box', plugins_url( '/metaboxes/js/jquery.flot.min.js', __FILE__ ), array( 'jquery' ) );
+		wp_enqueue_script( 'graph_resize_box', plugins_url( '/metaboxes/js/jquery.flot.resize.min.js', __FILE__ ), array( 'jquery' ) );
+		wp_enqueue_script("correlate", plugins_url( "/js/correlate.js", __FILE__ ), array("correlate-charts", "jquery-ui-datepicker", "jquery-ui-button"), false, true);
         wp_enqueue_script( 'meta_box-gmap','http://maps.google.com/maps/api/js?sensor=false');
-        wp_register_style( 'jqueryui', qm_PLUGIN_URL . '/qm-personal-studies/metaboxes/css/jqueryui.css' );
-        wp_enqueue_style( 'timepicker', qm_PLUGIN_URL . '/qm-personal-studies/metaboxes/css/timePicker.css' );
-		
-		
- 	
+        wp_register_style( 'jqueryui', plugins_url(  '/metaboxes/css/jqueryui.css', __FILE__ ) );
+        wp_enqueue_style( 'timepicker', plugins_url(  '/metaboxes/css/timePicker.css', __FILE__ ) );
 	}
 	
 	function persistent_admin_scripts(){
-		wp_enqueue_script( 'meta_box_js', qm_PLUGIN_URL . '/qm-personal-studies/metaboxes/js/scripts.js', array( 'jquery','iris','jquery-ui-core','jquery-ui-sortable','jquery-ui-slider','jquery-ui-datepicker' ) );
-		wp_enqueue_style( 'meta_box_css', qm_PLUGIN_URL . '/qm-personal-studies/metaboxes/css/meta_box.css');
+		wp_enqueue_script( 'meta_box_js', plugins_url(  '/js/scripts.js', __FILE__ ), array( 'jquery','iris','jquery-ui-core','jquery-ui-sortable','jquery-ui-slider','jquery-ui-datepicker' ) );
+		wp_enqueue_style( 'meta_box_css', plugins_url(  '/css/meta_box.css', __FILE__ ));
 	}
 	// scripts
 	function admin_head() {
@@ -65,8 +65,14 @@ class custom_add_meta_box_study {
 			if(is_array($this->fields))
 			foreach ( $this->fields as $field ) {
 				// date
+				if( $field['type_col1'] == 'date' )
+					echo 'jQuery("#' . $field['id_col1'] . '").datepicker({
+							dateFormat: \'yy-mm-dd\'});';
 				if( $field['type'] == 'date' )
 					echo 'jQuery("#' . $field['id'] . '").datepicker({
+							dateFormat: \'yy-mm-dd\'});';
+				if( $field['type_col3'] == 'date' )
+					echo 'jQuery("#' . $field['id_col3'] . '").datepicker({
 							dateFormat: \'yy-mm-dd\'});';
 				// slider
 				if ( $field['type'] == 'slider' ) {
@@ -217,7 +223,7 @@ class custom_add_meta_box_study {
 			add_meta_box( $this->id, $this->title, array( $this, 'meta_box_callback' ), $page, 'normal', 'high');
 		}
 	}
-	
+
 	function meta_box_callback() {
 		global $post, $post_type;
 		// Use nonce for verification
@@ -235,16 +241,99 @@ class custom_add_meta_box_study {
 				
 			// get value of this field if it exists for this post
 
-				$meta = get_post_meta( $post->ID, $id, true);
-			
+			$meta_col1 = get_post_meta( $post->ID, $id_col1, true);
+			$meta = get_post_meta( $post->ID, $id, true);
+
 			
 			// begin a table row with
-			echo '<tr>
-					<th><label for="' . $id . '">' . $label . '</label></th>
-					<td>';
-					switch( $type ) {
+			// Column One
+
+				echo '<tr> <td class="type_col1">';
+
+
+			if ( $field['type_col1'] == 'label-sof' ) {
+				echo '<label style="width:150px;" for="' . $id . '">' . $label . '</label>';
+
+			}
+
+
+			if ( $field['type_col1'] == 'cause-variables' ) {
+					check_empty_table( 'variables', $response );
+					$variables = $response;
+
+					if ( empty( $variables ) ) {
+						importdata( 'variables.sql' );
+					}
+
+					// Changed the width of table
+					if ( ! empty( $variables ) ) {
+						echo '<label style="width:30%;" for="' . $id_col1 . '">' . $label_col1 . '</label>';
+						echo '<select name="' . $id_col1 . '" id="' . $id_col1 . '" class="chzn-select" style="max-width: 60%">';
+						echo '<option value="">Variable Name</option>';
+						foreach ( $variables as $variable ) {
+							echo '<option' . selected( esc_attr( $meta_col1 ), $variable->name, false ) . ' value="' . $variable->name . '">' . $variable->name . '</option>';
+						}
+						echo '</select><br />' . $desc;
+					}
+
+				}
+
+			if ( $field['type_col1'] == 'effect-variables' ) {
+					check_empty_table( 'variables', $response );
+					$variables = $response;
+
+					if ( empty( $variables ) ) {
+						importdata( 'variables.sql' );
+					}
+
+					// Changed the width of table
+					if ( ! empty( $variables ) ) {
+						echo '<label style="width:30%;" for="' . $id_col1 . '">' . $label_col1 . '</label>';
+						echo '<select name="' . $id_col1 . '" id="' . $id_col1 . '" class="chzn-select" style="max-width: 60%;">';
+						echo '<option value="">Variable Name</option>';
+						foreach ( $variables as $variable ) {
+							echo '<option' . selected( esc_attr( $meta_col1 ), $variable->name, false ) . ' value="' . $variable->name . '">' . $variable->name . '</option>';
+						}
+						echo '</select><br />' . $desc;
+					}
+
+				}
+
+
+			if ( $field['type_col1'] == 'date' ) {
+					echo '<label for="' . $id_col1 . '">' . $label_col1 . '</label>';
+					echo '<input type="text" class="datepicker" name="' . $id_col1 . '" id="' . $id_col1 . '" value="' . esc_attr( $meta_col1 ) . '" size="20" />
+									<br />' . $desc;
+
+				}
+
+
+			if ( $field['type_col1'] == 'api_do_delay' ) {
+					echo '<label for="' . $id_col1 . '" style="width:170px;">' . $label_col1 . '</label>';
+					if ( $meta_col1 == '' || ! isset( $meta_col1 ) ) {
+						$meta_col1 = $std;
+					}
+					echo '<input type="number" name="' . $id_col1 . '" id="' . $id_col1 . '" value="' . esc_attr( $meta_col1 ) . '" size="20" placeholder="In Hours" />
+									<br />' . $desc;
+
+				}
+
+			if ( $field['type_col1'] == 'api_do_duration' ) {
+					echo '<label for="' . $id_col1 . '" style="width:170px;" >' . $label_col1 . '</label>';
+					if ( $meta_col1 == '' || ! isset( $meta_col1 ) ) {
+						$meta_col1 = $std;
+					}
+					echo '<input type="number" name="' . $id_col1 . '" id="' . $id_col1 . '" value="' . esc_attr( $meta_col1 ) . '" size="20" placeholder="In Hours" />
+									<br />' . $desc;
+				}
+
+
+
+			echo '</td> <td>';
+			// Column Two
+			switch( $type ) {
                         case 'number':
-                        
+
 							echo '<input type="number" name="' . $id . '" id="' . $id . '" value="' . esc_attr( $meta ) . '" size="20" />
 									<br />' . $desc;
 						break;
@@ -254,7 +343,7 @@ class custom_add_meta_box_study {
 									<br />' . $desc;
 						break;
 						// textarea
-						case 'textarea':
+						case 'area':
 							echo '<textarea name="' . $id . '" id="' . $id . '" cols="60" rows="4">' . esc_attr( $meta ) . '</textarea>
 									<br />' . $desc;
 						break;
@@ -3527,7 +3616,7 @@ class custom_add_meta_box_study {
 						   echo '<input type="text" class="capture-input qm-form-text qm-input" name="' . $id . '" id="' . $id . '" value="' . esc_attr( $meta ) . '" />' . "\n";
 							echo $desc;
 						break;
-                                                // color
+                        // color
                         case 'color':
 							echo '<input type="text" name="' . $id . '" id="' . $id . '" value="' . esc_attr( $meta ) . '" size="10" class="color" />
 									<br />' . $desc;
@@ -3589,7 +3678,7 @@ class custom_add_meta_box_study {
 
 							echo '</select><br />' . $desc;
 						break;
-					 //edited one  	
+					    //edited one
 						case 'selectcpt2':
 							echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">';
                             if($meta == '' || !isset($meta)){$meta=$std;}
@@ -3611,10 +3700,15 @@ class custom_add_meta_box_study {
 						break;
 						
 						/*
-                         For API 
-						 
+                         Cases added for QuantiModo
 						*/
-						
+
+						// For SOF
+						case 'sof':
+							echo '<textarea name="' . $id . '" id="' . $id . '" cols="80" rows="8">' . esc_attr( $meta ) . '</textarea>
+									<br />' . $desc;
+							break;
+
 						// API Category
 						case 'api_variable_category':
 							check_empty_table('variable_categories', $response);
@@ -3658,10 +3752,11 @@ class custom_add_meta_box_study {
 						   
 						// API Variable Unit
 						case 'api_variable_unit':
-						echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select">';
+						echo '<label style="width: 40px;" for="' . $id . '">' . $label . '</label>';
+						echo '<select name="' . $id . '" id="' . $id . '" class="chzn-select" style="width: 300px;">';
 						if($meta == '' || !isset($meta)){$meta=$std;}
 							foreach ( $options as $option )
-								echo '<option' . selected( esc_attr( $meta ), $option['value'], false ) . ' value="' . $option['value'] . '">' . $option['label'] . '</option>';
+								echo '<option' . selected( esc_attr( $meta ), $option['value'], false ) . ' value="' . $option['value'] . '" style="width: 100%;">' . $option['label'] . '</option>';
 							echo '</select><br />' . $desc;
                         break;
 						
@@ -3735,7 +3830,8 @@ class custom_add_meta_box_study {
 
 							echo '</select><br />' . $desc;
 						break;
-                                                // Multiselect
+
+                        // Multiselect
 						case 'multiselect':
 							echo '<select name="' . $id . '[]" id="' . $id . '" multiple class="chzn-select chosen">';
                                                         if($meta == '' || !isset($meta)){$meta=array();}
@@ -3752,7 +3848,7 @@ class custom_add_meta_box_study {
 							echo '' . $desc;
 						break;
                        
-					   case 'radio_img': 
+					   case 'radio_img':
                             if($meta == '' || !isset($meta)){$meta=$std;}
 							foreach ( $options as $option )
 								echo '<div class="radio-image-wrapper">
@@ -3765,7 +3861,7 @@ class custom_add_meta_box_study {
 							echo '' . $desc;
 						break;
 						// checkbox_group
-						case 'checkbox_group':
+					   case 'checkbox_group':
 							foreach ( $options as $option )
 								echo '<input type="checkbox" value="' . $option['value'] . '" name="' . $id . '[]" id="' . $id . '-' . $option['value'] . '"' , is_array( $meta ) && in_array( $option['value'], $meta ) ? ' checked="checked"' : '' , ' /> 
 										<label for="' . $id . '-' . $option['value'] . '">' . $option['label'] . '</label><br />';
@@ -4282,7 +4378,7 @@ class custom_add_meta_box_study {
 	</script>
 	<?php
 						break;
-                                                 case 'audio':
+                        case 'audio':
                                                     global $post;
                                                     ?>
                                                 <div id="qm_audio_container">
@@ -4424,7 +4520,7 @@ class custom_add_meta_box_study {
 	</script>
 	<?php
 						break;
-                                                 case 'video':
+                        case 'video':
                                                     global $post;
                                                     ?>
                                                 <div id="qm_media_container">
@@ -4571,12 +4667,26 @@ class custom_add_meta_box_study {
 							echo $desc;
 						break;
 					} //end switch
-			echo '</td></tr>';
+			echo '</td> <td class="type_col3">';
+
+			// Column Three
+			if ( $field['type_col3'] == 'cause-variables' )
+			{
+				echo '<input type="submit" value="Cause Variable Settings" class="qm_metabox_btn"/>';
+			}
+
+			if ( $field['type_col3'] == 'effect-variables' )
+			{
+				echo '<input type="submit" value="Effect Variable Settings" class="qm_metabox_btn" />';
+			}
+
+			echo '</td>
+					</tr>';
 		} // end foreach
 		echo '</table>'; // end table
 	}
 	
-	// Save the Data
+	// Save the Data for Column 1
 	function save_box( $post_id ) {
 		global $post, $post_type;
 		
@@ -4602,8 +4712,8 @@ class custom_add_meta_box_study {
                             
                               
                                 
-				 if(isset($field['id'])){
-				
+				 if(isset($field['id'])) {
+
 				// save the rest
                                 //print_r($_POST[$field['id']]);
                             
@@ -4652,7 +4762,7 @@ class custom_add_meta_box_study {
 						$new=$old;
 					}
 				}*/
-				
+
 				if ( $new && $new != $old ) {
 					if ( is_array( $new ) ) {
 						foreach ( $new as &$item ) {
@@ -4677,7 +4787,7 @@ class custom_add_meta_box_study {
 						if($field['type'] != 'editor')
 							$new = esc_attr( $new );
 					}
-                                        
+
 					update_post_meta( $post_id, $field['id'], $new );
 				} elseif ( !isset($new) && $old ) {
 					delete_post_meta( $post_id, $field['id'], $old );
@@ -4688,7 +4798,236 @@ class custom_add_meta_box_study {
 			}
 		} // end foreach
 	}
+
+	// Save the Data for Column 2
+	function save_col1( $post_id ) {
+		global $post, $post_type;
+
+		// verify nonce
+		if ( ! ( in_array($post_type, $this->page) && @wp_verify_nonce( $_POST[$post_type . '_meta_box_nonce'],  basename( __FILE__ ) ) ) )
+			return $post_id;
+		// check autosave
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
+			return $post_id;
+		// check permissions
+		if ( !current_user_can( 'edit_page', $post_id ) )
+			return $post_id;
+
+		// loop through fields and save the data
+		foreach ( $this->fields as $field ) {
+			if( $field['type'] == 'tax_select' ) {
+				// save taxonomies
+				if ( isset( $_POST[$field['id_col1']] ) )
+					$term = $_POST[$field['id_col1']];
+				wp_set_object_terms( $post_id, $term, $field['id_col1'] );
+			}
+			else {
+
+
+
+				if(isset($field['id_col1'])) {
+
+					// save the rest
+					//print_r($_POST[$field['id_col1']]);
+
+
+					$old = get_post_meta( $post_id, $field['id_col1'], true );
+
+					$old='';
+					$new=$old;
+
+
+
+					if ( isset( $_POST[$field['id_col1']] ) )
+						$new = $_POST[$field['id_col1']];
+
+
+					if($field['type'] == 'checkbox' || $field['type'] == 'available' || $field['type'] == 'featured') {
+						if ( !isset( $_POST[$field['id_col1']] ) ){
+							$new = 0;
+						}
+
+					}
+					if($field['type'] == 'gmap') {
+						if ( isset($_POST[$field['id_col1']]) && is_array( $_POST[$field['id_col1']])){
+							if(isset($_POST[$field['id_col1']]['city']))
+								update_post_meta($post_id,'qm_gmap_city',$_POST[$field['id_col1']]['city']);
+							if(isset($_POST[$field['id_col1']]['state']))
+								update_post_meta($post_id,'qm_gmap_state',$_POST[$field['id_col1']]['state']);
+							if(isset($_POST[$field['id_col1']]['pincode']))
+								update_post_meta($post_id,'qm_gmap_pincode',$_POST[$field['id_col1']]['pincode']);
+							if(isset($_POST[$field['id_col1']]['country']))
+								update_post_meta($post_id,'qm_gmap_country',$_POST[$field['id_col1']]['country']);
+						}
+					}
+					if($field['type'] == 'image') {
+						if ( !isset( $_POST[$field['id_col1']] ) || !$_POST[$field['id_col1']]){
+							$new = ' ';
+						}
+					}
+					if($field['type'] == 'textarea' || $field['type'] == 'editor') {
+						if ( !isset( $_POST[$field['id_col1']] ) || !$_POST[$field['id_col1']])
+							$new = ' ';
+					}
+					/*if( $field['type'] == 'sliders' ) {
+						$disable = get_post_meta( $post_id, 'qm_disable_featured', true );
+						if((isset($disable) && $disable =='disable') || (!isset($new[0]['image']) || $new[0]['image'] == '')){
+							$new=$old;
+						}
+					}*/
+
+					if ( $new && $new != $old ) {
+						if ( is_array( $new ) ) {
+							foreach ( $new as &$item ) {
+								if(is_array($item)){
+									foreach ( $item as &$item2 ) {
+										if($field['type'] == 'editor')
+											$item2 =  $item2 ;
+										else
+											$item2 = esc_attr( $item2 );
+									}
+									unset($item2);
+								}
+								else{
+									if($field['type'] == 'editor')
+										$item =  $item ;
+									else
+										$item = esc_attr( $item );
+								}
+							}
+							unset( $item );
+						} else {
+							if($field['type'] != 'editor')
+								$new = esc_attr( $new );
+						}
+
+						update_post_meta( $post_id, $field['id_col1'], $new );
+					} elseif ( !isset($new) && $old ) {
+						delete_post_meta( $post_id, $field['id_col1'], $old );
+					}elseif(!$new){
+						update_post_meta( $post_id, $field['id_col1'], $new );
+					}
+				}
+			}
+		} // end foreach
+	}
+
+    //// Save the Data for Column 3
+	function save_col3( $post_id ) {
+		global $post, $post_type;
+
+		// verify nonce
+		if ( ! ( in_array($post_type, $this->page) && @wp_verify_nonce( $_POST[$post_type . '_meta_box_nonce'],  basename( __FILE__ ) ) ) )
+			return $post_id;
+		// check autosave
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
+			return $post_id;
+		// check permissions
+		if ( !current_user_can( 'edit_page', $post_id ) )
+			return $post_id;
+
+		// loop through fields and save the data
+		foreach ( $this->fields as $field ) {
+			if( $field['type'] == 'tax_select' ) {
+				// save taxonomies
+				if ( isset( $_POST[$field['id_col3']] ) )
+					$term = $_POST[$field['id_col3']];
+				wp_set_object_terms( $post_id, $term, $field['id_col3'] );
+			}
+			else {
+
+
+
+				if(isset($field['id_col3'])) {
+
+					// save the rest
+					//print_r($_POST[$field['id_col3']]);
+
+
+					$old = get_post_meta( $post_id, $field['id_col3'], true );
+
+					$old='';
+					$new=$old;
+
+
+
+					if ( isset( $_POST[$field['id_col3']] ) )
+						$new = $_POST[$field['id_col3']];
+
+
+					if($field['type'] == 'checkbox' || $field['type'] == 'available' || $field['type'] == 'featured') {
+						if ( !isset( $_POST[$field['id_col3']] ) ){
+							$new = 0;
+						}
+
+					}
+					if($field['type'] == 'gmap') {
+						if ( isset($_POST[$field['id_col3']]) && is_array( $_POST[$field['id_col3']])){
+							if(isset($_POST[$field['id_col3']]['city']))
+								update_post_meta($post_id,'qm_gmap_city',$_POST[$field['id_col3']]['city']);
+							if(isset($_POST[$field['id_col3']]['state']))
+								update_post_meta($post_id,'qm_gmap_state',$_POST[$field['id_col3']]['state']);
+							if(isset($_POST[$field['id_col3']]['pincode']))
+								update_post_meta($post_id,'qm_gmap_pincode',$_POST[$field['id_col3']]['pincode']);
+							if(isset($_POST[$field['id_col3']]['country']))
+								update_post_meta($post_id,'qm_gmap_country',$_POST[$field['id_col3']]['country']);
+						}
+					}
+					if($field['type'] == 'image') {
+						if ( !isset( $_POST[$field['id_col3']] ) || !$_POST[$field['id_col3']]){
+							$new = ' ';
+						}
+					}
+					if($field['type'] == 'textarea' || $field['type'] == 'editor') {
+						if ( !isset( $_POST[$field['id_col3']] ) || !$_POST[$field['id_col3']])
+							$new = ' ';
+					}
+					/*if( $field['type'] == 'sliders' ) {
+						$disable = get_post_meta( $post_id, 'qm_disable_featured', true );
+						if((isset($disable) && $disable =='disable') || (!isset($new[0]['image']) || $new[0]['image'] == '')){
+							$new=$old;
+						}
+					}*/
+
+					if ( $new && $new != $old ) {
+						if ( is_array( $new ) ) {
+							foreach ( $new as &$item ) {
+								if(is_array($item)){
+									foreach ( $item as &$item2 ) {
+										if($field['type'] == 'editor')
+											$item2 =  $item2 ;
+										else
+											$item2 = esc_attr( $item2 );
+									}
+									unset($item2);
+								}
+								else{
+									if($field['type'] == 'editor')
+										$item =  $item ;
+									else
+										$item = esc_attr( $item );
+								}
+							}
+							unset( $item );
+						} else {
+							if($field['type'] != 'editor')
+								$new = esc_attr( $new );
+						}
+
+						update_post_meta( $post_id, $field['id_col3'], $new );
+					} elseif ( !isset($new) && $old ) {
+						delete_post_meta( $post_id, $field['id_col3'], $old );
+					}elseif(!$new){
+						update_post_meta( $post_id, $field['id_col3'], $new );
+					}
+				}
+			}
+		} // end foreach
+	}
+
+
 }
+
 
 
 ?>
