@@ -1,6 +1,8 @@
 QM-Personal-Studies-Plugin
 ==========================
 
+![screenclip](https://cloud.githubusercontent.com/assets/2808553/4616926/a6aa8444-52f8-11e4-84c2-a6096363be07.png)
+
 
 A WordPress plugin to allow citizen scientists to share their discoveries. This plugin could be used to automatically create studies using the "Study" custom post by selecting  one or more variables. 
 
@@ -53,3 +55,4 @@ So here's what still needs to be done:
 - Then when the user publishes a "Study", it should create a new post like this: https://quantimo.do/deep-sleep-is-strongest-predictor-of-short-term-mood-in-subject-with-inflammation-mediated-depression/ The part at the top is the excerpt. In the final product, that should be followed by either a dynamic version of the scatterplot and timeline just like the front end. The difference between the current dashboard is that the variable selection was already done in the back and and is static.  The parameters for the API call would them be taken from those custom fields in the WP post meta table, I guess.
 - We should enable that Highcharts image download thing they have in the top righthand corner. 
 - Add the following shortcode or equivalent PHP to produce a list of apps that track the variable category for the cause and effect at the bottom.  For instance, the variable "Overall Mood" is in the "Mood" category, so I've included this shortcode [portfolio load="20" columns="5" orderby="menu_order" showtitle="yes" showdate="no" category="mood"] at the bottom of this page: https://quantimo.do/deep-sleep-is-strongest-predictor-of-short-term-mood-in-subject-with-inflammation-mediated-depression/ 
+
