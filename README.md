@@ -42,10 +42,6 @@ That said, most of the coding for this has been done so the task is primarily a 
 
 We've got this front end WP page template using Highcharts that are fed via our API with requests defined by the variable selector on the left: https://www.dropbox.com/s/jx7r7u3l0hlbgci/Screenshot%202014-10-11%2009.59.35.png?dl=0
 
-You can log in here: https://quantimo.do/correlate/
-user: quantimodo
-pw: B1ggerstaff!
-
 So instead of logging in and selecting variables on the front end, I want to define all the parameters on the back end and then publish a post with specific variables selected.  We should also be able to specify the units, time range, and a couple other parameters. 
 
 A basic mockup of our goal for the "Studies" custom post type plugin is here: http://app.mockflow.com/view/07C883E489899C30BE88FD1DECDDD4C9  Again, I'd love any suggestions on how that might be improved or could be more easily implemented. 
