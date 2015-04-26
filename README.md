@@ -56,3 +56,4 @@ So here's what still needs to be done:
 - We should enable that Highcharts image download thing they have in the top righthand corner. 
 - Add the following shortcode or equivalent PHP to produce a list of apps that track the variable category for the cause and effect at the bottom.  For instance, the variable "Overall Mood" is in the "Mood" category, so I've included this shortcode [portfolio load="20" columns="5" orderby="menu_order" showtitle="yes" showdate="no" category="mood"] at the bottom of this page: https://quantimo.do/deep-sleep-is-strongest-predictor-of-short-term-mood-in-subject-with-inflammation-mediated-depression/ 
 
+![qm-study-custom-post-type-front-end-template](https://cloud.githubusercontent.com/assets/2808553/7339842/e79bdce0-ec41-11e4-9c4c-09ae633daf4c.png)
